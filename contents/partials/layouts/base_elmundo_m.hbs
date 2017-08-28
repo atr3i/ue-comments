@@ -1,53 +1,45 @@
-{{!-- layouts/base.hbs --}}
+{{!-- layouts/base_elmundo_m.hbs --}}
 
 <!doctype html>
 <html>
   <head>
-   {{!--  <title>
-    {{#if title}}
-        {{title}}
-      {{else}}
-        Base Page Title
-    {{/if}}
-    </title> --}}
     <link rel="stylesheet" href="styles/main.min.css">
-    
-    <head>
-      {{#> head-block }}
-        {{!-- Custom  content per page could be added. --}}
-      {{/head-block}} 
-    </head>
-
-  <body>
-
-   {{#> body-scripts-block }}
+    {{#> head-block }}
+      {{!-- Custom  content per page could be added. --}}
+    {{/head-block}} 
+  </head>
+  <body class="cataluna-home cataluna">
+    {{#> body-scripts-block }}
       {{!-- Custom scripts per page can be added. --}}
-      {{> includes/body-scripts }}
-   {{/body-scripts-block}}
+      {{> includes/elmundo_m/body-scripts }}
+    {{/body-scripts-block}}
     
-   
-    <header class="site-header js-cnav-header main-section-header  site-header-news inside" data-ue-model>
+    <header class="super-menu-header js-cnav-header inside" data-menu-nivel="home">
       {{#> header-block }}
         {{!-- header content goes here. --}}
       {{/header-block}}
     </header>
 
-    <main class="main news js_navContinua" data-ue-contenido id="js_599eae6546163fc1168b460f">
+    <script>
+      var portal = "cataluna";
+    </script>
+
+    <main class="main news js_navContinua" data-ue-contenido id="js_59a31302e5fdea71458b459e">
       {{#> main-block }}
         {{!-- main content goes here. --}}
-        {{> includes/main }}
+        {{> includes/elmundo_m/main }}
       {{/main-block}}
     </main>
 
     {{#> featured-links-block }}
       {{!-- featured links goes here. --}}
-      {{> includes/featured-links }}
+      {{> includes/elmundo_m/featured-links }}
     {{/featured-links-block}}
 
     <footer class="site-footer horizontal" itemscope itemtype="http://schema.org/Organization">
       {{#> footer-block }}
           {{!-- footer content goes here. --}}
-          {{> includes/footer }}
+          {{> includes/elmundo_m/footer }}
       {{/footer-block}}
     </footer>
     
@@ -55,7 +47,7 @@
 
     {{#> scripts-block }}
       {{!-- Custom scripts per page can be added. --}}
-      {{> includes/scripts }}
+      {{> includes/elmundo_m/scripts }}
     {{/scripts-block}}
   </body>
 

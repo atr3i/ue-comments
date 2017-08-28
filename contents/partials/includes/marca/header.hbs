@@ -1,0 +1,115 @@
+{{!-- includes/marca/header.hbs --}}
+
+<div class="main-top-header-container">
+    <div class="main-header-container">
+        <div class="main-site-logo">
+            <h1 class="logo"><a href="http://www.marca.com/" title="Marca" class="iconsvg iconsvg-logo-marca"><span class="hidden-content">Marca</span></a></h1>
+        </div>
+        <aside class="tools-header">
+            <div class="main-edition-dropdown">
+                <input class="edition-check" id="show-edition" type="checkbox" role="button">
+                <label for="show-edition" class="show-edition-active"><i class="iconsvg iconsvg-flag-es-a"></i>ES <i class="iconsvg iconsvg-down-a"></i></label><span class="edition-dropdown-title">Ediciones:</span>
+                <ul class="list-edition">
+                    <li class="list-option list-option-spain"><a onclick="ueHeader.changeEdition('n');return false;" href="http://www.marca.com?intcmp=BOTONPORTADA&amp;s_kw=portada"><i class="iconsvg iconsvg-flag-es-a"></i> ES (España) </a></li>
+                    <li class="list-option list-option-english"><a href="http://www.marca.com/en?intcmp=BOTONPORTADA&amp;s_kw=english-portada"><i class="iconsvg iconsvg-flag-en-a"></i> EN (English) </a></li>
+                    <li class="list-option list-option-mexico"><a onclick="ueHeader.changeEdition('mx');return false;" href="http://www.marca.com/claro-mx?intcmp=BOTONPORTADA&amp;s_kw=mx-portada"><i class="iconsvg iconsvg-flag-mx-a"></i> MX (México) </a></li>
+                </ul>
+            </div>
+            <ul class="tools-header-corporative">
+                <li class="tools-corporative-subscription"><a href="https://clk.tradedoubler.com/click?p=271574&a=2407712&g=23242688" title="Suscripciones Marca" class="tools-corporative-link">Suscr&iacute;bete</a>
+                </li>
+                <li class="tools-corporative-login toolbar-login nav-login">
+                    <a href='#' title='Login' class='tools-corporative-link js-loginClick js-loginButton'><span>Iniciar sesi&oacute;n</span><i class="icon-login"></i></a>
+                </li>
+                </ul>
+            </aside>
+        </div>
+    </div>
+    <div class="main-nav-container">
+        <div class="main-header-container">
+            <nav class="js-navTab js-desdefixed js-hastafixed" data-jsue-navtab="true" role="navigation">
+                <ul class="main-nav-tabs main-second-menu">
+                    <li class="main-tab main-tab-futbol">
+                        <a href="http://www.marca.com/futbol.html?intcmp=MENUPROD&amp;s_kw=futbol" data-menu-section-path="#submenuFutbol" data-menu-active="futbol" title="F&uacute;tbol" class="highlight">F&uacute;tbol<i class="iconsvg iconsvg-down-b"></i></a>
+                    </li>
+                    <li class="main-tab main-tab-baloncesto">
+                        <a href="http://www.marca.com/baloncesto.html?intcmp=MENUPROD&amp;s_kw=baloncesto" data-menu-section-path="#submenuBaloncesto" data-menu-active="baloncesto" title="Baloncesto" class="highlight">Baloncesto<i class="iconsvg iconsvg-down-b"></i></a>
+                    </li>
+                    <li class="main-tab main-tab-motor">
+                        <a href="http://www.marca.com/motor.html?cid=?intcmp=MENUPROD&amp;s_kw=motor" data-menu-section-path="#submenuMotor" data-menu-active="motor" title="Motor" class="highlight">Motor<i class="iconsvg iconsvg-down-b"></i></a>
+                    </li>
+                    <li class="main-tab main-tab-default">
+                        <a href="http://www.marca.com/polideportivo.html?intcmp=MENUPROD&amp;s_kw=polideportivo" data-menu-section-path="#submenuMasDeportes" data-menu-active="default" title="Polideportivo" class="highlight">Polideportivo<i class="iconsvg iconsvg-down-b"></i></a>
+                    </li>
+                    <li class="main-tab main-tab-highlight">
+                        <i class="iconsvg iconsvg-highlight-a"></i>
+                        <ul class="highlight-list">
+                            <li class="highlight-list-item">
+                                <a href="http://www.marca.com/resultados.html?intcmp=MENUDEST&amp;s_kw=resultados" title="Resultados y directos">Resultados y directos</a>
+                            </li>
+                            <li class="highlight-list-item">
+                                <a href="http://www.marca.com/futbol/mercado-fichajes.html?intcmp=MENUDEST&amp;s_kw=fichajes" title="Fichajes">Fichajes</a>
+                            </li>
+                            <li class="highlight-list-item">
+                                <a href="http://www.marca.com/ciclismo/vuelta-espana.html?intcmp=MENUDEST&amp;s_kw=vuelta-espana" title="La Vuelta">La Vuelta</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="js-desplegable-menu more-menu-tab" data-insertar data-menu-section-path-click="http://www.marca.com/assets/externos/v7/menu/supermenu.html"><span class="show-more-menu" data-click-role="cambiarIconos">Más<i class="iconsvg iconsvg-more-b"></i></span><span class="show-more-menu-on no-visible" data-click-role="cambiarIconos">Cerrar<i class="iconsvg iconsvg-close-b"></i></span>
+                        <div class="more-menu js-contenedor-menu">
+                            <time class="main-header-time" datetime="1503580261"><span class="date-home">24 de agosto de 2017</span> Actualizado a las 15:11 h.</time>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <div class="main-header-search">
+                <form action="http://cgi.marca.com/buscador/archivo_marca.html" method="get" class="js-search-portada">
+                    <input type="search" name="q" placeholder="Buscar en marca.com">
+                </form>
+                <div class="search-btn js-searchClick-portada">
+                    <a href title="Buscador Marca"><span><i class="iconsvg iconsvg-search-a"></i><strong>Buscar</strong></span></a>
+                </div>
+                <span class="close-btn js-close-btn-portada"><i class="iconsvg iconsvg-close-b"></i></span>
+            </div>
+        </div>
+    </div>
+    <div class="breadcrumbs js-desdefixed js-hastafixed">
+        <div class="container-breadcrumb js-submenu-toggle">
+            <div class="js-contenido-toggle content-breadcrumb">
+                <div class="clearfix ">
+                    <ul class="tab-breadcrumb js-containerbreadcrumb">
+                        <li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope class="home" itemref="bread-1" id="bread-0"><a itemprop="url" title="MARCA.com" href="http://www.marca.com?intcmp=MENUMIGA&s_kw=home"><span itemprop="title">Inicio</span></a><span class="arrow"></span></li>
+                        <li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope itemprop="child" class="first-level" itemref="bread-2" id="bread-1"><a href="http://www.marca.com/futbol.html?intcmp=MENUMIGA&s_kw=futbol" itemprop="url"><span itemprop="title">Fútbol</span></a><span class="arrow"></span></li>
+                        <li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope itemprop="child" class="second-level" itemref="bread-3" id="bread-2"><a href="http://www.marca.com/futbol/primera-division.html?intcmp=MENUMIGA&s_kw=laliga-santander" itemprop="url"><span itemprop="title">LaLiga Santander</span></a><span class="arrow"></span></li>
+                        <li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope itemprop="child" class="third-level" id="bread-3"><a href="http://www.marca.com/futbol/barcelona.html?intcmp=MENUMIGA&s_kw=barcelona" itemprop="url"><span itemprop="title">Barcelona</span></a><span class="arrow"></span></li>
+                    </ul>
+                    <ul class="tab-breadcrumb tab-breadcrumb-list js-breadcrumb-submenu">
+                        <li><a data-section="Plantilla y datos del club" href="http://www.marca.com/deporte/futbol/equipos/barcelona/datos.html?intcmp=MENUMIGA&s_kw=plantilla-y-datos-del-club" title="Plantilla y datos del club">Plantilla y datos del club</a></li>
+                        <li><a data-section="Resultados" href="http://www.marca.com/futbol/barcelona/resultados-temporada.html?intcmp=MENUMIGA&s_kw=resultados" title="Resultados">Resultados</a></li>
+                        <li><a data-section="Calendario" href="http://www.marca.com/deporte/futbol/primera-division/calendario/?intcmp=MENUMIGA&s_kw=calendario" title="Calendario">Calendario</a></li>
+                        <li><a data-section="Fichajes" href="http://www.marca.com/deporte/futbol/primera-division/mercado-fichajes/#barcelona?intcmp=MENUMIGA&s_kw=fichajes" title="Fichajes">Fichajes</a></li>
+                        <li><a data-section="Pretemporada" href="http://www.marca.com/futbol/barcelona/pretemporada?intcmp=MENUMIGA&s_kw=pretemporada" title="Pretemporada">Pretemporada</a></li>
+                        <li><a data-section="Blog" href="http://www.marca.com/blogs/barcelona?intcmp=MENUMIGA&s_kw=blog" title="Blog">Blog</a></li>
+                    </ul>
+                </div>
+                <input type="checkbox" id="show-more-breadcrumb" role="button" class="check-more-breadcrumb">
+                <label for="show-more-breadcrumb" class=" dropdown-submenu dropdown-more-breadcrumb js-botonera-more"><span class="show-more-breadcrumb-open">Más<i class="iconsvg iconsvg-more-b"></i></span><span class="show-more-breadcrumb-close">Cerrar<i class="iconsvg iconsvg-close-b"></i></span></label>
+                <div class="dropdown-container" data-items>
+                    <ul class="dropdown-content"></ul>
+                </div>
+            </div>
+            <div class="tab-news">
+                <div class="container-header">
+                    <p class="tab-news-title js-newsTitle">Futbol/barcelona</p>
+                    <aside class="aside-tools">
+                        <ul class="socialMedia js_socialMedia">
+                            <li><i class="iconsvg iconsvg-facebook-a js-icon-facebook"></i><span class="hidden-content">Facebook</span></li>
+                            <li><i class="iconsvg iconsvg-twitter-a js-icon-twitter"></i><span class="hidden-content">Twitter</span></li>
+                            <li onclick="envioSC('Enviar');"><i class="iconsvg iconsvg-mail-a js-icon-mail"></i><span class="hidden-content">Enviar</span></li>
+                        </ul>
+                    </aside>
+                </div>
+            </div>
+        </div>
+</div>
+<div class="percentage-bar" id="js_progressBar"></div>

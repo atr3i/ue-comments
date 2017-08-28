@@ -1,0 +1,54 @@
+{{!-- layouts/base_marca_m.hbs --}}
+
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="styles/main.min.css">
+    {{#> head-block }}
+      {{!-- Custom  content per page could be added. --}}
+    {{/head-block}} 
+  </head>
+  <body>
+
+    {{#> body-scripts-block }}
+      {{!-- Custom scripts per page can be added. --}}
+      {{> includes/marca_m/body-scripts }}
+    {{/body-scripts-block}}
+   
+    <header class="super-menu-header js-cnav-header inside" data-menu-nivel="home">
+      {{#> header-block }}
+        {{!-- header content goes here. --}}
+      {{/header-block}}
+    </header>
+   
+    {{#> tabs-block}}
+      {{!-- tabs menu content goes here. --}}
+    {{/tabs-block}}
+
+    <main class="main motor-section js_navContinua" data-ue-contenido id="js_59a3e672268e3e87678b46df">
+      {{#> main-block }}
+        {{!-- main content goes here. --}}
+        {{> includes/marca_m/main }}
+      {{/main-block}}
+    </main>
+
+    <aside class="container loading-module no-visible"><img class="loading-icon" src="http://e00-marca.uecdn.es/assets/v7/img/loading-icon.gif">
+        <div class="loading-next"><span>Cargando siguiente contenido</span><span class="js_navTitulo"></span></div>
+    </aside>
+
+    <footer class="site-footer horizontal" itemtype="http://schema.org/Organization">
+      {{#> footer-block }}
+          {{!-- footer content goes here. --}}
+          {{> includes/marca_m/footer }}
+      {{/footer-block}}
+    </footer>
+    
+    <script src="javascripts/main.js"></script>
+
+    {{#> scripts-block }}
+      {{!-- Custom scripts per page can be added. --}}
+      {{> includes/marca_m/scripts }}
+    {{/scripts-block}}
+  </body>
+
+</html>
