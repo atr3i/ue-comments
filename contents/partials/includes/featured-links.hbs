@@ -1,0 +1,40 @@
+ <script type="text/javascript">
+    jQuery(function() {
+        if (typeof jQuery.fn.RedesSociales === 'function') { jQuery('.js-cnav-header').find('.js_socialMedia').RedesSociales({ title: "El Govern, sobre el aviso \"informal\" de la Policía belga: \"Nunca nos constó que Es Satty fuera peligroso\"", img: "http://v.uecdn.es/p/108/thumbnail/entry_id/0_d79tes2x/width/657/type/2/bgcolor/000000/0_d79tes2x.jpg", url: "http://www.elmundo.es/cataluna/2017/08/24/599eae6546163fc1168b460f.html", summary: "", viaTwitter: 'elmundoes', urlCorreo: "http://www.elmundo.es/enviar/formulario_enviar_noticia.html?que_mundo=elmundo", sufijoAnalitica: '_1' }); }
+        jQuery(document).on("urlChanged", function(event, data) { if (typeof jQuery.fn.RedesSociales === 'function') { jQuery('.js-cnav-header').find('.js_socialMedia').RedesSociales({ title: data.title, img: data.rrss.img, url: data.url, summary: data.rrss.summary, viaTwitter: data.rrss.viaTwitter, urlCorreo: "http://www.elmundo.es/enviar/formulario_enviar_noticia.html?que_mundo=elmundo", sufijoAnalitica: '_1' }); } });
+    });
+    </script>
+    <aside class="container loading-module no-visible"><img class="loading-icon" src="http://e00-elmundo.uecdn.es/assets/v7/img/loading-icon.gif">
+        <div class="loading-next"><span>Cargando siguiente contenido</span><span class="js_navTitulo"></span></div>
+    </aside>
+    <section class="content-item featured-links UEClass">
+        <h3 class="list-header"><span>Enlaces de inter&eacute;s</span></h3>
+        <ul class="list">
+            <li><a href="http://www.elmundo.es/ultimas-noticias.html">&Uacute;ltimas Noticias</a></li>
+            <li><a href="http://www.elmundo.es/temas/">Temas</a></li>
+            <li><a href="http://www.elmundo.es/economia/bolsa/indices/ibex35_I.IB.html">IBEX 35</a></li>
+            <li><a href="http://www.elmundo.es/loterias/euromillones.html">Euromillones</a></li>
+            <li><a href="http://www.elmundo.es/horoscopo/">Hor&oacute;scopo Diario</a></li>
+            <li><a href="http://www.elmundo.es/mejores-colegios.html">Mejores colegios</a></li>
+        </ul>
+        <ul class="list">
+            <li><a href="http://www.elmundo.es/servicios/">Servicios</a></li>
+            <li><a href="http://quiosco.orbyt.es/">Orbyt</a></li>
+            <li><a href="http://www.elmundo.es/traductor/">Traductor</a></li>
+            <li><a href="http://www.elmundo.es/television/programacion-tv/">Gu&iacute;a TV</a></li>
+            <li><a href="http://www.elmundo.es/diccionarios/">Diccionarios</a></li>
+            <li><a href="http://www.elmundo.es/tiempo/">El tiempo</a></li>
+            <li><a href="http://www.elmundo.es/promociones/">Promociones</a></li>
+            <li><a href="http://www.elmundo.es/loterias/">Loter&iacute;a</a></li>
+            <li><a href="http://comparador.elmundo.es/">Comparador financiero</a></li>
+            <li><a href="http://seguroscoche.elmundo.es/">Comparador seguros</a></li>
+        </ul>
+        <ul class="list">
+            <li>
+                <a href="http://www.elmundo.es/eventos/en-directo/2017/08/23/48369-trofeo-bernabeu-en-directo-real-madrid-vs-fiorentina/"> Trofeo Bernabéu, en directo: Real Madrid vs Fiorentina</a>
+            </li>
+            <li>
+                <a href="http://www.elmundo.es/eventos/en-directo/2017/08/24/46344-6-etapa-de-la-vuelta-villarreal-sagunto-en-vivo/"> 6ª etapa de la Vuelta: Villarreal-Sagunto, en vivo</a>
+            </li>
+        </ul>
+    </section>

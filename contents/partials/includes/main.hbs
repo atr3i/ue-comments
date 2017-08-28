@@ -1,0 +1,699 @@
+
+        <div class="container">
+            <script>
+            var ueDataPage = { rootSection: "default", sectionPrettyName: "Cataluña", portal: "elmundo", ct: "n", model: "cataluna-home", contentId: '599eae6546163fc1168b460f', breadcrumb: '<ul class="tab-breadcrumb js-containerbreadcrumb"><li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" class="home" itemref="bread-1" id="bread-0"><a itemprop="url" title="Inicio" href="http://www.elmundo.es"><span itemprop="title">Inicio</span></a><span class="arrow"></span></li><li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" class="first-level" itemref="bread-2" id="bread-1"><a itemprop="url" title="España" href="http://www.elmundo.es/espana.html"><span itemprop="title">España</span></a><span class="arrow"></span></li><li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" class="second-level"  id="bread-2"><a itemprop="url" title="Cataluña" href="http://www.elmundo.es/elmundo/barcelona.html"><span itemprop="title">Cataluña</span></a></li></ul>', children: '', numComments: '100', rrss: { img: "http://v.uecdn.es/p/108/thumbnail/entry_id/0_d79tes2x/width/657/type/2/bgcolor/000000/0_d79tes2x.jpg", summary: "", viaTwitter: 'elmundoes' } }
+            </script>
+            <div class="alerta" id="alerta">
+                <ul>
+                    <li class="deportes">
+                        <span><strong>LA VUELTA</strong><a href="http://www.elmundo.es/eventos/en-directo/2017/08/24/46344-6-etapa-de-la-vuelta-villarreal-sagunto-en-vivo/?cid=ULTHR22001&amp;s_kw=la_vuelta">Siga la sexta etapa, con final en Sagunto.</a></span>
+                    </li>
+                </ul>
+            </div>
+            <script type="text/javascript">
+            if (typeof portal == 'undefined') { portal = ''; }
+            var ueAlert = window.ueAlert || (window.utilsEvent ? null : initUeAlerts());
+            if (ueAlert == null) { window.addEventListener('cargaUtils', function() { ueAlert = initUeAlerts(); }); }
+
+            function initUeAlerts(event) {
+                var pos = 0,
+                    lis = [],
+                    nlis = 0,
+                    timer1 = null,
+                    btPlay = null,
+                    btStop = null;
+
+                function init() {
+                    var alerta_container = document.getElementById("alerta");
+                    var cont = alerta_container.getElementsByTagName("ul")[0];
+                    btPlay = ueUtils.getElementsByClass("play", cont.getElementsByTagName("ul")[1])[0];
+                    btStop = ueUtils.getElementsByClass("stop", cont.getElementsByTagName("ul")[1])[0];
+                    if (portal == 'portada') { lis = cont.getElementsByTagName("li"); } else { lis = cont.getElementsByClassName('urgente'); }
+                    nlis = lis.length;
+                    if (nlis == 0) { ueUtils.addClass(alerta_container, 'ocultar'); } else { ueUtils.addClass(lis[0], "mostrar");
+                        ueUtils.addClass(btStop, "ocultar");
+                        ueAlert.play(); }
+                }
+                var ueAlert = {
+                    play: function() { timer1 = setInterval(ueAlert.next, 5000);
+                        ueUtils.addClass(btPlay, "ocultar");
+                        ueUtils.removeClass(btStop, "ocultar"); },
+                    stop: function() {
+                        if (timer1) { clearInterval(timer1);
+                            timer1 = null; }
+                        ueUtils.addClass(btStop, "ocultar");
+                        ueUtils.removeClass(btPlay, "ocultar");
+                    },
+                    next: function() { var nextPos = ((pos + 1) < nlis) ? (pos + 1) : 0;
+                        ueUtils.removeClass(lis[pos], "mostrar");
+                        ueUtils.addClass(lis[nextPos], "mostrar");
+                        pos = nextPos; },
+                    preview: function() { var nextPos = ((pos - 1) < 0) ? (nlis - 1) : (pos - 1);
+                        ueUtils.removeClass(lis[pos], "mostrar");
+                        ueUtils.addClass(lis[nextPos], "mostrar");
+                        pos = nextPos; }
+                }
+                init();
+                return ueAlert;
+            }
+            </script>
+            <article class="news-item" itemscope itemtype="http://schema.org/NewsArticle"><span class="section-title-group"><span class="section-type"><a href="http://www.elmundo.es/cataluna.html">Cataluña</a></span></span>
+                <div class="content-ad">
+                    <div class="ad-item-990">
+                        <div id='div-gpt-ad-cataluna_n_m_599eae6546163fc1168b460f' class="publicidad">
+                            <script type='text/javascript'>
+                            googletag.cmd.push(function() { googletag.display('div-gpt-ad-cataluna_n_m_599eae6546163fc1168b460f'); });
+                            </script>
+                        </div>
+                    </div>
+                </div>
+                <h2 class="kicker"> Atentado en Barcelona</h2>
+                <h1 itemprop="headline" class="js-headline">El Govern, sobre el aviso "informal" de la Policía belga: "Nunca nos constó que Es Satty fuera peligroso"</h1>
+                <div class="row content sharing-tools">
+                    <ul>
+                        <li class="signatures-container">
+                            <address class="news-author">
+                                <ul class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                                    <li itemprop="name" class="author-name"><strong>FERNANDO LÁZARO| AGENCIAS</strong></li>
+                                    <li itemprop="address" itemscope itemtype="http://schema.org/PostalAddress" class="author-city"><span itemprop="addressLocality"> Madrid|Barcelona</span></li>
+                                </ul>
+                            </address>
+                        </li>
+                        <li class="social-networks-container">
+                            <ul class="js_socialMedia">
+                                <li><i class="icon-facebook_30_a js-icon-facebook"></i><span class="hidden-content">Facebook</span></li>
+                                <li><i class="icon-twitter_30_a js-icon-twitter"></i><span class="hidden-content">Twitter</span></li>
+                                <li onclick="envioSC('Enviar');"><i class="icon-mail_30_a js-icon-mail"></i><span class="hidden-content">Enviar</span></li>
+                            </ul>
+                        </li>
+                        <li class="date-container">
+                            <meta itemprop="datePublished" content="2017-08-24">
+                            <time datetime="2017-08-24 14:49:57" class="date" itemprop="dateModified">
+                                24 ago. 2017
+                                <strong>14:49</strong></time>
+                        </li>
+                    </ul>
+                </div>
+                <div class="row content cols-70-30" itemprop="articleBody">
+                    <figure class="multimedia-item video" itemprop="video" itemscope itemtype="http://schema.org/VideoObject">
+                        <meta itemprop="name" content="El Govern, sobre el aviso &quot;informal&quot; de la Policía belga: &quot;Nunca nos constó que Es Satty fuera peligroso&quot;" />
+                        <meta itemprop="description" content="Descubre mas videos" />
+                        <meta itemprop="thumbnailUrl" content="http://v.uecdn.es/p/108/thumbnail/entry_id/0_d79tes2x/width/660/type/2/bgcolor/000000/0_d79tes2x.jpg" />
+                        <meta itemprop="contentURL" content="http://k.uecdn.es/index.php/kwidget/wid/_108/uiconf_id/8704917/entry_id/0_d79tes2x" />
+                        <meta itemprop="uploadDate" content="2017-08-24T14:50:02+02:00" />
+                        <meta itemprop="duration" content="T42S" />
+                        <div id="video-599eae6546163fc1168b460f" style="height: 371px;" class="full-video"></div>
+                        <script type="text/javascript">
+                        jQuery(function() { if (typeof KalturaUE === 'object') { var kalturaPlayer = new KalturaUE.Player('video-599eae6546163fc1168b460f', kalturaPlayerConfig);
+                                kalturaPlayer.setConfig({ partnerId: 108, opciones: { responsive: '16/9' } }); var tags = "atentado-en-barcelona";
+                                kalturaPlayer.setTags(tags.split(","));
+                                kalturaPlayer.setTopic("actualidad");
+                                kalturaPlayer.load('0_d79tes2x', 'El Govern, sobre el aviso &quot;informal&quot; de la Policía belga: &quot;Nunca nos...'); }; });
+                        </script>
+                        <noscript><img src="http://v.uecdn.es/p/108/thumbnail/entry_id/0_d79tes2x/width/660/cache_st/1503578998/type/2/bgcolor/000000/0_d79tes2x.jpg" style="height: 590px; margin-top: -590px; width:100%; " /></noscript>
+                        <figcaption class="caption" itemprop="description"><i class="icon-video_16_g"></i>El Govern, sobre el aviso "informal" de la Policía belga: "Nunca nos constó que Es Satty fuera peligroso" <span itemprop="author" itemscope itemtype="http://schema.org/Person"></span><span itemprop="name">EFE</span></figcaption>
+                    </figure>
+                    <aside class="aside-tools byline-tools">
+                        <div class="content-ad">
+                            <div class="ad-item-300">
+                                <div id='div-gpt-ad-cataluna_n_b300x100_599eae6546163fc1168b460f' class="publicidad">
+                                    <script type='text/javascript'>
+                                    googletag.cmd.push(function() { googletag.display('div-gpt-ad-cataluna_n_b300x100_599eae6546163fc1168b460f'); });
+                                    </script>
+                                </div>
+                            </div>
+                        </div>
+                        <aside class="aside-block js_fixed"><a href="#ancla_comentarios" class="comments-btn js-botonComentarios-599eae6546163fc1168b460f"><span class="left"><i class="icon-comments_24x20_a"></i><strong>100 </strong></span><span class="right"><strong>Ver comentarios</strong><i class="icon-forward_8x16_a"></i></span></a>
+                            <div class="content-ad">
+                                <div class="ad-item-300">
+                                    <div id='div-gpt-ad-cataluna_n_r_599eae6546163fc1168b460f' class="publicidad">
+                                        <script type='text/javascript'>
+                                        googletag.cmd.push(function() { googletag.display('div-gpt-ad-cataluna_n_r_599eae6546163fc1168b460f'); });
+                                        </script>
+                                    </div>
+                                </div>
+                            </div>
+                        </aside>
+                    </aside>
+                    <!-- Fin Modulo publicidad y boton -->
+                    <div class="subtitle-items">
+                        <p class="summary-lead"><i class="icon-apoyo_16_b"></i>Vuelve a pedir que los Mossos se integren en Europol</p>
+                        <p class="summary-lead"><i class="icon-apoyo_16_b"></i><a href="http://www.elmundo.es/espana/2017/08/24/599db4b3e2704e044d8b462b.html">La Policía belga se dirigió a los Mossos para advertirles sobre el imam de Ripoll en marzo de 2016</a></p>
+                    </div>
+                    <p>El conseller de Interior de la Generalitat, Joaquim Forn, ha explicado este jueves que la policía belga envió a los Mossos d'Esquadra una comunicación informal reclamando información sobre el imán de Ripoll Abdelbaki es Satty pero que <strong>nadie les alertó de que fuera peligroso</strong>. </p>
+                    <p> En una comparecencia junto a la alcaldesa de Cambrils (Tarragona), Camí Mendoza, tras participar en la Junta local de seguridad, Forn ha indicado que la policía belga pidió información sobre Es Satty: "Se da la información que tenemos, y <strong>en ningún momento nos consta que esta persona esté investigada o sea peligrosa</strong>. Es evidente que si alguien nos hubiera alertado de esto se hubiera actuado de otra manera". </p>
+                    <p> Sobre esta comunicación, ha indicado que fue absolutamente informal, en sus palabras: "Si hubiera sido formal precisamente el canal no hubiera sido directo porque <strong>nosotros no podemos tener una relación directa con policías de fuera</strong>, y por lo tanto se debería haber hecho a traves del Ministerio". </p>
+                    <p> Ha añadido: "Nos nos advierten sobre el estado de esta persona, solo piden si tenemos información de esta persona y no se tiene información y es lo que se contesta". </p>
+                    <p> "Me sorprende que, habiendo una <a href="http://www.elmundo.es/espana/2017/08/23/599dc953e5fdea50398b456f.html" target="_blank">amenaza difundida por Estado Islámico</a> ayer mismo, <strong>la preocupación de algunos medios sea disminuir la tarea de los Mossos y poner en duda y ensuciar su trabajo</strong>", ha lamentado el conseller.</p>
+                    <h3 class="subhead">Aviso de un policía belga a los Mossos</h3>
+                    <p>La policía local del municipio flamenco de Vilvoorde (Bélgica) contactó en marzo del pasado año con los Mossos para conocer si la policía de la Generalitat tenía en sus archivos datos sobre Albdelbaki es Satty.</p>
+                    <p>En concreto, la comunicación a los Mossos la realizaron agentes de la policía de esa localidad en la que Abdelbaki es Satty residió durante tres meses, a principios de 2016, y donde trató de conseguir trabajo en uno de los oratorios locales. </p>
+                    <p>La policía municipal consideró sospechosas sus actividades y envió su consulta de información a la policía de la Generalitat por escrito. La respuesta fue remitida de nuevo hacia Vilvoorde el 8 de marzo de 2016.</p>
+                    <h3 class="subhead">La actitud "extrema" del imam de Ripoll</h3>
+                    <p>Abdelbaki Es Satty mostró una actitud "rígida" y "extrema" cuando pidió trabajo en la mezquita del municipio de Diegem, según ha confirmado a Europa Press el responsable de este centro religioso, Akaychouh Soliman. </p>
+                    <p> Soliman ha explicado que pidió a Es Satty documentos personales que acreditasen la ausencia de antecedentes en España que el imán de Ripoll no aportó.<strong> Soliman, además, detectó "comportamientos sospechosos", por lo que advirtió a la policía local</strong>. </p>
+                    <p> "Cuando le pedimos el certificado de buena conducta y fue incapaz de presentarlo comprendimos bien que no tenía sitio aquí y que tenía que marcharse", añade el responsable de la mezquita en un comunicado publicado este jueves, en el que <strong>niega además que la comunidad musulmana de la localidad sea responsable de estos "actos criminales". </strong></p>
+                    <p> La comunidad musulmana de Machelen ha conocido con tristeza las noticias y<strong> condena este acto horrible que no se encuentra en ningún lugar de nuestra religión, una religión de paz y de humanismo</strong>", asegura el texto.</p>
+                    <aside class="publicidad mod-multipurpose end-fixed">
+                        <h3 class="list-header"><span>TE PUEDE INTERESAR</span></h3>
+                        <div id='div-gpt-ad-cataluna_n_nata_599eae6546163fc1168b460f' class="publicidad">
+                            <script type='text/javascript'>
+                            googletag.cmd.push(function() { googletag.display('div-gpt-ad-cataluna_n_nata_599eae6546163fc1168b460f'); });
+                            </script>
+                        </div>
+                        <div class="dotted-divider"></div>
+                        <div id='div-gpt-ad-cataluna_n_natb_599eae6546163fc1168b460f' class="publicidad">
+                            <script type='text/javascript'>
+                            googletag.cmd.push(function() { googletag.display('div-gpt-ad-cataluna_n_natb_599eae6546163fc1168b460f'); });
+                            </script>
+                        </div>
+                    </aside>
+                    <aside class="related-tags inside-news-body">
+                        <aside class="related-tags">
+                            <h4 class="list-header"><span>Relacionados</span></h4>
+                            <ul class="item-tags">
+                                <li><a href="http://www.elmundo.es/e/es/estado-islamico-is.html" rel="tag">Estado Islámico</a></li>
+                                <li><a href="http://www.elmundo.es/catalunya/tarragona.html" rel="tag">Tarragona</a></li>
+                                <li><a href="http://www.elmundo.es/t/at/atentado-barcelona.html" rel="tag">Atentado en Barcelona</a></li>
+                            </ul>
+                        </aside>
+                    </aside>
+                    <div class="related-links inside-news-body">
+                        <aside class="related-links end-fixed">
+                            <h3 class="list-header"><span>Noticias relacionadas</span></h3>
+                            <ol class="list">
+                                <li><a onclick="eventoSCModulos('noticias', 'relacionadas', '1', 'Colau y los Mossos esquivaron el consejo policial de poner bolardos', 'http://www.elmundo.es/cataluna/2017/08/18/5996adfae2704ea95f8b460d.html?cid=MNOT23801&amp;s_kw=colau_y_los_mossos_esquivaron_el_consejo_policial_de_poner_bolardos');" href="http://www.elmundo.es/cataluna/2017/08/18/5996adfae2704ea95f8b460d.html?cid=MNOT23801&amp;s_kw=colau_y_los_mossos_esquivaron_el_consejo_policial_de_poner_bolardos">Colau y los Mossos esquivaron el consejo policial de poner bolardos</a><span class="baseline"></span></li>
+                                <li><a onclick="eventoSCModulos('noticias', 'relacionadas', '2', 'La célula pretendía atentar con explosivos el mismo jueves en Barcelona', 'http://www.elmundo.es/cataluna/2017/08/20/5999718ae2704ed9698b459d.html?cid=MNOT23801&amp;s_kw=la_celula_pretendia_atentar_con_explosivos_el_mismo_jueves_en_barcelona');" href="http://www.elmundo.es/cataluna/2017/08/20/5999718ae2704ed9698b459d.html?cid=MNOT23801&amp;s_kw=la_celula_pretendia_atentar_con_explosivos_el_mismo_jueves_en_barcelona">La célula pretendía atentar con explosivos el mismo jueves en Barcelona</a><span class="baseline"></span></li>
+                                <li><a onclick="eventoSCModulos('noticias', 'relacionadas', '3', 'La célula yihadista preparó el atentado durante seis meses sin obstáculos', 'http://www.elmundo.es/espana/2017/08/21/5999f394468aeb8f5e8b4632.html?cid=MNOT23801&amp;s_kw=la_celula_yihadista_preparo_el_atentado_durante_seis_meses_sin_obstaculos');" href="http://www.elmundo.es/espana/2017/08/21/5999f394468aeb8f5e8b4632.html?cid=MNOT23801&amp;s_kw=la_celula_yihadista_preparo_el_atentado_durante_seis_meses_sin_obstaculos">La célula yihadista preparó el atentado durante seis meses sin obstáculos</a><span class="baseline"></span></li>
+                            </ol>
+                        </aside>
+                    </div>
+                </div>
+                <div class="row content cols-70-30 ">
+                    <aside class="aside-ad floated-right-item">
+                        <div class="content-ad js_fixed">
+                            <div class="ad-item-300">
+                                <div id='div-gpt-ad-cataluna_n_rb_599eae6546163fc1168b460f' class="publicidad">
+                                    <script type='text/javascript'>
+                                    googletag.cmd.push(function() { googletag.display('div-gpt-ad-cataluna_n_rb_599eae6546163fc1168b460f'); });
+                                    </script>
+                                </div>
+                            </div>
+                        </div>
+                    </aside>
+                    <aside class="aside-outbrain">
+                        <div class="OUTBRAIN" data-src="http://www.elmundo.es/cataluna/2017/08/24/599eae6546163fc1168b460f.html" data-widget-id="AR_7" data-ob-template="elmundo"></div>
+                        <div class="OUTBRAIN" data-src="http://www.elmundo.es/cataluna/2017/08/24/599eae6546163fc1168b460f.html" data-widget-id="AR_8" data-ob-template="elmundo"></div>
+                        <div class="OUTBRAIN" data-src="http://www.elmundo.es/cataluna/2017/08/24/599eae6546163fc1168b460f.html" data-widget-id="AR_9" data-ob-template="elmundo"></div>
+                        <script type="text/javascript">
+                        (function() { if (jQuery && jQuery('script[src*="outbrain.js"]').length === 0) { try { var scriptEl = document.createElement('script');
+                                    scriptEl.type = 'text/javascript';
+                                    scriptEl.async = 'true';
+                                    scriptEl.src = 'http://widgets.outbrain.com/outbrain.js'; var targetEl = document.getElementsByTagName('script')[0];
+                                    targetEl.parentNode.insertBefore(scriptEl, targetEl); } catch (e) {}; } })();
+                        </script>
+                    </aside>
+                </div>
+                <div class="row content cols-70-30">
+                    <aside class="aside-tools floated-right-item">
+                        <div class="content-ad js_fixed">
+                            <div class="ad-item-300">
+                                <div id='div-gpt-ad-cataluna_n_rc_599eae6546163fc1168b460f' class="publicidad">
+                                    <script type='text/javascript'>
+                                    googletag.cmd.push(function() { googletag.display('div-gpt-ad-cataluna_n_rc_599eae6546163fc1168b460f'); });
+                                    </script>
+                                </div>
+                            </div>
+                        </div>
+                    </aside>
+                    <aside id="ancla_comentarios" class="comentarios aside-comments">
+                        <h3><i class="icon-comentarios_32_a"></i>
+<strong class="js-ueCommentsCounter" data-commentId="1451902" content="UserComments:100" itemprop="interactionCount">100</strong>
+Comentarios
+</h3>
+                        <article>
+                            <header>
+                                <span>5</span>
+                                <img class="avatar" alt src="https://e00-elmundo.uecdn.es/social/ugc/avatars/004/517/xlarge_4517073.png">
+                                <div itemprop="author" class="autor ">
+                                    Luis-on
+                                </div>
+                                <time content="2017-08-24" itemprop="dateCreated" datetime="2017-08-24T13:27:00+01:00">
+                                    <span class="fecha">24/08/2017</span>
+                                    <span class="hora">13:27 horas</span>
+                                </time>
+                            </header>
+                            <div itemprop="text" class="texto-comentario">
+                                <p>Y no se lo ocurrió enviar la información al CNI? esto cada vez es peor, es necesario que este cosejero de Interior de explicaciones a la ciudadanía y si no tomar las responsabilidades correspondientes, cada vez esta más claro que se pudo haber evitado pero la prepotencia de las autoridades catalanas y su afán de ser independiente nos han puesto en peligro a todos</p>
+                            </div>
+                        </article>
+                        <div class="comments-tool js-botonComentarios-599eae6546163fc1168b460f">
+                            <span>Ver <strong class="js-ueCommentsCounter" data-commentId="1451902">100</strong> comentarios
+<i class="icon-adelante_32_d" data-click-role="cambiarIconos"></i>
+<i class="icon-cerrar_32_d no-visible" data-click-role="cambiarIconos"></i>
+</span>
+                        </div>
+                        <script type="text/javascript">
+                        function ocultaMuestraCapa(divId) {
+                            if (document.getElementById(divId).style.display == 'none') {
+                                document.getElementById(divId).style.display = 'block';
+                            } else {
+                                document.getElementById(divId).style.display = 'none';
+                            }
+                        };
+                        (function() {
+                            if (typeof jQuery != 'undefined') {
+                                var commentsId = '#js_599eae6546163fc1168b460f',
+                                    containerSelector = '.comentarios.aside-comments',
+                                    divSelector = '.texto-comentario',
+                                    textElement = 'p',
+                                    linkClass = 'leer-mas-btn',
+                                    spanClass = 'txt'
+                                gradientClass = 'gradient';
+                                jQuery(commentsId + ' ' + containerSelector)
+                                    .find(divSelector + ' ' + textElement).map(
+                                        function() {
+                                            try {
+                                                var divContainer = jQuery(this).parent(divSelector);
+                                                var containerMaxSize = divContainer.css('max-height')
+                                                    .split('px')[0];
+                                                if (jQuery(this).height() > containerMaxSize) {
+                                                    divContainer.append(
+                                                        jQuery('<a>', {
+                                                            class: linkClass,
+                                                            click: function(event) {
+                                                                event.preventDefault();
+                                                                var spanTxt = jQuery(this).find('span.' +
+                                                                    spanClass);
+                                                                if (divContainer.css('max-height') !== 'none') {
+                                                                    divContainer.css('max-height', 'none');
+                                                                    jQuery(this).css('position', 'relative')
+                                                                    spanTxt.html('cerrar');
+                                                                } else {
+                                                                    divContainer.css('max-height',
+                                                                        containerMaxSize + 'px');
+                                                                    jQuery(this).css('position', 'absolute')
+                                                                    spanTxt.html('leer más');
+                                                                }
+                                                            }
+                                                        }).append(
+                                                            jQuery('<span>', { class: gradientClass }),
+                                                            jQuery('<span>', {
+                                                                class: spanClass,
+                                                                html: 'leer más'
+                                                            })
+                                                        )
+                                                    )
+                                                }
+                                            } catch (e) {
+                                                console.error('Error in most valued comments');
+                                            }
+                                        }
+                                    );
+                            }
+                        })();
+                        </script>
+                    </aside>
+                </div>
+                <div class="lightbox_shadow no-visible js-popup"></div>
+
+
+
+				<div class="right-panel comments-panel js-right-panel show" style="right: 0px; opacity: 1;">
+				    <div class="fixed-button" style="position: fixed;"><a href="#" class="boton-volver"><i class="icon-atras_32_d"></i><span>Volver a la noticia</span> 'El Govern, sobre el aviso "informal" de la Policía belga: "Nunca nos constó que Es Satty fuera peligroso"'</a></div>
+				   <!--  <script type="text/javascript">
+				    var registroCookie = true;
+				    </script> -->
+				    <section class="comentarios comentarios-retro js-comentarios" itemprop="comment" itemscope="itemscope" itemtype="http://schema.org/Comment">
+				        <div class="em-comments-container-body js-comments-container" data-commentid="1451902" data-csp="1403">
+				            <section class="comentarios comentarios-retro js-comentarios" itemprop="comment" itemscope="itemscope" itemtype="http://schema.org/Comment">
+				                <h3 class="js-numComments"><i class="icon-comentarios_32_a"></i><strong itemprop="interactionCount">98</strong> Comentarios</h3>
+				                <div class="right-panel login-comentar js-comentar show" style="position: fixed;">
+				                    <div class="js-cajaComentario">
+				                        <form class="comentar" name="formulario_comentar_comentarios" method="post">
+				                            <textarea data-max-height="130" rows="1" name="texto" placeholder="Escriba aquí su comentario" required="required"></textarea>
+				                            <input type="submit" class="boton" value="PUBLICAR" name="enviar">
+				                        </form>
+				                    </div>
+				                </div>
+				                <div id="listado_comentarios" class="js-tabs">
+				                    <nav>
+				                        <ul>
+				                            <li class="seleccionado" data-name="all"><a href="#" title="Ver todos los mensajes">Todos</a></li>
+				                            <li class="mejor-valorados" data-name="mvc"><a href="#" title="Ver los mensajes mas valorados">Más valorados</a></li>
+				                        </ul>
+				                    </nav>
+				                    <section id="comentarios-usuarios" class="comentarios-usuarios js-comments-list-container">
+				                        <article>
+				                            <header>
+				                                <span><a rel="nofollow" title="Responder mensaje" href="#" class="js-quote">98</a></span>
+				                                <img class="avatar" alt="" src="https://e00-elmundo.uecdn.es/registro/v2/images/avatar/avatar.svg">
+				                                <div class="autor" itemprop="author">
+				                                    <span class="alias">l_astur</span>
+				                                </div>
+				                                <time>
+				                                    <span class="fecha">24/08/2017</span>
+				                                    <span class="hora">14:28</span>
+				                                </time>
+				                            </header>
+				                            <div itemprop="text" class="texto-comentario">
+				                                <p>Por si fuera poco ese caso omiso que hicieron a los avisos de la CIA y de la policía belga, confundieron lo del chalet de Alcanar con una simple explosión de gas. Hasta la juez encargada del caso les dijo, viendo tantas bombonas de butano, si no se trataría de la preparación de in atentado. Ni caso le hicieron. Y, por supuesto, no permitieron de que la guardia civil echara un vistazo. Por mucho que el govern intente manipular la información, al final se sabe la verdad.</p>
+				                            </div>
+				                            <ul class="comentario-acciones">
+				                                <li>
+				                                    <a rel="nofollow" class="comenta js-quote" title="Responder al usuario" href="#comentar"><span>Responder</span></a>
+				                                </li>
+				                                <li class="valorar js-rating">
+				                                    <a rel="nofollow" class="valorar-positivo js-rate-positive" title="Positivo" href="#"><span><i class="icon-like_32_e"></i>+</span></a>
+				                                    <a rel="nofollow" class="valorar-negativo js-rate-negative" title="Negativo" href="#"><span><i class="icon-dislike_32_f"></i>-</span></a>
+				                                </li>
+				                                <li class="js-report">
+				                                    <a rel="nofollow" class="denunciar" href="#"><span><i class="icon-denunciar_32_f"></i><span>Denunciar</span></span></a>
+				                                </li>
+				                            </ul>
+				                        </article>
+				                        <article>
+				                            <header>
+				                                <span><a rel="nofollow" title="Responder mensaje" href="#" class="js-quote">97</a></span>
+				                                <img class="avatar" alt="" src="https://e00-elmundo.uecdn.es/registro/v2/images/avatar/avatar.svg">
+				                                <div class="autor" itemprop="author">
+				                                    <span class="alias">javilan88</span>
+				                                </div>
+				                                <time>
+				                                    <span class="fecha">24/08/2017</span>
+				                                    <span class="hora">14:21</span>
+				                                </time>
+				                            </header>
+				                            <div itemprop="text" class="texto-comentario">
+				                                <p>a la vez que piden estar en contacto directo con Europol y demás policías europeos, les llega información y pasan de ella. no informan a Policía Nacional ni Guardia Civil y pasan estas cosas. pero eh, que ellos lo han hecho todo estupendamente...</p>
+				                            </div>
+				                            <ul class="comentario-acciones">
+				                                <li>
+				                                    <a rel="nofollow" class="comenta js-quote" title="Responder al usuario" href="#comentar"><span>Responder</span></a>
+				                                </li>
+				                                <li class="valorar js-rating">
+				                                    <a rel="nofollow" class="valorar-positivo js-rate-positive" title="Positivo" href="#"><span><i class="icon-like_32_e"></i>+</span></a>
+				                                    <a rel="nofollow" class="valorar-negativo js-rate-negative" title="Negativo" href="#"><span><i class="icon-dislike_32_f"></i>-</span></a>
+				                                </li>
+				                                <li class="js-report">
+				                                    <a rel="nofollow" class="denunciar" href="#"><span><i class="icon-denunciar_32_f"></i><span>Denunciar</span></span></a>
+				                                </li>
+				                            </ul>
+				                        </article>
+				                        <article>
+				                            <header>
+				                                <span><a rel="nofollow" title="Responder mensaje" href="#" class="js-quote">96</a></span>
+				                                <img class="avatar" alt="" src="https://e00-elmundo.uecdn.es/social/ugc/avatars/004/453/xlarge_4453837.png">
+				                                <div class="autor" itemprop="author">
+				                                    <span class="alias">GiovanniDiAustria</span>
+				                                </div>
+				                                <time>
+				                                    <span class="fecha">24/08/2017</span>
+				                                    <span class="hora">14:20</span>
+				                                </time>
+				                            </header>
+				                            <div itemprop="text" class="texto-comentario">
+				                                <p>@Esvalgo <a rel="nofollow" class="ancla_referencia">#1<span class="referencia" style="display: none"><i class="comentario-cerrar"><span>Cerrar</span></i></span></a> No tiene sentido lo que dices. Hay un organismo estatal para compartir información entre policías.</p>
+				                            </div>
+				                            <ul class="comentario-acciones">
+				                                <li>
+				                                    <a rel="nofollow" class="comenta js-quote" title="Responder al usuario" href="#comentar"><span>Responder</span></a>
+				                                </li>
+				                                <li class="valorar js-rating">
+				                                    <a rel="nofollow" class="valorar-positivo js-rate-positive" title="Positivo" href="#"><span><i class="icon-like_32_e"></i>+</span></a>
+				                                    <a rel="nofollow" class="valorar-negativo js-rate-negative" title="Negativo" href="#"><span><i class="icon-dislike_32_f"></i>-</span></a>
+				                                </li>
+				                                <li class="js-report">
+				                                    <a rel="nofollow" class="denunciar" href="#"><span><i class="icon-denunciar_32_f"></i><span>Denunciar</span></span></a>
+				                                </li>
+				                            </ul>
+				                        </article>
+				                        <article>
+				                            <header>
+				                                <span><a rel="nofollow" title="Responder mensaje" href="#" class="js-quote">95</a></span>
+				                                <img class="avatar" alt="" src="https://e00-elmundo.uecdn.es/social/ugc/avatars/003/741/xlarge_3741304.png">
+				                                <div class="autor" itemprop="author">
+				                                    <span class="alias">Josema16</span>
+				                                </div>
+				                                <time>
+				                                    <span class="fecha">24/08/2017</span>
+				                                    <span class="hora">14:20</span>
+				                                </time>
+				                            </header>
+				                            <div itemprop="text" class="texto-comentario">
+				                                <p>El Ridículo comienza a aflorar....dónde se meterán los Puigdemont...Tienen a la Comunidad como las finanzas....hecha unos zorros.Haber si hay un Juez que los sienta por prevaricar...</p>
+				                            </div>
+				                            <ul class="comentario-acciones">
+				                                <li>
+				                                    <a rel="nofollow" class="comenta js-quote" title="Responder al usuario" href="#comentar"><span>Responder</span></a>
+				                                </li>
+				                                <li class="valorar js-rating">
+				                                    <a rel="nofollow" class="valorar-positivo js-rate-positive" title="Positivo" href="#"></a>
+				                                    <a rel="nofollow" class="valorar-negativo js-rate-negative" title="Negativo" href="#"><span><i class="icon-dislike_32_f"></i>-</span></a>
+				                                </li>
+				                                <li class="js-report">
+				                                    <a rel="nofollow" class="denunciar" href="#"><span><i class="icon-denunciar_32_f"></i><span>Denunciar</span></span></a>
+				                                </li>
+				                            </ul>
+				                        </article>
+				                        <article>
+				                            <header>
+				                                <span><a rel="nofollow" title="Responder mensaje" href="#" class="js-quote">94</a></span>
+				                                <img class="avatar" alt="" src="https://e00-elmundo.uecdn.es/registro/v2/images/avatar/avatar.svg">
+				                                <div class="autor" itemprop="author">
+				                                    <span class="alias">marinaramirezreque</span>
+				                                </div>
+				                                <time>
+				                                    <span class="fecha">24/08/2017</span>
+				                                    <span class="hora">14:19</span>
+				                                </time>
+				                            </header>
+				                            <div itemprop="text" class="texto-comentario">
+				                                <p>@JaimeSH <a rel="nofollow" class="ancla_referencia">#15<span class="referencia" style="display: none"><i class="comentario-cerrar"><span>Cerrar</span></i>La policía belga se tendría que haber puesto en contacto con el Ministerio del Interior español. Se demuestra una vez más la descoordinación manifiesta de los cuerpos y fuerzas de seguridad del Estado. No colaboran suficientemente entre ellos, muchas veces por esa estúpida actitud de otorgarse galardones propios o reivindicar gestos nacionalistas absurdos. Contra el terrorismo sólo debe existir unidad de los mandos policiales, sean nacionales, autonómicos, locales o del ejército. Un mando único y una fuerza común.</span></a> Los Mossos tenian que haber comunicado al Ministerio del Interior este dato,y aparte de la descoordinación y la desidia de los Mossos a la hora de dejar investigar en la "casa laboratorio"</p>
+				                            </div>
+				                            <ul class="comentario-acciones">
+				                                <li>
+				                                    <a rel="nofollow" class="comenta js-quote" title="Responder al usuario" href="#comentar"><span>Responder</span></a>
+				                                </li>
+				                                <li class="valorar js-rating">
+				                                    <a rel="nofollow" class="valorar-positivo js-rate-positive" title="Positivo" href="#"><span><i class="icon-like_32_e"></i>+</span></a>
+				                                    <a rel="nofollow" class="valorar-negativo js-rate-negative" title="Negativo" href="#"><span><i class="icon-dislike_32_f"></i>-</span></a>
+				                                </li>
+				                                <li class="js-report">
+				                                    <a rel="nofollow" class="denunciar" href="#"><span><i class="icon-denunciar_32_f"></i><span>Denunciar</span></span></a>
+				                                </li>
+				                            </ul>
+				                        </article>
+				                        <article>
+				                            <header>
+				                                <span><a rel="nofollow" title="Responder mensaje" href="#" class="js-quote">93</a></span>
+				                                <img class="avatar" alt="" src="https://e00-elmundo.uecdn.es/registro/v2/images/avatar/avatar.svg">
+				                                <div class="autor" itemprop="author">
+				                                    <span class="alias">Sorriano19</span>
+				                                </div>
+				                                <time>
+				                                    <span class="fecha">24/08/2017</span>
+				                                    <span class="hora">14:21</span>
+				                                </time>
+				                            </header>
+				                            <div itemprop="text" class="texto-comentario">
+				                                <p>Son unos irresponsables y sinvergüenzas ,debería haber dimisiones y ceses espero que los familiares de las víctimas pongan sendas denumcias</p>
+				                            </div>
+				                            <ul class="comentario-acciones">
+				                                <li>
+				                                    <a rel="nofollow" class="comenta js-quote" title="Responder al usuario" href="#comentar"><span>Responder</span></a>
+				                                </li>
+				                                <li class="valorar js-rating">
+				                                    <a rel="nofollow" class="valorar-positivo js-rate-positive" title="Positivo" href="#"><span><i class="icon-like_32_e"></i>+</span></a>
+				                                    <a rel="nofollow" class="valorar-negativo js-rate-negative" title="Negativo" href="#"><span><i class="icon-dislike_32_f"></i>-</span></a>
+				                                </li>
+				                                <li class="js-report">
+				                                    <a rel="nofollow" class="denunciar" href="#"><span><i class="icon-denunciar_32_f"></i><span>Denunciar</span></span></a>
+				                                </li>
+				                            </ul>
+				                        </article>
+				                        <article>
+				                            <header>
+				                                <span><a rel="nofollow" title="Responder mensaje" href="#" class="js-quote">92</a></span>
+				                                <img class="avatar" alt="" src="https://e00-elmundo.uecdn.es/registro/v2/images/avatar/avatar.svg">
+				                                <div class="autor" itemprop="author">
+				                                    <span class="alias">l_astur</span>
+				                                </div>
+				                                <time>
+				                                    <span class="fecha">24/08/2017</span>
+				                                    <span class="hora">14:16</span>
+				                                </time>
+				                            </header>
+				                            <div itemprop="text" class="texto-comentario">
+				                                <p>Poco a poco la verdad sale a la luz. Y esa verdad no deja en buen lugar a la policía catalana. Porque el primer objetivo en la lucha antiterrorista, es evitar los atentados. La gestión policial de este caso fue buena, brillante si se quiere, DESPUÉS del atentado, pero a medida que se van conociendo los detalles, ha sido un desastre en la fase más importante, en la prevención. La CIA y la policía belga avisaron directamente a los mossos. Y todo indica que esos avisos, no sirvieron de nada.</p>
+				                            </div>
+				                            <ul class="comentario-acciones">
+				                                <li>
+				                                    <a rel="nofollow" class="comenta js-quote" title="Responder al usuario" href="#comentar"><span>Responder</span></a>
+				                                </li>
+				                                <li class="valorar js-rating">
+				                                    <a rel="nofollow" class="valorar-positivo js-rate-positive" title="Positivo" href="#"><span><i class="icon-like_32_e"></i>+</span></a>
+				                                    <a rel="nofollow" class="valorar-negativo js-rate-negative" title="Negativo" href="#"><span><i class="icon-dislike_32_f"></i>-</span></a>
+				                                </li>
+				                                <li class="js-report">
+				                                    <a rel="nofollow" class="denunciar" href="#"><span><i class="icon-denunciar_32_f"></i><span>Denunciar</span></span></a>
+				                                </li>
+				                            </ul>
+				                        </article>
+				                        <article>
+				                            <header>
+				                                <span><a rel="nofollow" title="Responder mensaje" href="#" class="js-quote">91</a></span>
+				                                <img class="avatar" alt="" src="https://e00-elmundo.uecdn.es/registro/v2/images/avatar/avatar.svg">
+				                                <div class="autor" itemprop="author">
+				                                    <span class="alias">nachoara</span>
+				                                </div>
+				                                <time>
+				                                    <span class="fecha">24/08/2017</span>
+				                                    <span class="hora">14:15</span>
+				                                </time>
+				                            </header>
+				                            <div itemprop="text" class="texto-comentario">
+				                                <p>@LoDigoYoMismo <a rel="nofollow" class="ancla_referencia">#10<span class="referencia" style="display: none"><i class="comentario-cerrar"><span>Cerrar</span></i>Que Europa se este llenando de musulmanes es por disenio. Cuando sean una minoria los que tengan empleo (hacia el 2040) que impedira que se vote masivamente a la izquierda? El miedo a los Musulmanes. Por eso estan aqui. Por eso sigien entrando y se les da toda clase de subsidios. Por eso se hacen Mezquitas y por eso no se les expulsa.</span></a> todos los musulmanes votan izquierda espabilao...por eso a los que les mola es al mezquitas que tú votas.. Comparten forma asamblearia (q en el fondo es dictadura),odio a occidente y cristanofobia.</p>
+				                            </div>
+				                            <ul class="comentario-acciones">
+				                                <li>
+				                                    <a rel="nofollow" class="comenta js-quote" title="Responder al usuario" href="#comentar"><span>Responder</span></a>
+				                                </li>
+				                                <li class="valorar js-rating">
+				                                    <a rel="nofollow" class="valorar-positivo js-rate-positive" title="Positivo" href="#"><span><i class="icon-like_32_e"></i>+</span></a>
+				                                    <a rel="nofollow" class="valorar-negativo js-rate-negative" title="Negativo" href="#"><span><i class="icon-dislike_32_f"></i>-</span></a>
+				                                </li>
+				                                <li class="js-report">
+				                                    <a rel="nofollow" class="denunciar" href="#"><span><i class="icon-denunciar_32_f"></i><span>Denunciar</span></span></a>
+				                                </li>
+				                            </ul>
+				                        </article>
+				                        <article>
+				                            <header>
+				                                <span><a rel="nofollow" title="Responder mensaje" href="#" class="js-quote">90</a></span>
+				                                <img class="avatar" alt="" src="https://e00-elmundo.uecdn.es/registro/v2/images/avatar/avatar.svg">
+				                                <div class="autor" itemprop="author">
+				                                    <span class="alias">Aufenbuch321</span>
+				                                </div>
+				                                <time>
+				                                    <span class="fecha">24/08/2017</span>
+				                                    <span class="hora">14:15</span>
+				                                </time>
+				                            </header>
+				                            <div itemprop="text" class="texto-comentario">
+				                                <p>La corrupción tampoco les consta.</p>
+				                            </div>
+				                            <ul class="comentario-acciones">
+				                                <li>
+				                                    <a rel="nofollow" class="comenta js-quote" title="Responder al usuario" href="#comentar"><span>Responder</span></a>
+				                                </li>
+				                                <li class="valorar js-rating">
+				                                    <a rel="nofollow" class="valorar-positivo js-rate-positive" title="Positivo" href="#"><span><i class="icon-like_32_e"></i>+</span></a>
+				                                    <a rel="nofollow" class="valorar-negativo js-rate-negative" title="Negativo" href="#"><span><i class="icon-dislike_32_f"></i>-</span></a>
+				                                </li>
+				                                <li class="js-report">
+				                                    <a rel="nofollow" class="denunciar" href="#"><span><i class="icon-denunciar_32_f"></i><span>Denunciar</span></span></a>
+				                                </li>
+				                            </ul>
+				                        </article>
+				                        <article>
+				                            <header>
+				                                <span><a rel="nofollow" title="Responder mensaje" href="#" class="js-quote">89</a></span>
+				                                <img class="avatar" alt="" src="https://e00-elmundo.uecdn.es/registro/v2/images/avatar/avatar.svg">
+				                                <div class="autor" itemprop="author">
+				                                    <span class="alias">luisjeme2008</span>
+				                                </div>
+				                                <time>
+				                                    <span class="fecha">24/08/2017</span>
+				                                    <span class="hora">14:15</span>
+				                                </time>
+				                            </header>
+				                            <div itemprop="text" class="texto-comentario">
+				                                <p>Da la impresión de que el Gobierno catalán hizo la vista gorda pensando que así no tendría atentados yihadistas en su territorio. La Oligarquía catalana es tan deleznable que no hay diccionario que contenga la palabra que los califique.</p>
+				                            </div>
+				                            <ul class="comentario-acciones">
+				                                <li>
+				                                    <a rel="nofollow" class="comenta js-quote" title="Responder al usuario" href="#comentar"><span>Responder</span></a>
+				                                </li>
+				                                <li class="valorar js-rating">
+				                                    <a rel="nofollow" class="valorar-positivo js-rate-positive" title="Positivo" href="#"><span><i class="icon-like_32_e"></i>+</span></a>
+				                                    <a rel="nofollow" class="valorar-negativo js-rate-negative" title="Negativo" href="#"><span><i class="icon-dislike_32_f"></i>-</span></a>
+				                                </li>
+				                                <li class="js-report">
+				                                    <a rel="nofollow" class="denunciar" href="#"><span><i class="icon-denunciar_32_f"></i><span>Denunciar</span></span></a>
+				                                </li>
+				                            </ul>
+				                        </article>
+				                    </section>
+				                    <ul id="subNavComentarios" class="js-button-next-page">
+				                        <li>
+				                            <a rel="nofollow" class="boton mas">Ver anteriores <i class="icon-abajo_16_d"></i></a>
+				                        </li>
+				                    </ul>
+				                </div>
+				            </section>
+				        </div>
+				        <!-- <script src="//e00-elmundo.uecdn.es/assets/uecomments/v1/ueComments.js"></script> -->
+				    </section>
+				</div>
+
+
+                <!-- <div class="right-panel comments-panel js-right-panel">
+                    <div class="fixed-button"><a href="#" class="boton-volver"><i class="icon-atras_32_d"></i><span>Volver a la noticia</span> 'El Govern, sobre el aviso &quot;informal&quot; de la Policía belga: &quot;Nunca nos constó que Es Satty fuera peligroso&quot;'</a></div>
+                    <script type="text/javascript">
+                    var registroCookie = true;
+                    </script>
+                    <section class="comentarios comentarios-retro js-comentarios" itemprop="comment" itemscope="itemscope" itemtype="http://schema.org/Comment">
+                        <div class="em-comments-container-body js-comments-container" data-commentId="1451902" data-csp="1403"></div>
+                        <script src="//e00-elmundo.uecdn.es/assets/uecomments/v1/ueComments.js"></script>
+                    </section>
+                </div> -->
+
+
+            </article>
+            <section class="row content row-layout"></section>
+            <section class="row content row-layout"></section>
+            <div class="content-ad">
+                <div class="ad-item-f2">
+                    <div id='div-gpt-ad-cataluna_n_f2_599eae6546163fc1168b460f' class="publicidad">
+                        <script type='text/javascript'>
+                        googletag.cmd.push(function() { googletag.display('div-gpt-ad-cataluna_n_f2_599eae6546163fc1168b460f'); });
+                        </script>
+                    </div>
+                </div>
+            </div>
+            <div class="content-ad">
+                <div class="ad-item-f3">
+                    <div id='div-gpt-ad-cataluna_n_f3_599eae6546163fc1168b460f' class="publicidad">
+                        <script type='text/javascript'>
+                        googletag.cmd.push(function() { googletag.display('div-gpt-ad-cataluna_n_f3_599eae6546163fc1168b460f'); });
+                        </script>
+                    </div>
+                </div>
+            </div>
+            <div class="content-ad">
+                <div class="ad-item-si js-sky">
+                    <div id='div-gpt-ad-cataluna_n_si_599eae6546163fc1168b460f' class="publicidad">
+                        <script type='text/javascript'>
+                        googletag.cmd.push(function() { googletag.display('div-gpt-ad-cataluna_n_si_599eae6546163fc1168b460f'); });
+                        </script>
+                    </div>
+                </div>
+            </div>
+            <div class="content-ad">
+                <div class="ad-item-sd js-sky">
+                    <div id='div-gpt-ad-cataluna_n_sd_599eae6546163fc1168b460f' class="publicidad">
+                        <script type='text/javascript'>
+                        googletag.cmd.push(function() { googletag.display('div-gpt-ad-cataluna_n_sd_599eae6546163fc1168b460f'); });
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+        jQuery(function() {
+            if (Comentarios) { window.Comments = new Comentarios({ botonesDesplegar: '.js-botonComentarios', newsId: "599eae6546163fc1168b460f" }); }
+            if (typeof jQuery.fn.RedesSociales === 'function') { jQuery('#js_599eae6546163fc1168b460f').find('.js_socialMedia').RedesSociales({ title: "El Govern, sobre el aviso \"informal\" de la Policía belga: \"Nunca nos constó que Es Satty fuera peligroso\"", img: "http://v.uecdn.es/p/108/thumbnail/entry_id/0_d79tes2x/width/657/type/2/bgcolor/000000/0_d79tes2x.jpg", url: "http://www.elmundo.es/cataluna/2017/08/24/599eae6546163fc1168b460f.html", summary: "", viaTwitter: 'elmundoes', urlCorreo: "http://www.elmundo.es/enviar/formulario_enviar_noticia.html?que_mundo=elmundo", sufijoAnalitica: '_1' }); }
+            if (typeof jQuery.fn.ElementoFijo === 'function') { jQuery('#js_599eae6546163fc1168b460f').find('.js_fixed').ElementoFijo({ elementosAnteriores: ['.nav-container', '.breadcrumbs '], elementoDesdeFixed: '.content', elementoHastaFixed: '.end-fixed', minWidthFijo: 768 }); }
+        });
+        </script>

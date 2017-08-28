@@ -1,0 +1,62 @@
+{{!-- layouts/base.hbs --}}
+
+<!doctype html>
+<html>
+  <head>
+   {{!--  <title>
+    {{#if title}}
+        {{title}}
+      {{else}}
+        Base Page Title
+    {{/if}}
+    </title> --}}
+    <link rel="stylesheet" href="styles/main.min.css">
+    
+    <head>
+      {{#> head-block }}
+        {{!-- Custom  content per page could be added. --}}
+      {{/head-block}} 
+    </head>
+
+  <body>
+
+   {{#> body-scripts-block }}
+      {{!-- Custom scripts per page can be added. --}}
+      {{> includes/body-scripts }}
+   {{/body-scripts-block}}
+    
+   
+    <header class="site-header js-cnav-header main-section-header  site-header-news inside" data-ue-model>
+      {{#> header-block }}
+        {{!-- header content goes here. --}}
+      {{/header-block}}
+    </header>
+
+    <main class="main news js_navContinua" data-ue-contenido id="js_599eae6546163fc1168b460f">
+      {{#> main-block }}
+        {{!-- main content goes here. --}}
+        {{> includes/main }}
+      {{/main-block}}
+    </main>
+
+    {{#> featured-links-block }}
+      {{!-- featured links goes here. --}}
+      {{> includes/featured-links }}
+    {{/featured-links-block}}
+
+    <footer class="site-footer horizontal" itemscope itemtype="http://schema.org/Organization">
+      {{#> footer-block }}
+          {{!-- footer content goes here. --}}
+          {{> includes/footer }}
+      {{/footer-block}}
+    </footer>
+    
+    <script src="javascripts/main.js"></script>
+
+    {{#> scripts-block }}
+      {{!-- Custom scripts per page can be added. --}}
+      {{> includes/scripts }}
+    {{/scripts-block}}
+  </body>
+
+</html>
