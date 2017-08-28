@@ -146,8 +146,23 @@
                     </aside>
                 </div>
                 <div class="row content">
-                    <a href="#ancla_comentarios" class="comments-btn js-botonComentarios-59a31302e5fdea71458b459e"><span class="left"><i class="icon-comments_24x20_a"></i><strong>72 </strong></span><span class="right"><strong>Ver comentarios </strong><i class="icon-forward_8x16_a"></i></span></a>
+                    
+
+                    <a href="#ancla_comentarios" class="comments-btn js-botonComentarios-59a31302e5fdea71458b459e">
+                        <span class="left"><i class="icon-comments_24x20_a"></i><strong>72 </strong></span>
+                        <span class="right"><strong>Ver comentarios </strong><i class="icon-forward_8x16_a"></i></span>
+                    </a>
+
+                    
+
                     <div class="right-panel comments-panel js-right-panel" data-mobile="true" style="opacity: 1;">
+                    {{#> comments-block }}
+                        {{!-- comments content goes here. --}}
+                        {{> includes/ue-comments/ue-comments }}
+                    {{/comments-block}}
+                    </div>
+
+                    {{!-- <div class="right-panel comments-panel js-right-panel" data-mobile="true" style="opacity: 1;">
                         <div class="fixed-button">
                             <a href="#" class="boton-volver"><i class="icon-atras_32_d"></i> <span>Comentarios:</span> 'Las familias, un escollo para integrar al alumno musulmán'</a>
                             <i class="ellipsis"></i>
@@ -466,8 +481,10 @@
                             </div>
                             <!-- <script src="//e00-elmundo.uecdn.es/assets/uecomments/v1/ueComments.js"></script> -->
                         </section>
-                    </div>
+                    </div> --}}
                   
+
+
                 </div>
                 <aside class="aside-ad floated-left-item">
                     <div class="content-ad">
