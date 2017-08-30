@@ -1,26 +1,189 @@
-<nav class="ue-c-comments_nav">
-    <a href="#">
-        <i class="icon-arrow-previous"></i>
-        <span>Volver a la noticia :</span> 
-        'Honda o Alonso'
-    </a>
-</nav>
+
 <div class="ue-c-comments">
 
-    <form></form>
+        <div class="ue-c-comments__thread">
+            
+            <div class="ue-c-comment has-replies">
 
-    <nav class="ue-c-comments_tabs">
-        <h4>67 Comentarios</h4>
-    </nav>
+                <div class="ue-c-comment__user">
+                    <img class="ue-c-comment__user-avatar" src="https://e00-marca.uecdn.es/registro/v2/images/avatar/avatar.svg" />
+                    <span class="ue-c-comment__user-name">krlospeka</span>
+                </div>
 
-    <div class="ue-c-comments_list js-comments-list" id="">
+                <strong class="ue-c-comment__number">
+                    <a title="" href="#">#73</a>
+                </strong>
 
-    </div>
+                <time class="ue-c-comment__meta" content="2017-08-28">
+                    <span class="ue-c-comment__meta-date">28/08/2017</span>
+                    <span class="ue-c-comment__meta-time">13:24</span>
+                </time>
 
+                <p class="ue-c-comment__discussion">
+                    @caracartucho 
+
+                    <a href="ue-c-comment__mention">
+                        #126
+                        <span class="ue-c-comment__mention-display is-hidden">
+                            <span class="ue-c-comment__mention--close">Cerrar</span>
+                            Que se salgan los independentistas catalanes con la suya es más fácil que te publiquen un comentario en "El Mundo"...
+                        </span>
+                    </a> 
+
+                    A veces tardan mucho, y cuando los publican ya han quitado la noticia... A mí no me gusta este sistema de comentarios... Me gustaría poder ver en una página enlaces a todos mis comentarios y las respuestas a los mismos, ser notificado de las respuestas, y que la navegación por los comentarios fuera mucho más fluida y no se tardara una eternidad en llegar a los primeros. La verdad es que los competidores suelen tener mejores sistemas, lo que me joroba bastante porque las discusiones de El Mundo suelen ser muy interesantes :(
+                </p>
+
+                <ul class="ue-c-comment__tools">
+
+                    <li class="ue-c-comment__report">
+                        <span class="ue-c-comment__report-icon">Denunciar</span>
+                        <span class="ue-c-comment__report-message is-hidden">Gracias. Revisaremos tu aviso de mal comportamiento.</span>
+                    </li>
+
+                    <li class="ue-c-comment__votes">
+                        <ul>
+                            <li><span>Valorar:</span></li>
+                            <li class="ue-c-comment__vote is-positive"><a title="Positivo" href="#">Positivo</a></li>
+                            <li class="ue-c-comment__vote is-negative"><a title="Negativo" href="#">Negativo</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a class="ue-c-comment__reply" title="" href="#">Responder</a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="ue-c-comments__thread-pagination">
+                <button class="ue-c-comments__pagination-btn">VER ANTERIORES</button>
+            </div>
+
+
+        </div>
+
+
+        <div class="ue-c-comment-box">
+
+            <form class="ue-c-form" name="" method="">
+                <textarea class="ue-c-form__textarea" data-max-height="130" rows="1" name="texto" placeholder="Escriba aquí su comentario" required="required"></textarea>
+                <input class="ue-c-form__input is-button" type="submit" value="" name="">
+            </form>
+
+        </div>
+
+
+        <div class="right-panel login-comentar js-comentar show" style="position: fixed;">        
+            <div class="js-cajaComentario">
+                <form class="comentar" name="formulario_comentar_comentarios" method="post">
+                    <textarea data-max-height="130" rows="1" name="texto" placeholder="Escriba aquí su comentario" required="required"></textarea>
+                    <input type="submit" class="boton" value="PUBLICAR" name="enviar">
+                </form>
+            </div>
+        </div>
+
+         {{!-- <div class="ue-c-signin">
+                                <div id="login">
+                                    <div class="js-cajaComentario no-visible">
+                                        <div id="cajaComentario">
+                                            <div id="izquierda">
+                                                <div id="enviarComentario">
+                                                    <form name="formulario_comentar_comentarios" id="formulario_comentar_comentarios" method="post">
+                                                        <input type="hidden" name="opcion" value="1" />
+                                                        <input type="hidden" name="noticia" value="3198349" />
+                                                        <input type="hidden" name="portal" value="5" />
+                                                        <p class="avisos">
+                                                            <input type="checkbox" id="formulario_comentar_comentarios_reglas" value="S" name="reglas" /><a href="http://www.marca.com/corporativo/aviso-legal.html" class="reglas" target="_blank">Acepto las reglas de participación</a></p>
+                                                        <textarea rows="1" name="texto" class="js-comments-comment-txt" id="formulario_comentar_comentarios_texto" onfocus="if(this.value=='Déjanos tu comentario') value='';" onblur="if(this.value=='') value='Déjanos tu comentario';">Déjanos tu comentario</textarea>
+                                                        <input type="button" onclick="javascript:enviarComentario(this)" class="boton" id="enviar" value="Publicar" name="enviar" />
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="js-cajaLogin ">
+                                        <div id="validacion">
+                                            <button class="registro-login-button button js-loginClick" ue-attr-csp="673">Iniciar sesión para participar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> --}}
 </div>
 
+{{!-- 
+<h1>Top rated craft beers</h1>
+<div id="tabs">
+    <ul>
+        <li><a href="#ipa">India Pale Ale (IPA)</a></li>
+        <li><a href="#gueuze">Gueuze</a></li>
+        <li><a href="#imperial-stout">Imperial Stout</a></li>
+    </ul>
+    <div>
+        <h2 id="ipa">India Pale Ale (IPA)</h2>
+        <ol>
+            <li><strong>Hill Farmstead:</strong> Susan</li>
+            <li><strong>Trillium:</strong> Melcher Street - Double Dry Hopped</li>
+            <li><strong>Tree House:</strong> Julius</li>
+            <li><strong>AleSmith:</strong> IPA</li>
+            <li><strong>Alchemist:</strong> Focal Banger</li>
+            <li><strong>Grassroots:</strong> Legitimacy</li>
+            <li><strong>Tree House:</strong> Alter Ego</li>
+            <li><strong>Bells:</strong> Two Hearted Ale</li>
+            <li><strong>New England:</strong> Fuzzy Baby Ducks IPA</li>
+            <li><strong>Ballast Point:</strong> Sculpin IPA</li>
+        </ol>
+    </div>
+    <div>
+        <h2 id="gueuze">Gueuze</h2>
+        <ol>
+            <li><strong>3 Fonteinen:</strong> Zenne y Frontera</li>
+            <li><strong>3 Fonteinen:</strong> Oude Geuze Vintage</li>
+            <li><strong>3 Fonteinen:</strong> Oude Geuze Golden Blend</li>
+            <li><strong>Bullfrog:</strong> Le Roar Grrrz</li>
+            <li><strong>Oude (Gueuze Tilquin):</strong> à l’Ancienne</li>
+            <li><strong>Girardin:</strong> Gueuze Black Label</li>
+            <li><strong>Cantillon:</strong> 50°N-4°E</li>
+            <li><strong>3 Fonteinen:</strong> Oude Geuze</li>
+            <li><strong>Cantillon:</strong> Lou Pepe Gueuze</li>
+            <li><strong>Lindemans:</strong> Oude Gueuze Cuvée René Special Blend 2010</li>
+        </ol>
+    </div>
+    <div>
+        <h2 id="imperial-stout">Imperial Stout</h2>
+        <ol>
+            <li><strong>Toppling Goliath:</strong> Mornin’ Delight</li>
+            <li><strong>Three Floyds:</strong> Dark Lord Russian Imperial Stout (Bourbon Barrel Aged)</li>
+            <li><strong>AleSmith:</strong> Speedway Stout - Bourbon Barrel Aged</li>
+            <li><strong>Three Floyds:</strong> Dark Lord Russian Imperial Stout (Bourbon Vanilla Bean)</li>
+            <li><strong>Founders:</strong> Backstage Series # 2: CBS (Canadian Breakfast Stout)</li>
+            <li><strong>AleSmith:</strong> Speedway Stout</li>
+            <li><strong>Cigar City:</strong> Hunahpu’s Imperial Stout</li>
+            <li><strong>Bells:</strong> Expedition Stout</li>
+            <li><strong>Three Floyds:</strong> Dark Lord Russian Imperial Stout</li>
+            <li><strong>Founders:</strong> KBS (Kentucky Breakfast Stout)</li>
+        </ol>
+    </div>
+</div> --}}
 
-
+{{!-- 
+<div class="tabs-content">
+    <ul class="tab-breadcrumb-list js-breadcrumbChildren js-breadcrumb-submenu">
+        <li data-section="previa" class="active">
+            <a title="Previa" href="../pre-match.html">Previa</a>
+        </li>
+        <li data-section="directo">
+            <a title="Directo" href="../during-match.html">Directo</a>
+        </li>
+        <li data-section="statistics">
+            <a title="Estadísticas" href="../match-statistic.html">Estadísticas</a>
+        </li>
+        <li data-section="photos">
+            <a title="Fotos" href="../match-photos.html">Fotos</a>
+        </li>
+    </ul>
+</div> --}}
 
 {{!-- 
 
