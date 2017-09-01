@@ -1,12 +1,10 @@
 <div class="ue-c-tabs">
 	<ul class="ue-c-tabs-list">
-	    <li class="ue-c-tabs-list__tab" data-section="all"><a title="Todos los comentarios" href="#all">Todos</a></li>
+	    <li class="ue-c-tabs-list__tab is-selected" data-section="all"><a title="Todos los comentarios" href="#all">Todos</a></li>
 	    <li class="ue-c-tabs-list__tab" data-section="most-valued"><a title="Comentarios más valorados" href="#most-valued">Más valorados</a></li>
+	    <li class="ue-c-tabs-list__tab" data-section="mentions"><a title="Te mencionan" href="#mentions">Te mencionan</a></li>
 	</ul>
 	<div class="ue-c-tabs__panel">
-		{{#> comments-block }}
-            {{!-- comments content goes here. --}}
-            {{> includes/ue-comments/ue-comments }}
-        {{/comments-block}}
+		{{> includes/ue-comments/ue-comments }}
 	</div>
 </div>

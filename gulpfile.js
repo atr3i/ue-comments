@@ -33,9 +33,12 @@ gulp.task('build-css', ['clean'], function() {
   	  		cascade: false
 
   	     }))
-  	  	.pipe(sass().on('error', sass.logError))
+  	  	.pipe(sass({
+          includePaths: require('node-normalize-scss').includePaths
+        }).on('error', sass.logError))
+        
   	  	.pipe(concat('main.min.css'))
-      	.pipe(cssmin())
+      	//.pipe(cssmin())
 	  .pipe(sourcemaps.write('./maps'))
 
       .pipe(gulp.dest('build/styles'));

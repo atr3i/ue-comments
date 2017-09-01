@@ -1,0 +1,64 @@
+<div class="ue-c-comment__form">
+    <div class="ue-c-comment__form-publish">
+        <div class="ue-c-form__message">Gracias por tu aportación</div>
+        <form class="ue-c-form" name="comment-box" action="#">
+            <label for="comment">Comentar:</label>
+            <textarea class="ue-c-textarea" name="comment" id="comment" placeholder="Escriba aquí su comentario" autocorrect="on" required="" autofocus=""></textarea>
+            <input class="ue-c-input is-button" type="submit" name="publish" value="Publicar">
+        </form>
+    </div>
+    <div class="ue-c-comment__form-verification">
+        <form class="ue-c-form" name="comment-verification" action="#">
+            <label class="ue-c-form__message" for="captcha">
+                Introduzca el código que aparece en la imagen. Si no lo ve bien, pinche <a rel="nofollow" title="Cargar otra imagen" href="#">aquí</a> para mostrar otro. 
+                <button class="ue-c-button--link" onclick="" data-modal-target="#help">(¿Para que sirve este código?)</a>
+                <div data-modal id="help" class="ue-c-modal" tabindex="-1">
+                    <button class="ue-c-modal--close" type="button" data-modal-close data-modal-primary-focus aria-label="close modal">
+                        Cerrar
+                    </button>
+                    <strong class="ue-c-modal__title">Código de seguridad</strong>
+                    Esos son los caracteres que debes introducir. Esta medida de control nos permite impedir que nadie envíe comentarios de forma masiva a través de un sistema automático.
+                </div>
+            </label>
+            <img src="http://www.elmundo.es/servicios/noticias/scroll/comentarios/comunidad/captcha.jpg?1504083523171" id="captchaComentarios">
+            <input class="ue-c-input" type="text" name="captcha" maxlength="6" required="" autocapitalize="off">
+            <input class="ue-c-input is-button" type="submit" name="submit" value="Enviar">
+        </form>
+    </div>
+</div>
+
+{{!-- 
+<div id="login">
+<div class="js-cajaComentario "><div id="enviarCaptcha">
+<form name="formulario_comentar_comentarios" id="formulario_comentar_comentarios" method="post" onsubmit="return false;">
+<div class="imagenCaptcha">
+<!-- ##IBEXCLU --> <img src="/servicios/noticias/comentarios/comunidad/captcha.jpg?tmp=1504261384427" id="captchaComentarios">
+<!-- ##FBEXCLU --> </div>
+<div class="txtCaptcha">
+<label for="captcha">
+Introduce el código que aparece en la imagen. No lo veo bien <a href="javascript:recargarCaptcha();">mostrar otro</a>.
+<a class="ayuda" onclick="javascript:mostrarAyudaCaptcha();return false;" href="#">(¿Para que sirve este código?)</a>
+</label>
+<div id="explicacionCodigo" style="display: block;">
+<p class="cerrar">
+<a onclick="javascript:mostrarAyudaCaptcha();return false;" href="#">|X| cerrar</a>
+</p>
+<p>
+<strong>Código de seguridad</strong>
+Esos son los caracteres que debes introducir. Esta medida de control nos permite impedir que nadie envíe comentarios de forma masiva a través de un sistema automático.
+</p>
+</div>
+</div>
+<input type="hidden" name="opcion" value="2">
+<input type="hidden" name="noticia" value="3199341">
+<input type="hidden" name="portal" value="5">
+<input type="text" class="captcha" name="captcha" value="" maxlength="6" onkeyup="if (event.keyCode==13) enviarCaptchaComentario(this);">
+<input id="enviar" class="boton" type="button" onclick="javascript:enviarCaptchaComentario(this);" value="Enviar" name="enviar">
+</form>
+</div></div>
+<div class="js-cajaLogin no-visible">
+<div id="validacion">
+<button class="registro-login-button button js-loginClick" ue-attr-csp="673">Iniciar sesión para participar</button>
+</div>
+</div>
+</div> --}}

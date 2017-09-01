@@ -1,0 +1,189 @@
+// Modificadores:
+//
+// .has-replies
+// .has-mention
+// .is-positive
+// .is-negative
+// .is-hidden
+// .is-visible
+
+.ue-c-comments{
+
+	&__title {
+		font-weight: bold;
+		font-size: 18px;
+		padding: 10px;
+	}
+
+	&__count {
+		position: relative;
+		padding-left: 2rem;
+	}
+
+	&__count::before {
+		content: '';
+	    display: block;
+	    width: 20px;
+	    height: 13px;
+	    background: black;
+	    border-radius: 1px;
+	    position: absolute;
+	    top: 5px;
+	    left: 0;
+	    margin-right: 3px;
+	}
+
+	&__count::after {
+		content: '';
+	    display: block;
+	    width: 6px;
+	    height: 6px;
+	    background: black;
+	    transform: rotate(45deg);
+	    position: absolute;
+	    bottom: 3px;
+	    left: 7px;
+	}
+
+	&__thread {
+
+		padding: 15px;
+
+	}
+}
+
+.ue-c-comment {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	&__header {
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+		align-items: center;
+		border-bottom: 1px solid grey;
+	}
+
+	&__user {
+		
+	}
+
+	&__avatar {
+		
+	}
+
+	&__name {
+
+	}
+
+	&__number {
+		font-size: 24px;
+	}
+
+	&__meta {
+		font-size: 12px;
+		display: flex;
+    	flex-grow: 1;
+    	flex-direction: column;
+	}
+
+	&__date {
+
+	}
+
+	&__time {
+
+	}
+
+	&__discussion {
+		font-size: 16px;
+	}
+
+	&__mention {
+		position: relative;
+		background: lightgrey;
+		padding: 10px;
+		display: block;
+		margin: 10px 0;
+
+		&__name {
+
+		}
+
+		&__number {
+
+		}
+
+		&__text {
+			font-size: 14px;
+			display: inline-block;
+		}
+
+		&--close {
+			position: absolute;
+			top: 10px;
+			right: 10px;
+		}
+
+	}
+
+	&__tools {
+		border: 1px solid grey;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+
+		li {
+
+		}
+	}
+
+	&__report {
+
+		order: 3;
+
+		&__icon {
+
+		}
+
+		&__message {
+
+		}
+	}
+
+	&__votes {
+		order: 2;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+	}
+
+	&__reply {
+		order: 1;
+		button {
+			background: black;
+			color: whitesmoke;
+			display: inline-block;
+			padding: 10px;
+		}
+	}
+
+	&__vote {
+		border: 1px solid grey;	
+	}
+
+	.is-positive {
+	
+	}
+
+	.is-negative {
+
+	}
+	
+}
+
+
+
+
+
+

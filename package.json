@@ -31,6 +31,8 @@
     "jasmine-core": "^2.5.2",
     "karma": "^1.5.0",
     "karma-jasmine": "^1.1.0",
+    "node-normalize-scss": "^3.0.0",
+    "normalize.css": "^7.0.0",
     "underscore": "^1.8.3"
   }
 }
