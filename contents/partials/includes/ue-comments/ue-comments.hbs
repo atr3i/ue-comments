@@ -1,10 +1,8 @@
 
     <div class="ue-c-comments">
-
         <div class="ue-c-comments__title">
             <span class="ue-c-comments__count">125</span> Comentarios
         </div> 
-
         <div class="ue-c-comments__thread">
             <div class="ue-c-comment has-replies">
                 <header class="ue-c-comment__header"> 
@@ -37,12 +35,20 @@
                 </div>
                 <ul class="ue-c-comment__tools">
                     <li class="ue-c-comment__report">
-                        <button data-message="Denunciar Comentario">Denunciar</button>
+                        <button data-message="Denunciar Comentario"><span class="is-hidden-text">Denunciar</span></button>
                         <span class="ue-c-comment__report__message is-hidden">Gracias. Revisaremos tu aviso de mal comportamiento.</span>
                     </li>
-                    <li class="ue-c-comment__votes">
-                        <button class="ue-c-comment__vote is-positive" data-message="Votar a favor"><span class="is-hidden-text">Votar a favor</span></button>
-                        <button class="ue-c-comment__vote is-negative" data-message="Votar en contra"><span class="is-hidden-text">Votar en contra</span></button>
+                    <li class="ue-c-comment__vote is-positive">
+                        <button data-tooltip="Votar a favor">
+                            <span class="is-hidden-text">Votar a favor</span>
+                            <span class="ue-c-comment__votes">2</span>
+                        </button>
+                    </li>
+                    <li class="ue-c-comment__vote is-negative">
+                        <button data-tooltip="Votar en contra">
+                            <span class="is-hidden-text">Votar en contra</span>
+                            <span class="ue-c-comment__votes">5</span>
+                        </button>
                     </li>
                     <li class="ue-c-comment__reply">
                         <button data-message="Responder">Responder</button>
