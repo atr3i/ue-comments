@@ -20,7 +20,7 @@
 	&__title {
 		font-weight: bold;
 		font-size: 18px;
-		padding: 10px;
+		padding: 0.5em 1rem;
 	}
 
 	&__count {
@@ -34,18 +34,17 @@
 	    width: 20px;
 	    height: 13px;
 	    background: black;
-	    border-radius: 1px;
+	    border-radius: 2px;
 	    position: absolute;
 	    top: 5px;
 	    left: 0;
-	    margin-right: 3px;
 	}
 
 	&__count::after {
 		content: '';
 	    display: block;
-	    width: 6px;
-	    height: 6px;
+	    width: 5px;
+	    height: 5px;
 	    background: black;
 	    transform: rotate(45deg);
 	    position: absolute;
@@ -54,8 +53,33 @@
 	}
 
 	&__thread {
+		padding: 1rem;
+	}
 
-		padding: 15px;
+	&__pagination-btn {
+		width: 100%;
+
+		display: inline-block;
+		padding: 0.75em 1.25em;
+		border-radius: 4px;
+		background-color: black;
+		color: white;
+		font-size: inherit;
+		line-height: inherit;
+		transition: all 0.15s ease-in-out;
+	}
+
+	&__form {
+
+		padding: 1rem;
+		font-size: 16px;
+		background: lightgrey;
+	}
+	&__form-publish {
+
+
+	}
+	&__form-verification {
 
 	}
 }
@@ -64,6 +88,8 @@
 	display: flex;
 	flex-direction: column;
 	width: 100%;
+	border-bottom: 1px solid grey;
+	margin-bottom: 1em;
 	&__header {
 		display: flex;
 		flex-direction: row;
@@ -77,7 +103,7 @@
 	}
 
 	&__avatar {
-		
+		margin: 0 0.5rem 0.5em 0;
 	}
 
 	&__name {
@@ -85,11 +111,11 @@
 	}
 
 	&__number {
-		font-size: 24px;
+		font-size: 1.5em;
 	}
 
 	&__meta {
-		font-size: 12px;
+		font-size: 0.8em;
 		display: flex;
     	flex-grow: 1;
     	flex-direction: column;
@@ -104,15 +130,16 @@
 	}
 
 	&__discussion {
-		font-size: 16px;
+
 	}
 
 	&__mention {
 		position: relative;
 		background: lightgrey;
-		padding: 10px;
+		padding: 0.8em 0.8rem;
 		display: block;
-		margin: 10px 0;
+		margin: 1em 0;
+		font-size: 0.9em;
 
 		&__name {
 
@@ -123,19 +150,23 @@
 		}
 
 		&__text {
-			font-size: 14px;
 			display: inline-block;
 		}
 
 		&--close {
 			position: absolute;
-			top: 10px;
-			right: 10px;
+			top: 0;
+			right: 0;
+			height: 2.5em;
+			width: 2.5em;
+		    background: transparent;
+		    border: 0;
+		    cursor: pointer;
+			@include close-icon(black);
 		}
 	}
 
 	&__tools {
-		border: 1px solid grey;
 		display: flex;
 		flex-direction: row;
 		justify-content: left;
@@ -220,131 +251,22 @@
 	    }
 	}
 
-	.is-positive {
-		border: green;
-		order: 2;
-		&::before {
-			content: '';
-    		pointer-events: none;
-    		border-style: solid;
-		    border-width: 7px 0 7px 7px;
-		    border-color: transparent;
-		    border-left-color: inherit;
-		    left: 27%;
-		    right: auto;
-		    position: absolute;
-    		top: 30%;
-    		transform: translateY(-50%) rotate(-90deg);
-		}
-		&::after {
-			content: '';
-			pointer-events: none;
-			position: absolute;
-			width: 15px;
-		    height: 3px;
-		    background: green;
-		    //margin: -2px -9px;
-		    transform: translateY(-21px) translateX(11px) rotate(-90deg);
-		}
+	&__form {
+
 	}
-
-	.is-negative {
-		border: red;
-		order: 3;
-
-	    &::before {
-			content: '';
-    		pointer-events: none;
-    		border-style: solid;
-		    border-width: 7px 0 7px 7px;
-		    border-color: transparent;
-		    border-left-color: inherit;
-		    left: 27%;
-		    right: auto;
-		    position: absolute;
-    		top: 30%;
-    		transform: translateY(50%) rotate(90deg);
-		}
-		&::after {
-			content: '';
-			pointer-events: none;
-			position: absolute;
-			width: 15px;
-		    height: 3px;
-		    background: red;
-		    // margin: 0 -9px;
-		    transform: translateY(-21px) translateX(11px) rotate(-90deg);
-		}
-	}
-
-
-	
 }
 
+.is-positive {
+	order: 2;
 
-/**
- * Tooltip Styles
- */
+	@include arrow-icon(translateY(-45%) rotate(-90deg), green);
 
-/* Add this attribute to the element that needs a tooltip */
-[data-tooltip] {
-  position: relative;
-  //z-index: 2;
-  cursor: pointer;
 }
+.is-negative {
 
-/* Hide the tooltip content by default */
-[data-tooltip]:before,
-[data-tooltip]:after {
-  visibility: hidden;
-  opacity: 0;
-  pointer-events: none;
+    order: 3;
+
+    @include arrow-icon(translateY(45%) rotate(90deg), red);
+
 }
-
-/* Position tooltip above the element */
-[data-tooltip]:before {
-  position: absolute;
-  bottom: 115%;
-  left: 50%;
-  margin-bottom: 5px;
-  margin-left: -80px;
-  padding: 7px;
-  width: 160px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-  background-color: #000;
-  background-color: hsla(0, 0%, 20%, 0.9);
-  color: #fff;
-  content: attr(data-tooltip);
-  text-align: center;
-  font-size: 14px;
-  line-height: 1.2;
-}
-
-/* Triangle hack to make tooltip look like a speech bubble */
-[data-tooltip]:after {
-  position: absolute;
-  bottom: 115%;
-  left: 50%;
-  margin-left: -5px;
-  width: 0;
-  border-top: 5px solid #000;
-  border-top: 5px solid hsla(0, 0%, 20%, 0.9);
-  border-right: 5px solid transparent;
-  border-left: 5px solid transparent;
-  content: " ";
-  font-size: 0;
-  line-height: 0;
-}
-
-/* Show tooltip content on hover */
-[data-tooltip]:hover:before,
-[data-tooltip]:hover:after {
-  visibility: visible;
-  opacity: 1;
-}
-
-
-
 

@@ -1,0 +1,71 @@
+
+
+// Mixin for buttons
+@mixin buttons($color, $background){
+	background-color: $background;
+	color: $color;
+	cursor: pointer;
+	display: inline-block;
+	padding: 0.5em 0.75rem;
+	font-size: 1rem;
+    line-height: 1.25;
+    border: 0;
+    border-radius: 0.25rem;
+    transition: all .15s ease-in-out;
+    &:active,
+    &:hover {
+    	background-color: #333; 
+    }
+    &:focus {
+    	box-shadow: 0 0 0 3px rgba(0,0,0,.5);
+    }
+}
+
+// Close symbol (x)
+@mixin close-icon($color) {
+    &::before,
+    &::after {
+        content: '';
+        pointer-events: none;
+        position: absolute;
+        left: 0.2em;
+        top: 1.1em;
+        background-color: $color;
+        width: 2em;
+        height: 0.2em;
+        transform: rotate(45deg);
+    }
+    &::after {
+        transform: rotate(-45deg);
+    }
+}
+
+// Arrow symbol (->)
+@mixin arrow-icon($direction, $color) {
+	border: $color;
+	&::before {
+		content: '';
+    	pointer-events: none;
+    	border-style: solid;
+		border-width: 7px 0 7px 7px;
+		border-color: transparent;
+		border-left-color: inherit;
+		left: 27%;
+		right: auto;
+		position: absolute;
+    	top: 30%;
+    	transform: $direction;
+	}
+	&::after {
+		content: '';
+		pointer-events: none;
+		position: absolute;
+		top: 40%;
+    	left: 20%;
+		width: 15px;
+		height: 3px;
+		background: $color;
+		transform: rotate(90deg);
+	}
+
+}
