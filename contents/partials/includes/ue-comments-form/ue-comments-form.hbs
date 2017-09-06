@@ -1,10 +1,9 @@
 <div class="ue-c-comments__form">
     <div class="ue-c-comments__form-publish">
-
         <form class="ue-c-form" name="comment-box" action="#"> 
             <span class="ue-c-form__message">Gracias por tu aportación</span>
-            <span class="ue-c-form__group">
-                <label class="is-hidden-text" for="comment">Comentar:</label>
+            <label class="is-hidden-text" for="comment">Comentar:</label>
+            <span class="ue-c-input-group">   
                 <textarea class="ue-c-textarea" name="comment" id="comment" placeholder="Escriba aquí su comentario" autocorrect="on" required="" autofocus="on"></textarea>
                 <button class="ue-c-button" type="button" name="publish" value="Publicar" aria-label="Publicar comentario">Publicar</button>
             </span>
@@ -12,11 +11,18 @@
 
     </div>
     <div class="ue-c-comments__form-verification">
-        <form class="ue-c-form" name="comment-verification" action="#">
-            <label class="ue-c-form__message" for="captcha">
-                Introduzca el código que aparece en la imagen. Si no lo ve bien, pinche <a rel="nofollow" title="Cargar otra imagen" href="#">aquí</a> para mostrar otro.      
-                <button class="ue-c-button--link" onclick="" data-modal-target="#help">(¿Para que sirve este código?)</button>
-            </label>
+        <form class="ue-c-form" name="comment-verification" action="#"> 
+            <fieldset class="ue-c-form__captcha">
+                <label class="ue-c-form__message" for="captcha">
+                    Introduzca el código que aparece en la imagen. Si no lo ve bien, pinche <a rel="nofollow" title="Cargar otra imagen" href="#">aquí</a> para mostrar otro.      
+                    <button class="ue-c-button--link" onclick="" data-modal-target="#help">(¿Para que sirve este código?)</button>
+                </label>
+                <img src="http://www.elmundo.es/servicios/noticias/scroll/comentarios/comunidad/captcha.jpg?1504083523171" id="captchaComentarios"> 
+                <span class="ue-c-input-group"> 
+                    <input class="ue-c-input" type="text" name="captcha" maxlength="6" required="" autocapitalize="off" autofocus="on">
+                    <button class="ue-c-button" type="button" name="submit" value="Enviar" aria-label="Enviar captcha">Enviar</button>
+                </span>
+            </fieldset>
             <div class="ue-c-modal" data-modal id="help" tabindex="-1">    
                 <strong class="ue-c-modal__title">Código de seguridad</strong>
                 Esos son los caracteres que debes introducir. Esta medida de control nos permite impedir que nadie envíe comentarios de forma masiva a través de un sistema automático.
@@ -24,9 +30,6 @@
                     <span class="is-hidden-text">Cerrar</span>
                 </button>
             </div>
-            <img src="http://www.elmundo.es/servicios/noticias/scroll/comentarios/comunidad/captcha.jpg?1504083523171" id="captchaComentarios">
-            <input class="ue-c-input" type="text" name="captcha" maxlength="6" required="" autocapitalize="off" autofocus="on">
-            <button class="ue-c-button" type="button" name="submit" value="Enviar" aria-label="Enviar captcha">Enviar</button>
         </form>
 
     </div>

@@ -1,0 +1,24 @@
+:root {
+	--btn-color: whitesmoke;
+	--btn-background: red;
+	--btn-hover-background: #fc0;
+  	--btn-focus-border: red;
+}
+
+// $buttons: (
+//   color: whitesmoke,
+//   background: red,
+//   hover-background: #fc0,
+//   focus-border: red
+// );
+
+// // ripped CSS4 vars out of color map
+// :root {
+//   // each item in color map
+//   @each $name, $btn in $buttons {
+//     --btn-#{$name}: $btn;
+//   }
+// }
+
+
+

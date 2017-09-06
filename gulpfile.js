@@ -12,41 +12,45 @@ var  gulp = require('gulp'),
 	 autoprefixer = require('gulp-autoprefixer'),
 	 sourcemaps = require('gulp-sourcemaps'),
 	 handlebars = require('gulp-compile-handlebars'),
-	 rename = require('gulp-rename');
+	 rename = require('gulp-rename'),
+   postcss = require('gulp-postcss'),
+   nested = require('postcss-nested'),
+   syntax = require('postcss-scss');
 
 
 gulp.task('clean', [], function() {
-  console.log("Clean all files in build folder");
-
   return gulp.src("build/*", { read: false }).pipe(clean());
 });
 
 gulp.task('build-css', ['clean'], function() {
-  console.log("Sass, concat, move, and minify all the css files in styles folder");
-  	
+
   	return gulp.src('contents/styles/**/*.scss')
   	
   	  .pipe(sourcemaps.init())
-  	  	.pipe(autoprefixer({
 
-  	  		browsers: ['last 10 version'],
-  	  		cascade: false
+  	  .pipe(sass({
+        includePaths: require('node-normalize-scss').includePaths
+      }).on('error', sass.logError))
 
-  	     }))
-  	  	.pipe(sass({
-          includePaths: require('node-normalize-scss').includePaths
-        }).on('error', sass.logError))
+      .pipe(autoprefixer({
+
+       browsers: ['last 10 version'],
+       cascade: false
+
+      }))
         
-  	  	.pipe(concat('main.min.css'))
-      	//.pipe(cssmin())
-	  .pipe(sourcemaps.write('./maps'))
+  	  //.pipe(concat('main.min.css'))
+
+      //.pipe(postcss())
+
+      //.pipe(cssmin())
+
+	    .pipe(sourcemaps.write('./maps'))
 
       .pipe(gulp.dest('build/styles'));
 });
 
 gulp.task('javascript', ['clean'], function () {
-  console.log("Validate, Concat, Uglify, and Move all the javascript files");
-
   return gulp.src("contents/javascripts/**.js")
       .pipe(jsValidate())
       .on("error", notify.onError(function(error) {

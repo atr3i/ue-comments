@@ -3,29 +3,13 @@
 // .is-button
 //
 
-.ue-c-form {
-	&__group {
-		display: flex;
-		flex-direction: row;
-		width: 100%;
-		.ue-c-textarea {
-			width: 75%;
-			margin-right: 0.5rem;
-		}
-	}
-	&__message {
-		font-size: 1.1rem;
-		padding: 0.5rem 0;
-		display: inline-block;
-	}
-}
-
 .ue-c-textarea {
 	display: inline-block;
     padding: 0.5em 0.75rem;
     font-size: 1rem;
     line-height: 1.10;
     color: black;
+    border-radius: 0.25rem;
     background-color: whitesmoke;
     border: 1px solid lightgrey;
 }
@@ -41,32 +25,54 @@
     transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
 
+.ue-c-input-group {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	.ue-c-textarea {
+		width: 75%;
+		margin-right: 0.5rem;
+	}
+	.ue-c-input {
+		width: 75%;
+		margin-right: 0.5rem;
+	}
+}
+
 .ue-c-button {
-
-	@include buttons(whitesmoke, black);
-
+	//@include buttons(whitesmoke, black, #333, rgba(0,0,0,.5));
 	&--link {
 		background: transparent;
 		font-size: 1rem;
 		border: 0;
 		cursor: pointer;
 		color: dodgerblue;
-
 		&:hover {
 			color: deepskyblue;
 		}
 	}
-
 }
 
+.ue-c-form {
+	&__message {
+		font-size: 1.1rem;
+		padding: 0.5rem 0;
+		display: inline-block;
+	}
+	&__captcha {
+		text-align: center;
+		margin: 0 auto;
+		.ue-c-form__message {
+			text-align: left;
+		}
+	}
+}
 
 .ue-c-modal {
-
 	position: relative;
 	background-color: whitesmoke;
-	padding: 1rem;
-	font-size: 0.5;
-
+	padding: 2em 2rem 1em 1rem;
+	font-size: 0.9em;
 	&--close {
 		position: absolute;
 		top: 0;
@@ -78,6 +84,8 @@
 		cursor: pointer;
 		@include close-icon(black);
 	}
-
-	&__title {}
+	&__title {
+		font-size: 1.2em;
+		display: block;
+	}
 }

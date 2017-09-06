@@ -1,0 +1,19 @@
+// sass variable map
+// $buttons: (
+//   background: black,
+//   color: whitesmoke,
+//   hover-background: #333,
+//   focus-border: #000
+// );
+
+// // ripped CSS4 vars out of color map
+// :root {
+//   // each item in color map
+//   @each $name, $btn in $buttons {
+//     --btn-#{$name}: $btn;
+//   }
+// }
+
+// @function btn($btn-name) {
+//   @return var(--btn-#{$btn-name});
+// }
