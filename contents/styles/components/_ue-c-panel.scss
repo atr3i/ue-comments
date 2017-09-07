@@ -5,7 +5,7 @@
 	opacity: 1;
     position: fixed;
     top: 0;
-    left: 0;
+    right: 0;
     background: #fff;
     width: 100%;
     height: 100%;
@@ -41,4 +41,12 @@
 
 .ue-c-panel__navigation-wrapper {
 
+}
+
+
+@media (min-width: 1200px) { 
+
+    .ue-c-panel { 
+        width: 65%; 
+    }
 }

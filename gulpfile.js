@@ -28,9 +28,11 @@ gulp.task('build-css', ['clean'], function() {
   	
   	  .pipe(sourcemaps.init())
 
-  	  .pipe(sass({
-        includePaths: require('node-normalize-scss').includePaths
-      }).on('error', sass.logError))
+  	  // .pipe(sass({
+     //    includePaths: require('node-normalize-scss').includePaths
+     //  }).on('error', sass.logError))
+
+     .pipe(sass().on('error', sass.logError))
 
       .pipe(autoprefixer({
 

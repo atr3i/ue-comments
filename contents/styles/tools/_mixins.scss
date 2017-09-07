@@ -23,20 +23,12 @@
 @mixin buttons($background, $color, $hover-background, $focus-border){
 	background-color: $background;
 	color: $color;
-	cursor: pointer;
-	display: inline-block;
-	padding: 0.5em 0.75rem;
-	font-size: 1rem;
-    line-height: 1.25;
-    border: 0;
-    border-radius: 0.25rem;
-    transition: all .15s ease-in-out;
     &:active,
     &:hover {
     	background-color: $hover-background; 
     }
     &:focus {
-    	box-shadow: 0 0 0 2px $focus-border; 
+    	box-shadow: 0 0 0 1px $focus-border; 
     }
 }
 
@@ -79,7 +71,7 @@
 		content: '';
 		pointer-events: none;
 		position: absolute;
-		top: 40%;
+		top: 42%;
     	left: 20%;
 		width: 15px;
 		height: 3px;

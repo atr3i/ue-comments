@@ -4,13 +4,13 @@
             <span class="ue-c-comments__count">125</span> Comentarios
         </div> 
         <div class="ue-c-comments__thread">
-            <div class="ue-c-comment has-replies">
+            <div class="ue-c-comment">
                 <header class="ue-c-comment__header"> 
-                    <img class="ue-c-comment__avatar" width="50" src="https://e00-marca.uecdn.es/registro/v2/images/avatar/avatar.svg" />
+                    <img class="ue-c-comment__avatar" width="50" alt="Avatar de usuario" src="https://e00-marca.uecdn.es/registro/v2/images/avatar/avatar.svg" />
                     <span class="ue-c-comment__meta">    
                         <span class="ue-c-comment__name">krlospeka</span>
-                        <time content="2017-08-28">
-                            <span class="ue-c-comment__date">28/08/2017</span>
+                        <time datetime="2017-08-28T13:24Z">
+                            <span class="ue-c-comment__date">28-08-2017</span>
                             <span class="ue-c-comment__time">13:24</span>
                         </time> 
                     </span>
@@ -25,7 +25,7 @@
                             #126 
                         </a> 
                         <span data-mention class="ue-c-comment__mention__text is-hidden">
-                            <button class="ue-c-comment__mention--close" type="button" data-mention-close data-mention-primary-focus aria-label="close mention">
+                            <button class="ue-c-comment__mention--close" type="button" data-mention-close data-mention-primary-focus aria-label="cerrar mención">
                                 <span class="is-hidden-text">Cerrar mención</span>
                             </button>
                             Que se salgan los independentistas catalanes con la suya es más fácil que te publiquen un comentario en "El Mundo"...
@@ -35,28 +35,32 @@
                 </div>
                 <ul class="ue-c-comment__tools">
                     <li class="ue-c-comment__report">
-                        <button data-message="Denunciar Comentario"><span class="is-hidden-text">Denunciar</span></button>
-                        <span class="ue-c-comment__report__message is-hidden">Gracias. Revisaremos tu aviso de mal comportamiento.</span>
+                        <button class="ue-c-button" title="Denunciar comentario">
+                            <span class="is-hidden-text">Denunciar comentario</span>
+                        </button>
+                        <span class="ue-c-comment__report-message is-hidden">
+                            Gracias. Revisaremos tu aviso de mal comportamiento.
+                        </span>
                     </li>
                     <li class="ue-c-comment__vote is-positive">
-                        <button data-tooltip="Votar a favor">
+                        <button class="ue-c-button" data-tooltip="Votar a favor">
                             <span class="is-hidden-text">Votar a favor</span>
-                            <span class="ue-c-comment__votes">2</span>
+                            <span class="ue-c-comment__votes" aria-label="Votos a favor">2</span>
                         </button>
                     </li>
                     <li class="ue-c-comment__vote is-negative">
-                        <button data-tooltip="Votar en contra">
+                        <button class="ue-c-button" data-tooltip="Votar en contra">
                             <span class="is-hidden-text">Votar en contra</span>
-                            <span class="ue-c-comment__votes">5</span>
+                            <span class="ue-c-comment__votes" aria-label="Votos en contra">5</span>
                         </button>
                     </li>
                     <li class="ue-c-comment__reply">
-                        <button data-message="Responder">Responder</button>
+                        <button class="ue-c-button">Responder al comentario</button>
                     </li>
                 </ul>
             </div>
             <div class="ue-c-comments__thread-pagination">
-                <button class="ue-c-comments__pagination-btn">VER ANTERIORES</button>
+                <button class="ue-c-button">VER ANTERIORES</button>
             </div>
         </div>
 

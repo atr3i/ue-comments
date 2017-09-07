@@ -56,21 +56,13 @@
 		padding: 1rem;
 	}
 
-	&__pagination-btn {
-		width: 100%;
-
-		display: inline-block;
-		padding: 0.75em 1.25em;
-		border-radius: 4px;
-		background-color: black;
-		color: white;
-		font-size: inherit;
-		line-height: inherit;
-		transition: all 0.15s ease-in-out;
+	&__thread-pagination {
+		.ue-c-button {
+			width: 100%;
+		}	
 	}
 
 	&__form {
-
 		padding: 1rem;
 		font-size: 16px;
 		background: lightgrey;
@@ -162,7 +154,7 @@
 		    background: transparent;
 		    border: 0;
 		    cursor: pointer;
-			@include close-icon(black);
+			@include close-icon(var(--close-icon-color, black));
 		}
 	}
 
@@ -179,27 +171,28 @@
 
 	&__report {
 		order: 4;
-		button {
-			//@include buttons(lightgrey, transparent, #ddd, rgba(218,218,218,.5));
-			@include buttons(btn(background), btn(color), btn(hover-background), btn(focus-border));
-		    margin-right: 5px;
+		.ue-c-button {
+			@include buttons(
+			var(--btn-background, #EEE), 
+			var(--btn-color, transparent), 
+			var(--btn-hover-background, #EEE), 
+			var(--btn-focus-border, #DDD)
+			);
+			margin-right: 5px;
 			position: relative;
 			width: 40px;
-		    height: 40px;
-		    @include forbidden(red);
+			height: 40px;
+			@include forbidden(var(--forbidden-icon-color, lightcoral));
 		}
+	}
 
-		&__message {
+	&__report-message {
 
-		}
 	}
 
 	&__reply {
 		order: 1;
-		button {
-			@include buttons(var(--btn-background, black), var(--btn-color, whitesmoke), var(--btn-hover-background, darkgrey), var(--btn-focus-border, black));
-			//@include buttons(black, whitesmoke, darkgrey, black);
-			// @include buttons(btn(background), btn(color), btn(hover-background), btn(focus-border));
+		.ue-c-button {
 			margin-right: 5px;
 			font-size: 16px;
 		}
@@ -210,16 +203,23 @@
 		position: relative;
 		width: 55px;
 	    height: 40px;
-	    background: lightgrey;
-	    border-radius: 2px;
-	    cursor: pointer;
+	    border-radius: 0.25rem;
+	    background: #eee;
 
-	    button {
-	    	width: 100%;
-	    	height: 100%;
-	    	background: transparent;
-	    	border: 0;
-	    }
+	    .ue-c-button {
+			width: 100%;
+		    height: 100%;
+			@include buttons(
+				var(--btn-background, transparent), 
+				var(--btn-color, black), 
+				var(--btn-hover-background, transparent), 
+				var(--btn-focus-border, lightgrey)
+				);
+		}
+	}
+
+	&__votes {
+		padding-left: 1em;
 	}
 
 	&__form {
@@ -229,15 +229,10 @@
 
 .is-positive {
 	order: 2;
-
 	@include arrow-icon(translateY(-45%) rotate(-90deg), green);
-
 }
 .is-negative {
-
     order: 3;
-
     @include arrow-icon(translateY(45%) rotate(90deg), red);
-
 }
 

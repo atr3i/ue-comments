@@ -8,6 +8,7 @@
     padding: 0.5em 0.75rem;
     font-size: 1rem;
     line-height: 1.10;
+    outline: initial;
     color: black;
     border-radius: 0.25rem;
     background-color: whitesmoke;
@@ -18,6 +19,7 @@
 	padding: 0.5em 0.75rem;
     font-size: 1rem;
     line-height: 1.25;
+    outline: initial;
     color: black;
     background-color: whitesmoke;
     border: 1px solid lightgrey;
@@ -39,20 +41,35 @@
 	}
 }
 
+[type='button'],
 .ue-c-button {
-	//@include buttons(whitesmoke, black, #333, rgba(0,0,0,.5));
-	&--link {
-		background: transparent;
-		font-size: 1rem;
-		border: 0;
-		cursor: pointer;
-		color: dodgerblue;
-		&:hover {
-			color: deepskyblue;
-		}
+	cursor: pointer;
+	display: inline-block;
+	padding: 0.5em 0.75rem;
+	font-size: 1rem;
+    line-height: 1.25;
+    border: 0;
+    border-radius: 0.25rem;
+    transition: all .15s ease-in-out;
+    outline: initial;
+
+	@include buttons(
+			var(--btn-background, black), 
+			var(--btn-color, whitesmoke), 
+			var(--btn-hover-background, darkgrey), 
+			var(--btn-focus-border, black)
+			);
+}
+.ue-c-button--link {
+	background: transparent;
+	font-size: 1rem;
+	border: 0;
+	cursor: pointer;
+	color: dodgerblue;
+	&:hover {
+		color: deepskyblue;
 	}
 }
-
 .ue-c-form {
 	&__message {
 		font-size: 1.1rem;
