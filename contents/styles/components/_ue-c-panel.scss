@@ -16,33 +16,14 @@
 		width: 100%;
 		height: 48px;
 		padding-left: 2.5rem;
-	}
 
-	&__navigation__back {
-		display: block;
-		font-size: 12px;
-		line-height: 175%;
-		&::before {
-			content: '<';
-         	display: inline-block;
-         	border-right: 1px solid black;
-         	width: 35px;
-         	height: 48px;
-         	font-size: 24px;
-         	color:  var(--color-brand, black);
-         	position: absolute;
-         	top: 0;
-         	left: 0;
-         	padding: 5px;
-         	line-height: 170%;
-		}
-	}
+        &--back {
+            display: block;
+            font-size: 12px;
+            line-height: 175%;
+        }
+	}	
 }
-
-.ue-c-panel__navigation-wrapper {
-
-}
-
 
 @media (min-width: 1200px) { 
 

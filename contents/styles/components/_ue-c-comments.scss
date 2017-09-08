@@ -21,6 +21,7 @@
 		font-weight: bold;
 		font-size: 18px;
 		padding: 0.5em 1rem;
+		position: relative;
 	}
 
 	&__count {
@@ -28,28 +29,11 @@
 		padding-left: 2rem;
 	}
 
-	&__count::before {
-		content: '';
-	    display: block;
-	    width: 20px;
-	    height: 13px;
-	    background: black;
-	    border-radius: 2px;
-	    position: absolute;
-	    top: 5px;
-	    left: 0;
-	}
-
-	&__count::after {
-		content: '';
-	    display: block;
-	    width: 5px;
-	    height: 5px;
-	    background: black;
-	    transform: rotate(45deg);
-	    position: absolute;
-	    bottom: 3px;
-	    left: 7px;
+	&-bubble {
+		fill: var(--bubble-icon-color, black);
+		position: absolute;
+		top: 0.5em;
+    	left: 1em;
 	}
 
 	&__thread {
@@ -127,25 +111,25 @@
 
 	&__mention {
 		position: relative;
-		background: lightgrey;
+		background: var(--mention-background, lightgrey);
 		padding: 0.8em 0.8rem;
 		display: block;
 		margin: 1em 0;
 		font-size: 0.9em;
 
-		&__name {
+		&-name {
 
 		}
 
-		&__number {
+		&-number {
 
 		}
 
-		&__text {
+		&-text {
 			display: inline-block;
 		}
 
-		&--close {
+		.ue-c-button {
 			position: absolute;
 			top: 0;
 			right: 0;
@@ -154,7 +138,19 @@
 		    background: transparent;
 		    border: 0;
 		    cursor: pointer;
-			@include close-icon(var(--close-icon-color, black));
+		    @include buttons(
+				var(--btn-background, transparent), 
+				var(--btn-color, black), 
+				var(--btn-hover-background, transparent), 
+				var(--btn-focus-border, transparent)
+			);
+		}
+
+		&--close {
+			fill: var(--close-icon-color, black);
+			&:hover {
+				fill: var(--close-icon-color, darkgrey);
+			}
 		}
 	}
 
@@ -170,19 +166,25 @@
 	}
 
 	&__report {
-		order: 4;
+		order: 3;
 		.ue-c-button {
 			@include buttons(
-			var(--btn-background, #EEE), 
-			var(--btn-color, transparent), 
-			var(--btn-hover-background, #EEE), 
-			var(--btn-focus-border, #DDD)
+				var(--btn-background, #EEE), 
+				var(--btn-color, transparent), 
+				var(--btn-hover-background, #EEE), 
+				var(--btn-focus-border, #DDD)
 			);
 			margin-right: 5px;
 			position: relative;
 			width: 40px;
 			height: 40px;
-			@include forbidden(var(--forbidden-icon-color, lightcoral));
+		}
+
+		&--block {
+			fill: var(--block-icon-color, red);
+			position: absolute;
+			top: 0.5em;
+    		left: 0.5em;
 		}
 	}
 
@@ -198,28 +200,34 @@
 		}
 	}
 
-	&__vote {
+	&__votes {
+		order: 2;
 		margin-right: 5px;
 		position: relative;
-		width: 55px;
-	    height: 40px;
-	    border-radius: 0.25rem;
-	    background: #eee;
-
+		padding-left: 1em;
 	    .ue-c-button {
-			width: 100%;
-		    height: 100%;
+	    	width: 55px;
+	    	height: 40px;
+	    	border-radius: 0.25rem;
 			@include buttons(
-				var(--btn-background, transparent), 
+				var(--btn-background, #eee), 
 				var(--btn-color, black), 
-				var(--btn-hover-background, transparent), 
+				var(--btn-hover-background, #ddd), 
 				var(--btn-focus-border, lightgrey)
-				);
+			);
 		}
 	}
 
-	&__votes {
-		padding-left: 1em;
+	&__vote {
+		left: 0.2em;
+	    top: 0.5em;
+	    position: absolute;
+	    &.is-positive {
+	    	fill: var(--arrow-up-icon-color, green);
+	    }
+	    &.is-negative {
+	    	fill: var(--arrow-down-icon-color, red);
+	    }
 	}
 
 	&__form {
@@ -227,12 +235,5 @@
 	}
 }
 
-.is-positive {
-	order: 2;
-	@include arrow-icon(translateY(-45%) rotate(-90deg), green);
-}
-.is-negative {
-    order: 3;
-    @include arrow-icon(translateY(45%) rotate(90deg), red);
-}
+
 
