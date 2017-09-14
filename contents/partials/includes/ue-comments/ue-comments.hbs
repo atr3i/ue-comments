@@ -1,3 +1,4 @@
+
     <div class="ue-c-comments">
         <div class="ue-c-comments__title">
             <svg class="ue-c-comments-bubble" width="24" height="24" viewBox="0 0 24 24">
@@ -21,32 +22,72 @@
                     </span>
                 </header>
                 <div class="ue-c-comment__discussion has-mention">
+                    A veces tardan mucho, y cuando los publican ya han quitado la noticia... A mí no me gusta este sistema de comentarios... Me gustaría poder ver en una página enlaces a todos mis comentarios y las respuestas a los mismos, ser notificado de las respuestas, y que la navegación por los comentarios fuera mucho más fluida y no se tardara una eternidad en llegar a los primeros. La verdad es que los competidores suelen tener mejores sistemas, lo que me joroba bastante porque las discusiones de El Mundo suelen ser muy interesantes :(
+
+
+
                     <span class="ue-c-comment__mention">
                         <span class="ue-c-comment__mention-name">@caracartucho</span>
                         <a class="ue-c-comment__mention-number" href="">
                             #126 
                         </a> 
-                        <span data-mention class="ue-c-comment__mention-text is-hidden">
-                            <button class="ue-c-button">
+                        <span data-mention class="ue-c-comment__mention-text">
+                            {{!-- <button class="ue-c-button">
                                 <svg class="ue-c-comment__mention--close" width="24" height="24" viewBox="0 0 24 24">
                                     <g><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></g>
                                 </svg>
                                 <span class="is-hidden-text">Cerrar mención</span>
-                            </button>
+                            </button> --}}
                             Que se salgan los independentistas catalanes con la suya es más fácil que te publiquen un comentario en "El Mundo"...
                         </span>
                     </span>
-                    A veces tardan mucho, y cuando los publican ya han quitado la noticia... A mí no me gusta este sistema de comentarios... Me gustaría poder ver en una página enlaces a todos mis comentarios y las respuestas a los mismos, ser notificado de las respuestas, y que la navegación por los comentarios fuera mucho más fluida y no se tardara una eternidad en llegar a los primeros. La verdad es que los competidores suelen tener mejores sistemas, lo que me joroba bastante porque las discusiones de El Mundo suelen ser muy interesantes :(
+
+                    <span class="ue-c-comment__mention">
+                        <span class="ue-c-comment__mention-name">@caracartucho</span>
+                        <a class="ue-c-comment__mention-number" href="">
+                            #126 
+                        </a> 
+                        <span data-mention class="ue-c-comment__mention-text">
+                            {{!-- <button class="ue-c-button">
+                                <svg class="ue-c-comment__mention--close" width="24" height="24" viewBox="0 0 24 24">
+                                    <g><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></g>
+                                </svg>
+                                <span class="is-hidden-text">Cerrar mención</span>
+                            </button> --}}
+                            Que se salgan los independentistas catalanes con la suya es más fácil que te publiquen un comentario en "El Mundo"...
+                        </span>
+                    </span>
+
+
+                    <a class="ue-c-button--link toggle" href="#example2">Ver conversación completa</a>
+
+                    <span class="ue-c-comment__mention toggle-content" id="example2">
+                        <span class="ue-c-comment__mention-name">@caracartucho</span>
+                        <span class="ue-c-comment__mention-number">
+                            #126 
+                        </span> 
+                        <span data-mention class="ue-c-comment__mention-text">
+                            {{!-- <button class="ue-c-button">
+                                <svg class="ue-c-comment__mention--close" width="24" height="24" viewBox="0 0 24 24">
+                                    <g><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></g>
+                                </svg>
+                                <span class="is-hidden-text">Cerrar mención</span>
+                            </button> --}}
+                            Que se salgan los independentistas catalanes con la suya es más fácil que te publiquen un comentario en "El Mundo"...
+                        </span>
+                    </span>
+
                 </div>
+
                 <ul class="ue-c-comment__tools">
                     <li class="ue-c-comment__report">
-                        <button class="ue-c-button" title="Denunciar comentario">
+                        <button class="ue-c-button toggle" onclick="window.location.href='#example3'" title="Denunciar comentario">
                             <span class="is-hidden-text">Denunciar comentario</span>
                             <svg class="ue-c-comment__report--block" width="24" height="24" viewBox="0 0 24 24">
                                 <g><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM4 12c0-4.42 3.58-8 8-8 1.85 0 3.55.63 4.9 1.69L5.69 16.9C4.63 15.55 4 13.85 4 12zm8 8c-1.85 0-3.55-.63-4.9-1.69L18.31 7.1C19.37 8.45 20 10.15 20 12c0 4.42-3.58 8-8 8z"></path></g>
                             </svg>
                         </button>
-                        <span class="ue-c-comment__report-message is-hidden">
+                        <span class="ue-c-comment__report-message toggle-content" id="example3">
                             Gracias. Revisaremos tu aviso de mal comportamiento.
                         </span>
                     </li>
@@ -65,18 +106,19 @@
                     </li>
                   
                     <li class="ue-c-comment__reply">
-                        <button class="ue-c-button">Responder</button>
+                        <a class="ue-c-button toggle" href="#example">Responder</a>
                     </li>
                 </ul>
+
+                {{#> comments-form-block }}
+                    {{!-- comments form content goes here. --}}
+                    {{> includes/ue-comments-form/ue-comments-form }}
+                {{/comments-form-block}}
+
             </div>
             <div class="ue-c-comments__thread-pagination">
                 <button class="ue-c-button">VER ANTERIORES</button>
             </div>
         </div>
+    </div>  
 
-        {{#> comments-form-block }}
-            {{!-- comments form content goes here. --}}
-            {{> includes/ue-comments-form/ue-comments-form }}
-        {{/comments-form-block}}
-
-    </div>     
