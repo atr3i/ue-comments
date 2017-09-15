@@ -1,0 +1,11 @@
+// sustituye la variable #{$Color} por el valor de $color-nuevo;
+@function icono-color($string, $search, $replace: '') {
+
+    $index: str-index($string, $search);
+    @if $index {
+        $cadena: str-slice($string, 1, $index - 1) + $replace + icono-color(str-slice($string, $index + str-length($search)), $search, $replace);
+        @return $cadena;
+    }
+    @return $string;
+
+}
