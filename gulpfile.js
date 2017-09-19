@@ -68,7 +68,7 @@ gulp.task('javascript', ['clean'], function () {
       .on("error", notify.onError(function(error) {
         return error.message;
       }))
-      .pipe(uglify())
+      //.pipe(uglify())
       .pipe(concat('main.js'))
       .pipe(gulp.dest('build/javascripts'));
 });
@@ -100,6 +100,6 @@ gulp.task('watch', ['default'], function() {
 
 gulp.task('webserver', function() {
   return gulp.src('build')
-    .pipe(webserver({ livereload: true }))
+    //.pipe(webserver({ livereload: true }))
     .pipe(webserver());
 });

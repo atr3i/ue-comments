@@ -179,19 +179,6 @@ $block: 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="#
 		    position: absolute;
 		    top: 0;
 		    left: 0;
-
-		    background: pink;
-
-		    svg {
-				position: relative;
-				display: inline-block;
-		    }
- 
-			// background-color: transparent;
-			// $color-nuevo: 'red';
-   //  		background-image: url(icono-color($block, '#{$Color}', $color-nuevo));
-   //  		background-repeat: no-repeat;
-   //  		background-position: center center;
 		}
 	}
 
