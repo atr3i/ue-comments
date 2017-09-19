@@ -17,49 +17,38 @@
                             <span class="ue-c-comment__time">13:24</span>
                         </time> 
                     </span>
-                    <span class="ue-c-comment__number">
-                        <a title="Número de comentario" href="#">#73</a>
+                    <span class="ue-c-comment__number" title="Número de comentario">
+                        #73
                     </span>
                 </header>
                 <div class="ue-c-comment__discussion has-mention">
                     A veces tardan mucho, y cuando los publican ya han quitado la noticia... A mí no me gusta este sistema de comentarios... Me gustaría poder ver en una página enlaces a todos mis comentarios y las respuestas a los mismos, ser notificado de las respuestas, y que la navegación por los comentarios fuera mucho más fluida y no se tardara una eternidad en llegar a los primeros. La verdad es que los competidores suelen tener mejores sistemas, lo que me joroba bastante porque las discusiones de El Mundo suelen ser muy interesantes :(
-
-
-
                     <span class="ue-c-comment__mention">
                         <span class="ue-c-comment__mention-name">@caracartucho</span>
-                        <a class="ue-c-comment__mention-number" href="">
+                        <span class="ue-c-comment__mention-number">
                             #126 
-                        </a> 
+                        </span> 
                         <span data-mention class="ue-c-comment__mention-text">
-                            {{!-- <button class="ue-c-button">
-                                <svg class="ue-c-comment__mention--close" width="24" height="24" viewBox="0 0 24 24">
-                                    <g><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></g>
-                                </svg>
-                                <span class="is-hidden-text">Cerrar mención</span>
-                            </button> --}}
                             Que se salgan los independentistas catalanes con la suya es más fácil que te publiquen un comentario en "El Mundo"...
                         </span>
                     </span>
 
                     <span class="ue-c-comment__mention">
                         <span class="ue-c-comment__mention-name">@caracartucho</span>
-                        <a class="ue-c-comment__mention-number" href="">
+                        <span class="ue-c-comment__mention-number">
                             #126 
-                        </a> 
+                        </span> 
                         <span data-mention class="ue-c-comment__mention-text">
-                            {{!-- <button class="ue-c-button">
-                                <svg class="ue-c-comment__mention--close" width="24" height="24" viewBox="0 0 24 24">
-                                    <g><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></g>
-                                </svg>
-                                <span class="is-hidden-text">Cerrar mención</span>
-                            </button> --}}
                             Que se salgan los independentistas catalanes con la suya es más fácil que te publiquen un comentario en "El Mundo"...
                         </span>
                     </span>
 
-
-                    <a class="ue-c-button--link toggle" href="#example2">Ver conversación completa</a>
+                    <button class="ue-c-comment__mention--show ue-c-button--link">
+                        <a class="toggle" href="#example2" title="Ver conversación completa">
+                            Ver conversación completa
+                        </a>
+                    </button>
+                    {{!-- <a class="ue-c-button--link toggle" href="#example2">Ver conversación completa</a> --}}
 
                     <span class="ue-c-comment__mention toggle-content" id="example2">
                         <span class="ue-c-comment__mention-name">@caracartucho</span>
@@ -67,12 +56,6 @@
                             #126 
                         </span> 
                         <span data-mention class="ue-c-comment__mention-text">
-                            {{!-- <button class="ue-c-button">
-                                <svg class="ue-c-comment__mention--close" width="24" height="24" viewBox="0 0 24 24">
-                                    <g><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></g>
-                                </svg>
-                                <span class="is-hidden-text">Cerrar mención</span>
-                            </button> --}}
                             Que se salgan los independentistas catalanes con la suya es más fácil que te publiquen un comentario en "El Mundo"...
                         </span>
                     </span>
@@ -82,17 +65,15 @@
 
                 <ul class="ue-c-comment__tools">
                     <li class="ue-c-comment__report">
-                        <button class="ue-c-button" title="Denunciar comentario">
-                            <a class="toggle" href="#example3">
-                                {{!-- <span class="is-hidden-text">Denunciar comentario</span> --}}
-                                <span class="ue-c-comment__report--block">
-                                    <span class="is-hidden-text">Denunciar comentario</span>
-                                </span>
-                                {{!-- <svg class="ue-c-comment__report--block" width="24" height="24" viewBox="0 0 24 24">
-                                    <g><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM4 12c0-4.42 3.58-8 8-8 1.85 0 3.55.63 4.9 1.69L5.69 16.9C4.63 15.55 4 13.85 4 12zm8 8c-1.85 0-3.55-.63-4.9-1.69L18.31 7.1C19.37 8.45 20 10.15 20 12c0 4.42-3.58 8-8 8z"></path></g>
-                                </svg> --}}
+                        {{!-- <button class="ue-c-button" title="Denunciar comentario">
+                            <a class="ue-c-comment__report--block toggle" href="#example3">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="red" width="24" height="24" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM4 12c0-4.42 3.58-8 8-8 1.85 0 3.55.63 4.9 1.69L5.69 16.9C4.63 15.55 4 13.85 4 12zm8 8c-1.85 0-3.55-.63-4.9-1.69L18.31 7.1C19.37 8.45 20 10.15 20 12c0 4.42-3.58 8-8 8z"></path></svg>
                             </a>
-                        </button>
+                        </button> --}}
+                        <a class="ue-c-button ue-c-comment__report--block toggle" href="#example3">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="red" width="24" height="24" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM4 12c0-4.42 3.58-8 8-8 1.85 0 3.55.63 4.9 1.69L5.69 16.9C4.63 15.55 4 13.85 4 12zm8 8c-1.85 0-3.55-.63-4.9-1.69L18.31 7.1C19.37 8.45 20 10.15 20 12c0 4.42-3.58 8-8 8z"></path></svg>
+                            </a>
+
                         <span class="ue-c-comment__report-message toggle-content" id="example3">
                             Gracias. Revisaremos tu aviso de mal comportamiento.
                         </span>
@@ -112,7 +93,11 @@
                     </li>
                   
                     <li class="ue-c-comment__reply">
-                        <a class="ue-c-button toggle" href="#example">Responder</a>
+                        <button class="ue-c-button">
+                            <a class="toggle" href="#example" title="Responder">
+                                Responder
+                            </a>
+                        </button>
                     </li>
                 </ul>
 

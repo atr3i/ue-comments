@@ -1,7 +1,7 @@
 // Modifiers
 // 
 // .is-button
-//
+// .toggle
 
 .ue-c-textarea {
 	display: inline-block;
@@ -52,24 +52,25 @@
     border-radius: 0.25rem;
     transition: all .15s ease-in-out;
     outline: initial;
-
 	@include buttons(
 			var(--btn-background, black), 
 			var(--btn-color, whitesmoke), 
 			var(--btn-hover-background, darkgrey), 
 			var(--btn-focus-border, black)
 			);
-
 	.toggle {
 		display: block;
-		background: lightcoral;
-		position: absolute;
-	    top: 0;
-	    left: 0;
-	    width: 100%;
-	    height: 100%;
 	}
 }
+
+.toggle-content {
+	display: none;
+}
+
+.toggle-content.is-visible {
+	display: block;
+}
+
 .ue-c-button--link {
 	background: transparent;
 	font-size: 1rem;

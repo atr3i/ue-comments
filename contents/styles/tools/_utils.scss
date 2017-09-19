@@ -1,0 +1,21 @@
+
+.is-hidden-text {
+	position:absolute;
+	left:-10000px;
+	top:auto;
+	width:1px;
+	height:1px;
+	overflow:hidden;
+}
+
+.lightbox_shadow {
+	z-index: 2;
+}
+
+.is-hidden {
+	display: none;
+}
+
+.is-visible {
+	display: block;
+}

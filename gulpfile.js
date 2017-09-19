@@ -10,6 +10,7 @@ var  gulp = require('gulp'),
 	 webserver = require('gulp-webserver'),
 	 sass = require('gulp-sass'),
 	 autoprefixer = require('gulp-autoprefixer'),
+   urlencode   = require('gulp-css-urlencode-inline-svgs'),
 	 sourcemaps = require('gulp-sourcemaps'),
 	 handlebars = require('gulp-compile-handlebars'),
 	 rename = require('gulp-rename'),
@@ -22,6 +23,15 @@ gulp.task('clean', [], function() {
   return gulp.src("build/*", { read: false }).pipe(clean());
 });
 
+
+// Generate Images
+gulp.task('generate_images', ['clean'], function() {
+    return gulp.src('contents/images/**/*')
+        .pipe(gulp.dest('build/styles/images/'));
+});
+
+
+
 gulp.task('build-css', ['clean'], function() {
 
   	return gulp.src('contents/styles/**/*.scss')
@@ -33,7 +43,7 @@ gulp.task('build-css', ['clean'], function() {
      //  }).on('error', sass.logError))
 
      .pipe(sass().on('error', sass.logError))
-
+      .pipe(urlencode())
       .pipe(autoprefixer({
 
        browsers: ['last 10 version'],
@@ -45,11 +55,11 @@ gulp.task('build-css', ['clean'], function() {
 
       //.pipe(postcss())
 
-      //.pipe(cssmin())
+      .pipe(cssmin())
 
 	    .pipe(sourcemaps.write('./maps'))
 
-      .pipe(gulp.dest('build/styles'));
+      .pipe(gulp.dest('build/styles/'));
 });
 
 gulp.task('javascript', ['clean'], function () {
@@ -63,7 +73,7 @@ gulp.task('javascript', ['clean'], function () {
       .pipe(gulp.dest('build/javascripts'));
 });
 
-gulp.task('default', ['build-css', 'html', 'javascript']);
+gulp.task('default', ['generate_images', 'build-css', 'html', 'javascript']);
 
 
 
@@ -72,7 +82,6 @@ gulp.task('html', () => {
 	return gulp.src('contents/pages/*.hbs')
 
 		.pipe(handlebars({}, {
-
 			ignorePartials: true,
 			batch: ['contents/partials']
 		}))
@@ -81,7 +90,7 @@ gulp.task('html', () => {
 			extname: '.html'
 		}))
 
-		.pipe(gulp.dest('build'));
+		.pipe(gulp.dest('build/'));
 });
 
 gulp.task('watch', ['default'], function() {
@@ -91,6 +100,6 @@ gulp.task('watch', ['default'], function() {
 
 gulp.task('webserver', function() {
   return gulp.src('build')
-    // .pipe(webserver({ livereload: true }));
+    .pipe(webserver({ livereload: true }))
     .pipe(webserver());
 });

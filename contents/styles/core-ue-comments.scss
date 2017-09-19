@@ -4,26 +4,29 @@
 }
 //@import "normalize";
 @import "tools/_mixins";
+@import "tools/_functions";
+@import "tools/_utils";
 //@import "tools/_css-variables";
-@import "components/_ue-c-form";
 @import "components/_ue-c-panel";
 @import "components/_ue-c-tabs";
 @import "components/_ue-c-comments";
+@import "components/_ue-c-form";
 @import "objects/_ue-o-tooltip";
-
 
 //@import "themes/_marca-styles";
 
-.is-hidden-text {
-	position:absolute;
-	left:-10000px;
-	top:auto;
-	width:1px;
-	height:1px;
-	overflow:hidden;
-}
 
+// OVERRIDE elmundo_style & marca_style 
 
-.lightbox_shadow {
-	z-index: 2;
+body {
+	a,
+	a:link {
+		color: var(--link-color, black);
+		&:visited,
+		&:focus,
+		&:hover,
+		&:active {
+			color: var(--link-color-hover, #999);
+		}
+	}
 }
