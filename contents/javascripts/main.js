@@ -33,15 +33,14 @@
 
 // }, false);
 
-
   
 (function(){
-  var butons = document.querySelectorAll("[data-role-toggle]");
+  var buttons = document.querySelectorAll("[data-role-toggle]");
  
-  for (var i = butons.length - 1; i >= 0; i--) {
-    butons[i].addEventListener('click', function(e){
+  for (var i = buttons.length - 1; i >= 0; i--) {
+    buttons[i].addEventListener('click', function(e){
       var enlace = this.getAttribute("data-role-toggle");
-      var capa = document.querySelector("[data-role-toggle-content="+enlace+"]");
+      var capa = document.querySelector("[data-role-toggle-content=" + enlace + "]");
       capa.classList.toggle('is-visible');
     })
   }

@@ -106,11 +106,24 @@ $block: 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="#
 
 	&__mention {
 		position: relative;
-		background: var(--mention-background, lightgrey);
+		background: var(--mention-background, #ddd);
 		padding: 0.8em 0.8rem;
 		display: block;
-		margin: 1em 0;
+		margin: 1em 0 1em 2em;
 		font-size: 0.9em;
+
+
+		&:before {
+			content:'\0021b3';
+			color: lightgrey;
+			display: inline-block;
+			text-align: center;
+			position: absolute;
+			top: 0;
+			left: -30px;
+			width: 30px;
+			height: 20px;
+		}
 
 		&-name {
 
@@ -133,6 +146,7 @@ $block: 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="#
 		    background: transparent;
 		    border: 0;
 		    cursor: pointer;
+
 		    @include buttons(
 				var(--btn-background, transparent), 
 				var(--btn-color, black), 
@@ -148,6 +162,16 @@ $block: 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="#
 		}
 	}
 
+	&__show-thread {
+		position: relative;
+		top: 0.45em;
+		transform: rotate(180deg);
+		fill: var(--show-thread-icon-color, dodgerblue);
+		&:hover{
+			fill:var(--show-thread-icon-color-hover, deepskyblue);
+		} 
+	}
+
 	&__tools {
 		display: flex;
 		flex-direction: row;
@@ -157,6 +181,7 @@ $block: 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="#
 		padding: 0;
 		height: 65px;
 		overflow: inherit; 	
+		position: relative;
 	}
 
 	&__report {
@@ -168,22 +193,21 @@ $block: 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="#
 				var(--btn-hover-background, #EEE), 
 				var(--btn-focus-border, #DDD)
 			);
-			margin-right: 5px;
-			position: relative;
-			width: 40px;
+			width: auto;
 			height: 40px;
 		}
-		&--block {
-			width: 100%;
-		    height: 100%;
-		    position: absolute;
-		    top: 0;
-		    left: 0;
+		&-block {
+			fill: var(--block-icon-color, red);
 		}
 	}
 
 	&__report-message {
-
+		font-size: 16px;
+		padding: 1em;
+		margin-bottom: 0.5em;
+		text-align: center;
+		border-radius: var(--alert-message-border-radius, 8px);
+		background: var(--alert-message-background, #ddd);
 	}
 
 	&__reply {

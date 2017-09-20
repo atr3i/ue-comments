@@ -3,8 +3,6 @@
 // Add this attribute to the element that needs a tooltip: [data-tooltip]
 // 
 
-
-// Hide the tooltip content by default
 [data-tooltip] {
     position: relative; 
     z-index: 2;
@@ -36,7 +34,6 @@
     line-height: 1.2;
 }
 
-// Triangle to make tooltip look like a speech bubble 
 [data-tooltip]:after {
     position: absolute;
     bottom: 115%;
@@ -52,7 +49,6 @@
     line-height: 0;
 }
 
-// Show tooltip content on hover 
 [data-tooltip]:hover:before,
 [data-tooltip]:hover:after {
     visibility: visible;

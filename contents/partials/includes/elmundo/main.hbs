@@ -124,7 +124,23 @@
                                 </div>
                             </div>
                         </div>
-                        <aside class="aside-block js_fixed"><a href="#ancla_comentarios" class="comments-btn js-botonComentarios-599eae6546163fc1168b460f"><span class="left"><i class="icon-comments_24x20_a"></i><strong>100 </strong></span><span class="right"><strong>Ver comentarios</strong><i class="icon-forward_8x16_a"></i></span></a>
+                        <aside class="aside-block js_fixed">
+
+
+
+                            <button type="button" data-role-toggle="commentsBoard">Ver comentarios</button>
+
+                            {{!-- <a href="#ancla_comentarios" class="comments-btn js-botonComentarios-599eae6546163fc1168b460f">
+                                <span class="left">
+                                    <i class="icon-comments_24x20_a"></i>
+                                    <strong>100 </strong>
+                                </span>
+                                <span class="right">
+                                    <strong>Ver comentarios</strong>
+                                    <i class="icon-forward_8x16_a"></i>
+                                </span>
+                            </a> --}}
+
                             <div class="content-ad">
                                 <div class="ad-item-300">
                                     <div id='div-gpt-ad-cataluna_n_r_599eae6546163fc1168b460f' class="publicidad">
@@ -228,10 +244,14 @@
                         </div>
                     </aside>
                     <aside id="ancla_comentarios" class="comentarios aside-comments">
-                        <h3><i class="icon-comentarios_32_a"></i>
-<strong class="js-ueCommentsCounter" data-commentId="1451902" content="UserComments:100" itemprop="interactionCount">100</strong>
-Comentarios
-</h3>
+                        
+
+                        <h3>
+                            <i class="icon-comentarios_32_a"></i>
+                            <strong class="js-ueCommentsCounter" data-commentId="1451902" content="UserComments:100" itemprop="interactionCount">100</strong>
+                            Comentarios
+                        </h3>
+
                         <article>
                             <header>
                                 <span>5</span>
@@ -248,71 +268,74 @@ Comentarios
                                 <p>Y no se lo ocurrió enviar la información al CNI? esto cada vez es peor, es necesario que este cosejero de Interior de explicaciones a la ciudadanía y si no tomar las responsabilidades correspondientes, cada vez esta más claro que se pudo haber evitado pero la prepotencia de las autoridades catalanas y su afán de ser independiente nos han puesto en peligro a todos</p>
                             </div>
                         </article>
+
+
                         <div class="comments-tool js-botonComentarios-599eae6546163fc1168b460f">
                             <span>Ver <strong class="js-ueCommentsCounter" data-commentId="1451902">100</strong> comentarios
-<i class="icon-adelante_32_d" data-click-role="cambiarIconos"></i>
-<i class="icon-cerrar_32_d no-visible" data-click-role="cambiarIconos"></i>
-</span>
+                            <i class="icon-adelante_32_d" data-click-role="cambiarIconos"></i>
+                            <i class="icon-cerrar_32_d no-visible" data-click-role="cambiarIconos"></i>
+                        </span>
                         </div>
                         <script type="text/javascript">
-                        function ocultaMuestraCapa(divId) {
-                            if (document.getElementById(divId).style.display == 'none') {
-                                document.getElementById(divId).style.display = 'block';
-                            } else {
-                                document.getElementById(divId).style.display = 'none';
-                            }
-                        };
-                        (function() {
-                            if (typeof jQuery != 'undefined') {
-                                var commentsId = '#js_599eae6546163fc1168b460f',
-                                    containerSelector = '.comentarios.aside-comments',
-                                    divSelector = '.texto-comentario',
-                                    textElement = 'p',
-                                    linkClass = 'leer-mas-btn',
-                                    spanClass = 'txt'
-                                gradientClass = 'gradient';
-                                jQuery(commentsId + ' ' + containerSelector)
-                                    .find(divSelector + ' ' + textElement).map(
-                                        function() {
-                                            try {
-                                                var divContainer = jQuery(this).parent(divSelector);
-                                                var containerMaxSize = divContainer.css('max-height')
-                                                    .split('px')[0];
-                                                if (jQuery(this).height() > containerMaxSize) {
-                                                    divContainer.append(
-                                                        jQuery('<a>', {
-                                                            class: linkClass,
-                                                            click: function(event) {
-                                                                event.preventDefault();
-                                                                var spanTxt = jQuery(this).find('span.' +
-                                                                    spanClass);
-                                                                if (divContainer.css('max-height') !== 'none') {
-                                                                    divContainer.css('max-height', 'none');
-                                                                    jQuery(this).css('position', 'relative')
-                                                                    spanTxt.html('cerrar');
-                                                                } else {
-                                                                    divContainer.css('max-height',
-                                                                        containerMaxSize + 'px');
-                                                                    jQuery(this).css('position', 'absolute')
-                                                                    spanTxt.html('leer más');
-                                                                }
-                                                            }
-                                                        }).append(
-                                                            jQuery('<span>', { class: gradientClass }),
-                                                            jQuery('<span>', {
-                                                                class: spanClass,
-                                                                html: 'leer más'
-                                                            })
-                                                        )
-                                                    )
-                                                }
-                                            } catch (e) {
-                                                console.error('Error in most valued comments');
-                                            }
-                                        }
-                                    );
-                            }
-                        })();
+                        // function ocultaMuestraCapa(divId) {
+                        //     if (document.getElementById(divId).style.display == 'none') {
+                        //         document.getElementById(divId).style.display = 'block';
+                        //     } else {
+                        //         document.getElementById(divId).style.display = 'none';
+                        //     }
+                        // };
+                        // (function() {
+                        //     if (typeof jQuery != 'undefined') {
+                        //         var commentsId = '#js_599eae6546163fc1168b460f',
+                        //             containerSelector = '.comentarios.aside-comments',
+                        //             divSelector = '.texto-comentario',
+                        //             textElement = 'p',
+                        //             linkClass = 'leer-mas-btn',
+                        //             spanClass = 'txt'
+                        //         gradientClass = 'gradient';
+                        //         jQuery(commentsId + ' ' + containerSelector)
+                        //             .find(divSelector + ' ' + textElement).map(
+                        //                 function() {
+                        //                     try {
+                        //                         var divContainer = jQuery(this).parent(divSelector);
+                        //                         var containerMaxSize = divContainer.css('max-height')
+                        //                             .split('px')[0];
+                        //                         if (jQuery(this).height() > containerMaxSize) {
+                        //                             divContainer.append(
+                        //                                 jQuery('<a>', {
+                        //                                     class: linkClass,
+                        //                                     click: function(event) {
+                        //                                         event.preventDefault();
+                        //                                         var spanTxt = jQuery(this).find('span.' +
+                        //                                             spanClass);
+                        //                                         if (divContainer.css('max-height') !== 'none') {
+                        //                                             divContainer.css('max-height', 'none');
+                        //                                             jQuery(this).css('position', 'relative')
+                        //                                             spanTxt.html('cerrar');
+                        //                                         } else {
+                        //                                             divContainer.css('max-height',
+                        //                                                 containerMaxSize + 'px');
+                        //                                             jQuery(this).css('position', 'absolute')
+                        //                                             spanTxt.html('leer más');
+                        //                                         }
+                        //                                     }
+                        //                                 }).append(
+                        //                                     jQuery('<span>', { class: gradientClass }),
+                        //                                     jQuery('<span>', {
+                        //                                         class: spanClass,
+                        //                                         html: 'leer más'
+                        //                                     })
+                        //                                 )
+                        //                             )
+                        //                         }
+                        //                     } catch (e) {
+                        //                         console.error('Error in most valued comments');
+                        //                     }
+                        //                 }
+                        //             );
+                        //     }
+                        // })();
+                        // 
                         </script>
                     </aside>
                 </div>
