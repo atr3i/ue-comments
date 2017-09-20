@@ -35,14 +35,62 @@
 
   
 (function(){
+
   var buttons = document.querySelectorAll("[data-role-toggle]");
  
   for (var i = buttons.length - 1; i >= 0; i--) {
+
     buttons[i].addEventListener('click', function(e){
+
+      e.preventDefault();
+
       var enlace = this.getAttribute("data-role-toggle");
+
       var capa = document.querySelector("[data-role-toggle-content=" + enlace + "]");
+
       capa.classList.toggle('is-visible');
+   	  
     })
+  }
+
+
+
+
+  var slide_toggle = document.querySelectorAll("[data-slide-toggle]");
+
+  for (var i = slide_toggle.length - 1; i >= 0; i--) {
+
+  	slide_toggle[i].addEventListener('click', function(e){
+
+  		e.preventDefault();
+
+  		var s = document.getElementById('c-mask');
+
+  		console.log(s);
+
+  		var d = this.getAttribute("data-slide-toggle");
+  		var c = document.querySelector("[data-slide-toggle-content=" + d + "]");
+  		var b = document.body;
+
+  		console.log(b);
+		
+		switch (d) {
+
+			case 'slideRight':
+			   c.classList.toggle('is-slide-right');
+			   b.classList.toggle('disable-vscroll');
+			   s.classList.toggle('is-active');
+			   break;
+			case 'slideLeft':
+			   c.classList.toggle('is-slide-left');
+			   b.classList.toggle('disable-vscroll');
+			   s.classList.toggle('is-active');
+			   break;
+			default:
+			   c.classList.toggle('');
+		}
+  	})
+
   }
     
 })();

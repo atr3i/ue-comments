@@ -128,7 +128,9 @@
 
 
 
-                            <button type="button" data-role-toggle="commentsBoard">Ver comentarios</button>
+                            <button class="ue-c-button" type="button" data-slide-toggle="slideRight">Ver comentarios</button>
+
+
 
                             {{!-- <a href="#ancla_comentarios" class="comments-btn js-botonComentarios-599eae6546163fc1168b460f">
                                 <span class="left">
@@ -339,7 +341,10 @@
                         </script>
                     </aside>
                 </div>
-                <div class="lightbox_shadow no-visible js-popup"></div>
+
+                <div id="c-mask" class="ue-c-panel-shadow"></div>
+
+                {{!-- <div class="lightbox_shadow no-visible js-popup"></div> --}}
 
                 {{> includes/ue-panel/ue-panel }}
 
@@ -399,7 +404,7 @@
         </div>
         <script type="text/javascript">
         jQuery(function() {
-            if (Comentarios) { window.Comments = new Comentarios({ botonesDesplegar: '.js-botonComentarios', newsId: "599eae6546163fc1168b460f" }); }
+            // if (Comentarios) { window.Comments = new Comentarios({ botonesDesplegar: '.js-botonComentarios', newsId: "599eae6546163fc1168b460f" }); }
             if (typeof jQuery.fn.RedesSociales === 'function') { jQuery('#js_599eae6546163fc1168b460f').find('.js_socialMedia').RedesSociales({ title: "El Govern, sobre el aviso \"informal\" de la Policía belga: \"Nunca nos constó que Es Satty fuera peligroso\"", img: "http://v.uecdn.es/p/108/thumbnail/entry_id/0_d79tes2x/width/657/type/2/bgcolor/000000/0_d79tes2x.jpg", url: "http://www.elmundo.es/cataluna/2017/08/24/599eae6546163fc1168b460f.html", summary: "", viaTwitter: 'elmundoes', urlCorreo: "http://www.elmundo.es/enviar/formulario_enviar_noticia.html?que_mundo=elmundo", sufijoAnalitica: '_1' }); }
             if (typeof jQuery.fn.ElementoFijo === 'function') { jQuery('#js_599eae6546163fc1168b460f').find('.js_fixed').ElementoFijo({ elementosAnteriores: ['.nav-container', '.breadcrumbs '], elementoDesdeFixed: '.content', elementoHastaFixed: '.end-fixed', minWidthFijo: 768 }); }
         });

@@ -66,15 +66,14 @@ More info available at http://www.omniture.com -->
     function DM_prepClient(csid, client) { client.DM_cat("cataluna > cataluna-home > noticia"); }
     </script>
     <script src="http://e00-elmundo.uecdn.es/assets/desktop/master/js/ue-ajax.js" type="text/javascript"></script>
-    <script src="http://e00-elmundo.uecdn.es/assets/v7/js/kalturaue-elmundo.min.js" type="text/javascript"></script>
-    <script src="http://e00-elmundo.uecdn.es/assets/v7/js/desktop.min.js" type="text/javascript"></script>
-    <script type="text/javascript" src="http://e00-elmundo.uecdn.es/assets/navcontinua/v1/navegacioncontinua.min.js"></script>
-    <script type="text/javascript">
-    jQuery(function() { if (typeof NavegacionContinua === 'function' && typeof nav_continua_active !== 'undefined' && typeof uePages !== 'undefined' && typeof ueDataPage !== 'undefined' && typeof activeUeNavigation !== 'undefined') { var navegacion = new NavegacionContinua(jQuery, uePages, ueDataPage, nav_continua_active, activeUeNavigation);
-            navegacion.init();
-            jQuery(document).on("contentLoaded", function(event, params) { window.nextContentId = MetadataWalker.getContentId(params.nIndex); }); } else { var historyFix = new historyAPIFix(jQuery);
-            historyFix.lanzaListenerPopstate(); }; });
-    </script>
+   
+     <!-- <script type="text/javascript" src="http://e00-elmundo.uecdn.es/assets/navcontinua/v1/navegacioncontinua.min.js"></script>--> 
+     <script type="text/javascript">
+    // jQuery(function() { if (typeof NavegacionContinua === 'function' && typeof nav_continua_active !== 'undefined' && typeof uePages !== 'undefined' && typeof ueDataPage !== 'undefined' && typeof activeUeNavigation !== 'undefined') { var navegacion = new NavegacionContinua(jQuery, uePages, ueDataPage, nav_continua_active, activeUeNavigation);
+    //         navegacion.init();
+    //         jQuery(document).on("contentLoaded", function(event, params) { window.nextContentId = MetadataWalker.getContentId(params.nIndex); }); } else { var historyFix = new historyAPIFix(jQuery);
+    //         historyFix.lanzaListenerPopstate(); }; });
+    // </script>
     <div class="no-visible" id="iframeACargar">
         <div class="lightbox_shadow js_lightboxShadow no-visible"></div>
         <section class="lightbox js_enviarnoticia no-visible">
