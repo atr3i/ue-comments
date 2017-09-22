@@ -36,7 +36,9 @@
   
 (function(){
 
-  var buttons = document.querySelectorAll("[data-role-toggle]");
+  var buttons = document.body.querySelectorAll("[data-role-toggle]");
+
+  console.log(buttons);
  
   for (var i = buttons.length - 1; i >= 0; i--) {
 
@@ -53,10 +55,10 @@
     })
   }
 
-
-
-
-  var slide_toggle = document.querySelectorAll("[data-slide-toggle]");
+  var b = document.body;
+  var s = document.querySelector('[data-slide-shadow]');
+  var p = document.querySelector('[data-slide-toggle-content]'); 
+  var slide_toggle = document.querySelectorAll('[data-slide-toggle]');
 
   for (var i = slide_toggle.length - 1; i >= 0; i--) {
 
@@ -64,34 +66,36 @@
 
   		e.preventDefault();
 
-  		var s = document.getElementById('c-mask');
-
-  		console.log(s);
-
-  		var d = this.getAttribute("data-slide-toggle");
-  		var c = document.querySelector("[data-slide-toggle-content=" + d + "]");
-  		var b = document.body;
-
-  		console.log(b);
-		
-		switch (d) {
-
-			case 'slideRight':
-			   c.classList.toggle('is-slide-right');
-			   b.classList.toggle('disable-vscroll');
-			   s.classList.toggle('is-active');
-			   break;
-			case 'slideLeft':
-			   c.classList.toggle('is-slide-left');
-			   b.classList.toggle('disable-vscroll');
-			   s.classList.toggle('is-active');
-			   break;
-			default:
-			   c.classList.toggle('');
-		}
+  		let d = this.getAttribute('data-slide-toggle');
+  		let c = document.querySelector('[data-slide-toggle-content=' + d + ']');
+  		
+  		switch (d) {
+  			case 'slideRight':
+  			   c.classList.toggle('is-slide-right');
+  			   b.classList.toggle('disable-vscroll');
+  			   s.classList.toggle('is-active');
+  			   break;
+  			case 'slideLeft':
+  			   c.classList.toggle('is-slide-left');
+  			   b.classList.toggle('disable-vscroll');
+  			   s.classList.toggle('is-active');
+  			   break;
+  			default:
+  			   c.classList.toggle('');
+  		}
   	})
-
   }
+
+  s.addEventListener('click', function(e){
+    s.classList.toggle('is-active');
+    b.classList.remove('disable-vscroll');
+    var o = document.querySelectorAll('[data-slide-toggle-content]');
+      for (var i = o.length - 1; i >= 0; i--) {
+        let c = o[i].classList;
+        let r = c.remove('is-slide-right');
+        let l = c.remove('is-slide-left');
+      }
+  })
     
 })();
 
