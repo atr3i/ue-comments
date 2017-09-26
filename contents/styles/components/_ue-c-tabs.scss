@@ -1,28 +1,51 @@
 // - Modificadores
 // 
-// .is-selected
 //
-
 
 .ue-c-tabs {
 	width: 100%;
-	
 }
 
-.ue-c-tabs-list {
-	display: flex;
+.ue-c-tablist {
+ 	display: flex;
 	flex-direction: row;
 	justify-content: center;
 	width: 100%;
-	border-bottom: 1px solid black;
+	border-bottom: 1px solid var(--ue-c-tablist-border, black);
 	padding: 10px;
-
-	&__tab {
-		padding: 5px;
-		font-size: 14px;
-	}
 }
 
-.is-selected {
-	border-bottom: 4px solid grey;
+[role="tab"] {
+  position: relative;
+  margin: 0 0.5em;
+  padding: 0.3em 0.5em 0.4em;
+  border-radius: 0;
+  overflow: visible;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+[role="tab"][aria-selected="true"] {
+  border-bottom: 4px solid var(--ue-c-tab-border-color, black);
+  outline: 0;
+}
+
+[role="tab"]:hover,
+[role="tab"]:focus,
+[role="tab"]:active {
+  outline: 0;
+  border-radius: 0;
+  color: inherit;
+}
+
+.ue-c-tab__panel {}
+
+[role="tabpanel"] {
+  position: relative;
+  z-index: 2;
+  padding: 0.5em 0.5em 0.7em;
+}
+
+[role="tabpanel"]:focus {
+  outline: 0;
 }

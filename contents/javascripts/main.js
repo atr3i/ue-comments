@@ -37,8 +37,6 @@
 (function(){
 
   var buttons = document.body.querySelectorAll("[data-role-toggle]");
-
-  console.log(buttons);
  
   for (var i = buttons.length - 1; i >= 0; i--) {
 
@@ -46,18 +44,21 @@
 
       e.preventDefault();
 
-      var enlace = this.getAttribute("data-role-toggle");
+      let enlace = this.getAttribute("data-role-toggle");
+      let capa = document.querySelectorAll("[data-role-toggle-content=" + enlace + "]");
 
-      var capa = document.querySelector("[data-role-toggle-content=" + enlace + "]");
+      console.log(capa);
+      console.log(enlace);
 
-      capa.classList.toggle('is-visible');
-   	  
+      for (var i = capa.length - 1; i >= 0; i--) {
+        capa[i].classList.toggle('is-visible');
+      }
     })
   }
 
   var b = document.body;
   var s = document.querySelector('[data-slide-shadow]');
-  var p = document.querySelector('[data-slide-toggle-content]'); 
+  //var p = document.querySelector('[data-slide-toggle-content]'); 
   var slide_toggle = document.querySelectorAll('[data-slide-toggle]');
 
   for (var i = slide_toggle.length - 1; i >= 0; i--) {
@@ -89,7 +90,7 @@
   s.addEventListener('click', function(e){
     s.classList.toggle('is-active');
     b.classList.remove('disable-vscroll');
-    var o = document.querySelectorAll('[data-slide-toggle-content]');
+    let o = document.querySelectorAll('[data-slide-toggle-content]');
       for (var i = o.length - 1; i >= 0; i--) {
         let c = o[i].classList;
         let r = c.remove('is-slide-right');

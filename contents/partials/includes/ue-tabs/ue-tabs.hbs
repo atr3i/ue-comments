@@ -1,4 +1,4 @@
-<div class="ue-c-tabs">
+{{!-- <div class="ue-c-tabs">
 	<ul class="ue-c-tabs-list">
 	    <li class="ue-c-tabs-list__tab is-selected" data-section="all"><a title="Todos los comentarios" href="#all">Todos</a></li>
 	    <li class="ue-c-tabs-list__tab" data-section="most-valued"><a title="Comentarios más valorados" href="#most-valued">Más valorados</a></li>
@@ -7,4 +7,55 @@
 	<div class="ue-c-tabs__panel">
 		{{> includes/ue-comments/ue-comments }}
 	</div>
-</div>
+</div> --}}
+
+  <div class="ue-c-tabs">
+    <div class="ue-c-tablist" role="tablist" aria-label="Comentarios">
+      <button class="ue-c-button--link" role="tab"
+            aria-selected="true"
+            aria-controls="all-comments"
+            id="allComments">
+        Todos
+      </button>
+      <button class="ue-c-button--link" role="tab"
+            aria-selected="false"
+            aria-controls="most-valued"
+            id="mostValued"
+            tabindex="-1">
+        Más valorados
+      </button>
+      <button class="ue-c-button--link" role="tab"
+            aria-selected="false"
+            aria-controls="all-mentions"
+            id="allMentions"
+            tabindex="-1"
+            data-deletable="">
+        Te mencionan
+      </button>
+    </div>
+    <div class="ue-c-tab__panel" tabindex="0"
+       role="tabpanel"
+       id="all-comments"
+       aria-labelledby="Todos">
+      
+        {{> includes/ue-comments/ue-comments }}
+   
+    </div>
+    <div class="ue-c-tab__panel" tabindex="0"
+       role="tabpanel"
+       id="most-valued"
+       aria-labelledby="Más valorados"
+       hidden="">
+      
+      {{> includes/ue-comments/ue-comments-most-valued }}
+
+    </div>
+    <div class="ue-c-tab__panel" tabindex="0"
+       role="tabpanel"
+       id="all-mentions"
+       aria-labelledby="Te mencionan"
+       hidden="">
+      
+      {{> includes/ue-comments/ue-comments-mentions }}
+    </div>
+  </div>

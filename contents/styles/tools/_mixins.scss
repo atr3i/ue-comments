@@ -20,12 +20,13 @@
 // }
 
 //Mixin for buttons
-@mixin buttons($background, $color, $hover-background, $focus-border){
+@mixin buttons($background, $color, $hover-background, $hover-color, $focus-border){
 	background-color: $background;
 	color: $color;
     &:active,
     &:hover {
     	background-color: $hover-background; 
+        color: $hover-color;
     }
     &:focus {
     	box-shadow: 0 0 0 1px $focus-border; 

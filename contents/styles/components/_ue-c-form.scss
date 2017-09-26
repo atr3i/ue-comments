@@ -3,6 +3,19 @@
 // .is-button
 // .toggle
 
+[data-role-toggle-content] {
+	display: none;
+}
+
+[data-role-toggle-content].is-visible {
+	display: block;
+}
+
+
+.ue-c-comments > [data-role-toggle-content='joinThread'] {
+	display: block;
+}
+
 .ue-c-textarea {
 	display: inline-block;
     padding: 0.5em 0.75rem;
@@ -57,21 +70,13 @@
     border: 0;
     border-radius: 0.25rem;
     transition: all .15s ease-in-out;
-    // outline: initial;
 	@include buttons(
 			var(--btn-background, black), 
 			var(--btn-color, whitesmoke), 
 			var(--btn-hover-background, darkgrey), 
+			var(--btn-hover-color, whitesmoke),
 			var(--btn-focus-border, black)
 			);
-}
-
-[data-role-toggle-content] {
-	display: none;
-}
-
-[data-role-toggle-content].is-visible {
-	display: block;
 }
 
 .ue-c-button--link {
@@ -84,11 +89,32 @@
 		color: deepskyblue;
 	}
 }
+
 .ue-c-form {
-	&__message {
+	&__message,
+	&__message--error {
 		font-size: 1.1rem;
-		padding: 0.5rem 0;
+		padding: 1rem;
 		display: inline-block;
+		width: 100%;
+		text-align: center;
+		margin: 0.5em 0;
+		background: var(--message-background, lemonchiffon);
+		color: var(--message-background, black);
+		border-radius: var(--message-border-radius, 3px);
+		border: 1px solid #666;
+		box-shadow: 0 0 0.3em #797979;
+		a {
+			color: var(--link-color, dodgerblue);
+			text-decoration: underline;
+			&:hover {
+				color: var(--link-color-hover, deepskyblue);
+			}
+		}
+
+		&--error {
+			background: var(--message-background, lightsalmon);
+		}
 	}
 	&__captcha {
 		text-align: center;
@@ -99,24 +125,24 @@
 	}
 }
 
-.ue-c-modal {
-	position: relative;
-	background-color: whitesmoke;
-	padding: 2em 2rem 1em 1rem;
-	font-size: 0.9em;
-	&--close {
-		position: absolute;
-		top: 0;
-		right: 0;
-		height: 2.5em;
-		width: 2.5em;
-		background: transparent;
-		border: 0;
-		cursor: pointer;
-		@include close-icon(black);
-	}
-	&__title {
-		font-size: 1.2em;
-		display: block;
-	}
-}
+// .ue-c-modal {
+// 	position: relative;
+// 	background-color: whitesmoke;
+// 	padding: 2em 2rem 1em 1rem;
+// 	font-size: 0.9em;
+// 	&--close {
+// 		position: absolute;
+// 		top: 0;
+// 		right: 0;
+// 		height: 2.5em;
+// 		width: 2.5em;
+// 		background: transparent;
+// 		border: 0;
+// 		cursor: pointer;
+// 		@include close-icon(black);
+// 	}
+// 	&__title {
+// 		font-size: 1.2em;
+// 		display: block;
+// 	}
+// }

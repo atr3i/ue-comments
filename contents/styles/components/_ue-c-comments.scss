@@ -10,6 +10,13 @@
 $Color: #333;
 $block: 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="#{$Color}" width="24" height="24" viewBox="0 0 24 24"><g><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM4 12c0-4.42 3.58-8 8-8 1.85 0 3.55.63 4.9 1.69L5.69 16.9C4.63 15.55 4 13.85 4 12zm8 8c-1.85 0-3.55-.63-4.9-1.69L18.31 7.1C19.37 8.45 20 10.15 20 12c0 4.42-3.58 8-8 8z"></path></g></svg>';
 
+.is-bubble-icon {
+	fill: var(--bubble-icon-color, black);
+}
+.is-arrow-icon{
+	fill: var(--ue-c-panel-icon-color, black);
+}
+
 .ue-c-comments{
 
 	&__title {
@@ -25,7 +32,6 @@ $block: 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="#
 	}
 
 	&-bubble {
-		fill: var(--bubble-icon-color, black);
 		position: absolute;
 		top: 0.5em;
     	left: 1em;
@@ -52,6 +58,38 @@ $block: 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="#
 	}
 	&__form-verification {
 
+	}
+
+	&-toggle {
+		position: relative;
+		margin: 1em 0;
+		.ue-c-button {
+			border: 2px solid black;
+			width: 100%;
+			border-radius: 0;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			@include buttons(
+				var(--btn-background, transparent), 
+				var(--btn-color, black), 
+				var(--btn-hover-background, black), 
+				var(--btn-hover-color, whitesmoke),
+				var(--btn-focus-border, transparent)
+			);
+			&:hover {
+				.is-bubble-icon,
+				.is-arrow-icon {
+					fill: var(--bubble-icon-color, whitesmoke);
+				}
+			}
+		}
+		.is-arrow-icon {
+			transform: rotate(180deg);
+			width: 30px;
+    		height: 30px;
+    		transform: rotate(180deg);
+		}
 	}
 }
 
@@ -151,6 +189,7 @@ $block: 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="#
 				var(--btn-background, transparent), 
 				var(--btn-color, black), 
 				var(--btn-hover-background, transparent), 
+				var(--btn-hover-color, darkgrey),
 				var(--btn-focus-border, transparent)
 			);
 		}
@@ -190,7 +229,8 @@ $block: 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="#
 			@include buttons(
 				var(--btn-background, #EEE), 
 				var(--btn-color, transparent), 
-				var(--btn-hover-background, #EEE), 
+				var(--btn-hover-background, #EEE),
+				var(--btn-hover-color, darkgrey), 
 				var(--btn-focus-border, #DDD)
 			);
 			width: auto;
@@ -231,6 +271,7 @@ $block: 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="#
 				var(--btn-background, #eee), 
 				var(--btn-color, black), 
 				var(--btn-hover-background, #ddd), 
+				var(--btn-hover-color, darkgrey),
 				var(--btn-focus-border, lightgrey)
 			);
 		}
@@ -252,7 +293,6 @@ $block: 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="#
 
 	}
 }
-
 
 
 
