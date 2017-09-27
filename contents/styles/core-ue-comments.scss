@@ -2,20 +2,20 @@
   box-sizing: border-box;
   font-family: "robotoRegular", Arial, sans-serif, helvetica;
 }
-//@import "normalize";
 @import "tools/_mixins";
 @import "tools/_functions";
-@import "tools/_utils";
-//@import "tools/_css-variables";
 @import "components/_ue-c-panel";
 @import "components/_ue-c-tabs";
 @import "components/_ue-c-comments";
 @import "components/_ue-c-form";
 @import "objects/_ue-o-tooltip";
 
+//@import "normalize";
+//@import "tools/_css-variables";
+
+@import "tools/_utils";
+
 //@import "themes/_marca-styles";
-
-
 // OVERRIDE elmundo_style & marca_style (provisional)
 
 body {
@@ -33,4 +33,31 @@ body {
 
 .ue-c-panel {
 	z-index: 12000; // set a higher z-index
+}
+
+.menu-sample {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 200px;
+	background: black;
+	margin: 0;
+	padding: 0;
+	z-index: 10;
+	
+	li {
+		margin: 0;
+		padding: 0;
+		a {
+			display: inline-block;
+			width: 100%;
+			padding: 1em;
+			color: whitesmoke;
+			font-size: 14px;
+
+			&:hover {
+				background: #333;
+			}
+		}
+	}
 }

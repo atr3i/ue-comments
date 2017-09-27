@@ -33,6 +33,41 @@
 
 // }, false);
 
+(function(){
+
+  var parentNode = document.querySelector('[data-form]'); 
+  var publishComment = document.querySelector('[data-form=publishComment]'); 
+  var checkUser = document.querySelector('[data-form-content=verifyUser]');
+  var messageOk = document.querySelector('[data-form-message=confirm]');
+  var messageError = document.querySelector('[data-form-message=error]');
+
+  var buttonVerify = document.querySelector('[data-form=verifyUser]');
+  var buttonSubmit = document.querySelector('[data-form=submitComment]'); 
+
+  buttonVerify.addEventListener('click', function(e){
+    e.preventDefault();
+
+    publishComment.classList.add('is-hidden');
+    checkUser.classList.remove('is-hidden');
+
+  })
+
+  buttonSubmit.addEventListener('click', function(e){
+    e.preventDefault();
+
+    publishComment.classList.remove('is-hidden');
+    checkUser.classList.add('is-hidden');
+    messageOk.classList.remove('is-hidden');
+
+    setTimeout(function(){
+      messageOk.classList.add('has-fade-out');
+      parentNode.removeChild(messageOk);
+      
+    }, 2000);
+
+  })
+
+})();
   
 (function(){
 
@@ -47,9 +82,6 @@
       let enlace = this.getAttribute("data-role-toggle");
       let capa = document.querySelectorAll("[data-role-toggle-content=" + enlace + "]");
 
-      console.log(capa);
-      console.log(enlace);
-
       for (var i = capa.length - 1; i >= 0; i--) {
         capa[i].classList.toggle('is-visible');
       }
@@ -58,7 +90,6 @@
 
   var b = document.body;
   var s = document.querySelector('[data-slide-shadow]');
-  //var p = document.querySelector('[data-slide-toggle-content]'); 
   var slide_toggle = document.querySelectorAll('[data-slide-toggle]');
 
   for (var i = slide_toggle.length - 1; i >= 0; i--) {

@@ -5,11 +5,15 @@
             </svg>
             <span class="ue-c-comments__count">125</span> Comentarios
         </div> 
-
-      
-
-
         <div class="ue-c-comments__thread">
+
+            <div class="ue-c-comments__form" data-role-toggle-content="joinThread">
+                {{#> comments-form-block }}
+                    {{!-- comments form content goes here. --}}
+                    {{> includes/ue-comments-form/ue-comments-form }}
+                {{/comments-form-block}}
+            </div>
+
             <div class="ue-c-comment">
                 <header class="ue-c-comment__header"> 
                     <img class="ue-c-comment__avatar" width="50" alt="Avatar de usuario" src="https://e00-marca.uecdn.es/registro/v2/images/avatar/avatar.svg" />
@@ -79,7 +83,7 @@
                         </button>
                     </li>
                     <li class="ue-c-comment__reply">
-                        <button type="button" class="ue-c-button" data-role-toggle="replyComment">                          
+                        <button type="button" class="ue-c-button" data-role-toggle="replyComment">                      
                             Responder
                         </button>
                     </li>
@@ -89,10 +93,12 @@
                     Gracias. Revisaremos tu aviso de mal comportamiento.
                 </div>
 
-                {{#> comments-form-block }}
-                    {{!-- comments form content goes here. --}}
-                    {{> includes/ue-comments-form/ue-comments-form }}
-                {{/comments-form-block}}
+                <div class="ue-c-comments__form" data-role-toggle-content="replyComment">
+                    {{#> comments-form-block }}
+                        {{!-- comments form content goes here. --}}
+                        {{> includes/ue-comments-form/ue-comments-form }}
+                    {{/comments-form-block}}
+                </div>
 
             </div>
             <div class="ue-c-comments__thread-pagination">

@@ -12,9 +12,19 @@
 }
 
 
-.ue-c-comments > [data-role-toggle-content='joinThread'] {
+[data-role-toggle-content='joinThread'] {
 	display: block;
 }
+
+[data-form-message].is-hidden {
+	display: none;
+}
+
+.has-fade-out {
+	opacity: 0;
+	transition: all 1s ease-out 0s;
+}
+
 
 .ue-c-textarea {
 	display: inline-block;

@@ -1,33 +1,31 @@
 
-<div class="ue-c-comments__form" data-role-toggle-content="replyComment">
+{{!-- <div class="ue-c-comments__form" data-role-toggle-content="replyComment"> --}}
     <div class="ue-c-comments__form-publish">
-        <form class="ue-c-form" name="comment-box" action="#"> 
-            <span class="ue-c-form__message" data-form-message="confirm">Gracias por tu aportación</span>
+        <form class="ue-c-form" name="comment-box" action="#" data-form="publishComment"> 
+            <span class="ue-c-form__message is-hidden" data-form-message="confirm">Gracias por tu aportación</span>
             <label class="is-hidden-text" for="comment">Comentar:</label>
             <span class="ue-c-input-group">   
                 <textarea class="ue-c-textarea" name="comment" id="comment" placeholder="Escriba aquí su comentario" autocorrect="on" required="" autofocus="on"></textarea>
-                <button class="ue-c-button" name="publish" value="Publicar" data-role-toggle="verifyUser">Publicar</button>
+                <button class="ue-c-button" name="publish" value="Publicar" data-form="verifyUser">Publicar</button>
             </span>
         </form>
-
     </div>
-    <div class="ue-c-comments__form-verification" data-role-toggle-content="verifyUser">
-        <form class="ue-c-form" name="comment-verification" action="#"> 
+    <div class="ue-c-comments__form-verification">
+        <form class="ue-c-form is-hidden" name="comment-verification" action="#" data-form-content="verifyUser">  
             <fieldset class="ue-c-form__captcha">
                 <label class="ue-c-form__message" for="captcha" data-form-message="captcha">
-                    Introduzca el código que aparece en la imagen. Si no lo ve bien, pinche <a rel="nofollow" title="Cargar otra imagen" href="#">aquí</a> para mostrar otro.      
-                   {{!--  <button class="ue-c-button--link" onclick="" data-modal-target="#help">(¿Para que sirve este código?)</button> --}}
+                    Introduzca el código que aparece en la imagen. Si no lo ve bien, pinche <a rel="nofollow" title="Cargar otra imagen" href="#">aquí</a> para mostrar otro.
                 </label>
-                <span class="ue-c-form__message--error" data-form-message="error">
+                <span class="ue-c-form__message--error is-hidden" data-form-message="error">
                     El código de seguridad que ha introducido no es correcto. Por favor, revíselo y pruebe de nuevo
                 </span>
                 <img src="http://www.elmundo.es/servicios/noticias/scroll/comentarios/comunidad/captcha.jpg?1504083523171"> 
                 <span class="ue-c-input-group"> 
                     <input class="ue-c-input" type="text" name="captcha" maxlength="6" required="" autocapitalize="off" autofocus="on">
-                    <button type="submit" class="ue-c-button" name="submit">Enviar</button>
+                    <button type="submit" class="ue-c-button" name="" data-form="submitComment">Enviar</button>
                 </span>
             </fieldset>
         </form>
     </div>
-</div>
+{{!-- </div> --}}
 
