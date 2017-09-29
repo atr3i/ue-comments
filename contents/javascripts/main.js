@@ -33,41 +33,7 @@
 
 // }, false);
 
-(function(){
 
-  var parentNode = document.querySelector('[data-form]'); 
-  var publishComment = document.querySelector('[data-form=publishComment]'); 
-  var checkUser = document.querySelector('[data-form-content=verifyUser]');
-  var messageOk = document.querySelector('[data-form-message=confirm]');
-  var messageError = document.querySelector('[data-form-message=error]');
-
-  var buttonVerify = document.querySelector('[data-form=verifyUser]');
-  var buttonSubmit = document.querySelector('[data-form=submitComment]'); 
-
-  buttonVerify.addEventListener('click', function(e){
-    e.preventDefault();
-
-    publishComment.classList.add('is-hidden');
-    checkUser.classList.remove('is-hidden');
-
-  })
-
-  buttonSubmit.addEventListener('click', function(e){
-    e.preventDefault();
-
-    publishComment.classList.remove('is-hidden');
-    checkUser.classList.add('is-hidden');
-    messageOk.classList.remove('is-hidden');
-
-    setTimeout(function(){
-      messageOk.classList.add('has-fade-out');
-      parentNode.removeChild(messageOk);
-      
-    }, 2000);
-
-  })
-
-})();
   
 (function(){
 
@@ -128,7 +94,88 @@
         let l = c.remove('is-slide-left');
       }
   })
+  
+  var joinAll = document.querySelectorAll('[data-form=joinThread]');
+  
+  for (var i = joinAll.length - 1; i >= 0; i--) {  
     
+    joinAll[i].addEventListener ('focus', function(){
+
+      formFlow(this);
+      // event.target.style.background = 'pink';
+
+    }, true);
+  }
+
+ 
+  function formFlow(elem) {
+    
+    var buttonVerify = elem.querySelectorAll('[data-form=verifyUser]');
+    var checkUser = elem.querySelectorAll('[data-form-content=verifyUser]');
+    var publishComment = elem.querySelectorAll('[data-form=publishComment]'); 
+    var messageOk = elem.querySelectorAll('[data-form-message=confirm]');
+    //var messageError = elem.querySelector('[data-form-message=error]');
+    var formFields = elem.getElementsByClassName("ue-c-form")[0];
+    var buttonSubmit = elem.querySelectorAll('[data-form=submitComment]'); 
+
+    for (var i = buttonVerify.length - 1; i >= 0; i--) {
+
+      buttonVerify[i].addEventListener('click', function(e){
+        
+        e.preventDefault();
+
+        for (var i = checkUser.length - 1 && publishComment.length -1; i >= 0; i--) {
+          checkUser[i].classList.remove('is-hidden');
+          publishComment[i].classList.add('is-hidden');
+        }
+      })
+    }
+
+
+    for (var i = buttonSubmit.length - 1; i >= 0; i--) {
+
+      buttonSubmit[i].addEventListener('click', function(e){
+
+        e.preventDefault();
+        
+        for (var i = checkUser.length - 1 && publishComment.length -1 && messageOk.length -1; i >= 0; i--) {
+
+          checkUser[i].classList.add('is-hidden');
+          publishComment[i].classList.remove('is-hidden');
+
+          messageOk[i].classList.remove('is-hidden');
+          messageOk[i].classList.remove('has-fade-out');
+          messageOk[i].classList.add('has-fade-in');
+          fadeAway(messageOk[i]);
+
+        }
+
+        resetFields(formFields);
+
+      })
+    }
+
+  }
+
+  function fadeAway(elem) {
+    setTimeout(function() {
+        elem.classList.remove('has-fade-in');
+        elem.classList.add('has-fade-out');
+    }, 2000);
+
+    setTimeout(function() {
+        elem.classList.add('is-hidden');
+        // if(elem1.parentNode) {
+        //   elem1.parentNode.removeChild(elem1);
+        // }
+    }, 2500);
+
+  }
+
+  function resetFields(elem) {
+    elem.reset();
+  }
+
 })();
 
 

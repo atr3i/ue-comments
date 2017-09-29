@@ -24,7 +24,10 @@
 	opacity: 0;
 	transition: all 1s ease-out 0s;
 }
-
+.has-fade-in {
+	opacity: 100;
+	transition: all 1s ease-out 0s;
+}
 
 .ue-c-textarea {
 	display: inline-block;

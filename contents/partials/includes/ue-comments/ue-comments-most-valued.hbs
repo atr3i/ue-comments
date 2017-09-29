@@ -6,6 +6,14 @@
             <span class="ue-c-comments__count">25</span> Comentarios más valorados
         </div> 
         <div class="ue-c-comments__thread">
+
+            <div class="ue-c-comments__form" data-form="joinThread">
+                {{#> comments-form-block }}
+                    {{!-- comments form content goes here. --}}
+                    {{> includes/ue-comments-form/ue-comments-form }}
+                {{/comments-form-block}}
+            </div>
+
             <div class="ue-c-comment">
                 <header class="ue-c-comment__header"> 
                     <img class="ue-c-comment__avatar" width="50" alt="Avatar de usuario" src="https://e00-marca.uecdn.es/registro/v2/images/avatar/avatar.svg" />
@@ -22,37 +30,6 @@
                 </header>
                 <div class="ue-c-comment__discussion has-mention">
                     A veces tardan mucho, y cuando los publican ya han quitado la noticia... A mí no me gusta este sistema de comentarios... Me gustaría poder ver en una página enlaces a todos mis comentarios y las respuestas a los mismos, ser notificado de las respuestas, y que la navegación por los comentarios fuera mucho más fluida y no se tardara una eternidad en llegar a los primeros. La verdad es que los competidores suelen tener mejores sistemas, lo que me joroba bastante porque las discusiones de El Mundo suelen ser muy interesantes :(
-                   {{!--  <span class="ue-c-comment__mention">
-                        <span class="ue-c-comment__mention-name">@caracartucho</span>
-                        <span class="ue-c-comment__mention-number">
-                            #126 
-                        </span> 
-                        <span data-mention class="ue-c-comment__mention-text">
-                            Que se salgan los independentistas catalanes con la suya es más fácil que te publiquen un comentario en "El Mundo"...
-                        </span>
-                    </span>
-                    <span class="ue-c-comment__mention">
-                        <span class="ue-c-comment__mention-name">@caracartucho</span>
-                        <span class="ue-c-comment__mention-number">
-                            #126 
-                        </span> 
-                        <span data-mention class="ue-c-comment__mention-text">
-                            Que se salgan los independentistas catalanes con la suya es más fácil que te publiquen un comentario en "El Mundo"...
-                        </span>
-                    </span>
-                    <button class="ue-c-button--link" data-role-toggle="showThread">                     
-                        Ver conversación completa
-                        <svg class="ue-c-comment__show-thread" width="24" height="24" viewBox="0 0 24 24"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path></svg>
-                    </button>
-                    <span class="ue-c-comment__mention" data-role-toggle-content="showThread">
-                        <span class="ue-c-comment__mention-name">@caracartucho</span>
-                        <span class="ue-c-comment__mention-number">
-                            #126 
-                        </span> 
-                        <span data-mention class="ue-c-comment__mention-text">
-                            Que se salgan los independentistas catalanes con la suya es más fácil que te publiquen un comentario en "El Mundo"...
-                        </span>
-                    </span> --}}
                 </div>
               
                 <ul class="ue-c-comment__tools">
@@ -85,11 +62,12 @@
                     Gracias. Revisaremos tu aviso de mal comportamiento.
                 </div>
 
-                {{#> comments-form-block }}
-                    {{!-- comments form content goes here. --}}
-                    {{> includes/ue-comments-form/ue-comments-form }}
-                {{/comments-form-block}}
-
+                <div class="ue-c-comments__form" data-role-toggle-content="replyComment" data-form="joinThread">
+                    {{#> comments-form-block }}
+                        {{!-- comments form content goes here. --}}
+                        {{> includes/ue-comments-form/ue-comments-form }}
+                    {{/comments-form-block}}
+                </div>
             </div>
             <div class="ue-c-comments__thread-pagination">
                 <button type="button" class="ue-c-button">VER ANTERIORES</button>
