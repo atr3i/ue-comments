@@ -42,5 +42,8 @@
     "postcss-nested": "^2.1.2",
     "postcss-scss": "^1.0.2",
     "underscore": "^1.8.3"
+  },
+  "dependencies": {
+    "browser-sync": "^2.18.13"
   }
 }

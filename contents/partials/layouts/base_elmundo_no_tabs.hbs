@@ -1,0 +1,57 @@
+{{!-- layouts/base_elmundo_no_tabs.hbs --}}
+
+<!doctype html>
+<html>
+  <head>
+    {{#> head-block }}
+      {{!-- Custom  content per page could be added. --}}
+    {{/head-block}}  
+    <link rel="stylesheet" href="styles/core-ue-comments.css">
+  </head>
+  <body class="">
+    {{#> body-scripts-block }}
+      {{!-- Custom scripts per page can be added. --}}
+      {{> includes/elmundo/body-scripts }}
+    {{/body-scripts-block}}
+    
+    <header class="site-header js-cnav-header main-section-header  site-header-news inside" data-ue-model>
+      {{#> header-block }}
+        {{!-- header content goes here. --}}
+      {{/header-block}}
+    </header>
+
+    <main class="main news js_navContinua" data-ue-contenido id="js_599eae6546163fc1168b460f">
+      {{#> main-block }}
+        {{!-- main content goes here. --}}
+        {{> includes/elmundo/main-no-tabs }}
+      {{/main-block}}
+    </main>
+
+    
+
+    {{#> featured-links-block }}
+      {{!-- featured links goes here. --}}
+      {{> includes/elmundo/featured-links }}
+    {{/featured-links-block}}
+
+    <footer class="site-footer horizontal" itemscope itemtype="http://schema.org/Organization">
+      {{#> footer-block }}
+          {{!-- footer content goes here. --}}
+          {{> includes/elmundo/footer }}
+      {{/footer-block}}
+    </footer>
+
+    {{#> menu-sample-block }}
+      {{!-- menu sample goes here. --}}
+      {{> includes/menu-sample }}
+    {{/menu-sample-block}}
+    
+    <script src="javascripts/main.js"></script>
+
+    {{#> scripts-block }}
+      {{!-- Custom scripts per page can be added. --}}
+      {{> includes/elmundo/scripts }}
+    {{/scripts-block}}
+  </body>
+
+</html>
