@@ -1,12 +1,11 @@
 
-{{!-- <div class="ue-c-comments__form" data-role-toggle-content="replyComment"> --}}
     <div class="ue-c-comments__form-publish">
         <form class="ue-c-form" name="comment-box" action="#" data-form="publishComment"> 
             <span class="ue-c-form__message is-hidden" data-form-message="confirm">Gracias por tu aportación</span>
             <label class="is-hidden-text" for="comment">Comentar:</label>
             <span class="ue-c-input-group">   
-                <textarea class="ue-c-textarea" name="comment" id="comment" placeholder="Escriba aquí su comentario" autocorrect="on" required="" autofocus="on"></textarea>
-                <button class="ue-c-button" name="publish" value="Publicar" data-form="verifyUser">Publicar</button>
+                <textarea class="ue-c-textarea" name="comment" id="comment" placeholder="Escriba aquí su comentario" autocorrect="on" required></textarea>
+                <button class="ue-c-button" type="submit" name="publish" value="Publicar" data-form="verifyUser">Publicar</button>
             </span>
         </form>
     </div>
@@ -19,13 +18,12 @@
                 <span class="ue-c-form__message--error is-hidden" data-form-message="error">
                     El código de seguridad que ha introducido no es correcto. Por favor, revíselo y pruebe de nuevo
                 </span>
-                <img src="http://www.elmundo.es/servicios/noticias/scroll/comentarios/comunidad/captcha.jpg?1504083523171"> 
+                <img alt="captcha image" src="http://www.elmundo.es/servicios/noticias/scroll/comentarios/comunidad/captcha.jpg?1504083523171"> 
                 <span class="ue-c-input-group"> 
-                    <input class="ue-c-input" type="text" name="captcha" maxlength="6" required="" autocapitalize="off" autofocus="on">
+                    <input class="ue-c-input" type="text" name="captcha" maxlength="6" autocapitalize="off" required>
                     <button type="submit" class="ue-c-button" name="" data-form="submitComment">Enviar</button>
                 </span>
             </fieldset>
         </form>
     </div>
-{{!-- </div> --}}
 

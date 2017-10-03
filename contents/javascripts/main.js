@@ -33,7 +33,6 @@
 
 // }, false);
 
-
   
 (function(){
 
@@ -102,28 +101,26 @@
     joinAll[i].addEventListener ('focus', function(){
 
       formFlow(this);
+
+      //event.target.setFocus('ue-c-textarea', 'ue-c-input');
       // event.target.style.background = 'pink';
 
     }, true);
   }
-
- 
+  
   function formFlow(elem) {
     
     var buttonVerify = elem.querySelectorAll('[data-form=verifyUser]');
     var checkUser = elem.querySelectorAll('[data-form-content=verifyUser]');
     var publishComment = elem.querySelectorAll('[data-form=publishComment]'); 
     var messageOk = elem.querySelectorAll('[data-form-message=confirm]');
-    //var messageError = elem.querySelector('[data-form-message=error]');
-    var formFields = elem.getElementsByClassName("ue-c-form")[0];
     var buttonSubmit = elem.querySelectorAll('[data-form=submitComment]'); 
+    var formFields = elem.getElementsByClassName("ue-c-form")[0];
+    //var messageError = elem.querySelector('[data-form-message=error]');
 
     for (var i = buttonVerify.length - 1; i >= 0; i--) {
-
-      buttonVerify[i].addEventListener('click', function(e){
-        
+      buttonVerify[i].addEventListener('click', function(e){     
         e.preventDefault();
-
         for (var i = checkUser.length - 1 && publishComment.length -1; i >= 0; i--) {
           checkUser[i].classList.remove('is-hidden');
           publishComment[i].classList.add('is-hidden');
@@ -131,29 +128,42 @@
       })
     }
 
-
     for (var i = buttonSubmit.length - 1; i >= 0; i--) {
-
       buttonSubmit[i].addEventListener('click', function(e){
-
         e.preventDefault();
-        
         for (var i = checkUser.length - 1 && publishComment.length -1 && messageOk.length -1; i >= 0; i--) {
-
           checkUser[i].classList.add('is-hidden');
           publishComment[i].classList.remove('is-hidden');
-
           messageOk[i].classList.remove('is-hidden');
           messageOk[i].classList.remove('has-fade-out');
           messageOk[i].classList.add('has-fade-in');
           fadeAway(messageOk[i]);
-
         }
 
         resetFields(formFields);
 
       })
     }
+
+    var viewport = document.querySelectorAll('[data-form]');
+    var allInputs = document.getElementsByTagName('input');
+
+    var panel = document.querySelector('[data-slide-toggle-content]');
+
+    
+
+    for( var i=0; i<allInputs.length && i<viewport.length; i++) {
+
+        var zone = viewport[i];
+        var item = allInputs[i];
+       
+        item.onfocus = function() {
+            this.style.background = "pink"; 
+            console.log('set focus event handler on', item);
+            panel.scrollTo(0, window.innerHeight);
+            console.log(window.innerHeight);
+        }
+    };
 
   }
 
