@@ -1,24 +1,4 @@
 
-// @mixin buttons($background, $color, $hover-background, $border-focus) {
-// 	background-color: $background;
-// 	color: $color;
-// 	cursor: pointer;
-// 	display: inline-block;
-// 	padding: 0.5em 0.75rem;
-// 	font-size: 1rem;
-//     line-height: 1.25;
-//     border: 0;
-//     border-radius: 0.25rem;
-//     transition: all .15s ease-in-out;
-//     &:active,
-//     &:hover {
-//     	background-color: $hover-background; 
-//     }
-//     &:focus {
-//     	box-shadow: 0 0 0 2px $border-focus; 
-//     }
-// }
-
 //Mixin for buttons
 @mixin buttons($background, $color, $hover-background, $hover-color, $focus-border){
 	background-color: $background;
@@ -33,83 +13,214 @@
     }
 }
 
-// Close symbol (x)
-@mixin close-icon($color) {
-    &::before,
-    &::after {
-        content: '';
-        pointer-events: none;
-        position: absolute;
-        left: 0.2em;
-        top: 1.1em;
-        background-color: $color;
-        width: 2em;
-        height: 0.2em;
-        transform: rotate(45deg);
+// // Close symbol (x)
+// @mixin close-icon($color) {
+//     &::before,
+//     &::after {
+//         content: '';
+//         pointer-events: none;
+//         position: absolute;
+//         left: 0.2em;
+//         top: 1.1em;
+//         background-color: $color;
+//         width: 2em;
+//         height: 0.2em;
+//         transform: rotate(45deg);
+//     }
+//     &::after {
+//         transform: rotate(-45deg);
+//     }
+// }
+
+// Select function
+@mixin form-input-select(){
+
+  @include _select-form-reset;
+  color: $select-color;
+  display: block;
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 16px;
+  margin-top: 9px;
+  margin-bottom: 15px;
+  width: 100%;
+
+  &::before,
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    pointer-events: none; // Arrow clickable in some browsers
+    border: 1px solid transparent; // reset all borders
+    width: 0;
+    height: 0;
+    right: 16px;
+  }
+
+  // top arrow
+  &::before {
+    bottom: 55%;
+    border-width: 0 6.5px 8px 6.5px;
+    border-bottom-color: $select-arrow-color;
+  }
+
+  // bottom arrow
+  &::after {
+    border-width: 8px 6.5px 0 6.5px;
+    border-top-color: $select-arrow-color;
+    top: 55%;
+  }
+  
+  // firefox is outside the div
+  @-moz-document url-prefix() {
+    border-right: $select-border-width solid $select-border-color; 
+    &:hover {
+      border-right: $select-border-width solid $select-color;
+    }
+  }
+
+  &:hover {
+    .ue-c-select {
+      border-color: $select-color;
+      // outline is critical but when we are hovering the div has the border already.
+      &:focus {
+        outline-color: transparent;
+      }
+    }
+    &::before {
+      border-bottom-color: $select-color;
     }
     &::after {
-        transform: rotate(-45deg);
+      border-top-color: $select-color;
     }
+  }
+
+  // Make sure you set all padding, borders on this select and not the parent div.
+  // this is mainly for :focus and tabbing.
+  .ue-c-select {
+    border: $select-border-width solid $select-border-color;
+    border-radius: 0;
+    font-weight: 400;
+    color: inherit;
+    padding: 11px 15px;
+    line-height: normal;
+    transition: border-color 0.2s ease,
+                outline 0.2s ease;
+    // we really need this for the tabbers
+    // causes double borders though
+    &:focus {
+      // outline is critical for usability
+      outline: $select-border-width solid $select-color;
+      outline-offset: -#{$select-border-width}; //offset vs width
+    }
+    &[disabled], &:disabled{
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+    // we use invalid like a placeholder
+    &:invalid {
+      color: $select-placeholder;
+    }
+  }
 }
 
-// Arrow symbol (->)
-// @mixin arrow-icon($direction, $color) {
-// 	border: $color;
-// 	&::before {
-// 		content: '';
-//     	pointer-events: none;
-//     	border-style: solid;
-// 		border-width: 7px 0 7px 7px;
-// 		border-color: transparent;
-// 		border-left-color: inherit;
-// 		left: 27%;
-// 		right: auto;
-// 		position: absolute;
-//     	top: 30%;
-//     	transform: $direction;
-// 	}
-// 	&::after {
-// 		content: '';
-// 		pointer-events: none;
-// 		position: absolute;
-// 		top: 42%;
-//     	left: 20%;
-// 		width: 15px;
-// 		height: 3px;
-// 		background: $color;
-// 		transform: rotate(90deg);
-// 	}
+@mixin _select-form-reset() {
 
-// }
+  display: block;
+  padding: 0;
+  position: relative;
 
-// Forbidden symbol
-// @mixin forbidden($color) {
+  &::before,
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    pointer-events: none; // Arrow clickable in some browsers
+    z-index: 2;
+  }
 
-// 	&::before {
-// 		content: '';
-// 		pointer-events: none;
-// 		position: absolute;
-//     	left: 15%;
-//     	top: 43%;
-//     	color: $color;
-// 		width: 24px;
-//     	height: 3px;
-//     	box-shadow: inset 0 0 0 32px;
-//     	transform: rotate(45deg);
-// 	}
+  // Native select, we're making everything but the text invisible so we can see the button styles in the wrapper
+  .ue-c-select {
+    -webkit-appearance: none;
+    appearance: none;
+    background: none;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    border: 1px solid transparent;
+    font-size: 16px; // Font size must the 16px or larger to prevent iOS page zoom on focus
+    outline: none;
 
-// 	&::after {
-// 		content: '';
-// 		position: absolute;
-// 		top: 1px; 
-// 		left: 2px;
-// 		pointer-events: none;
-// 		border: 2px solid;
-// 		width: 28px;
-// 		height: 28px;
-// 		border-width: 3px;
-// 		border-radius: 50%;
-// 		border-color: $color;
-// 		margin: 3px;   
-// 	}
-// }
+    // Focus style 
+    &:focus {
+      background-color: transparent;
+      outline: none;
+    }
+  }
+
+  // Set options to normal weight 
+  .ue-c-select option {
+    font-weight: normal;
+  }
+
+  // ------------------------------------ 
+  // BROWSER-SPECIFIC HACKS //
+  // ----------------------------------  
+
+  // Targeted via this hack http://browserhacks.com/#hack-a3f166304aafed524566bc6814e1d5c7
+  x:-o-prefocus, &::after {
+    display: none;
+  }
+  // IE 10/11+ - This hides native dropdown button arrow so it will have the custom appearance,
+  // IE 9 and earlier get a native select - targeting media query hack via http://browserhacks.com/#hack-28f493d247a12ab654f6c3637f6978d5 - looking for better ways to achieve this targeting
+  // The second rule removes the odd blue bg color behind the text in the select button in IE 10/11 and sets the text color to match the focus style's - fix via http://stackoverflow.com/questions/17553300/change-ie-background-color-on-unopened-focused-select-box */
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    & {
+      .ue-c-select {
+        &::-ms-expand {
+          display: none;
+        }
+
+        &:focus::-ms-value {
+          background: transparent;
+          color: #000;
+        }
+
+      }
+    }
+  }
+
+  // FIREFOX won't let us hide the native select arrow, so we have to make it wider than needed and clip it via overflow on the parent container.
+  // The percentage width is a fallback since FF 4+ supports calc() so we can just add a fixed amount of extra width to push the native arrow out of view. We're applying this hack across all FF versions because all the previous hacks were too fragile and complex.
+  // You might want to consider not using this hack and using the native select arrow in FF. Note this makes the menus wider than the select button because they display at the specified width and aren't clipped. Targeting hack via http://browserhacks.com/#hack-758bff81c5c32351b02e10480b5ed48e 
+  // Show only the native arrow 
+  @-moz-document url-prefix() {
+    & {
+      overflow: hidden;
+
+      .ue-c-select {
+        width: 120%;
+        width: -moz-calc(100% + 3em);
+        width: calc(100% + 3em);
+        
+        @supports(-moz-appearance: none) {
+          width: 100%;          
+        }
+        
+
+        // Firefox focus has odd artifacts around the text, this kills that. See https://developer.mozilla.org/en-US/docs/Web/CSS/:-moz-focusring 
+        &:-moz-focusring {
+          color: transparent;
+          text-shadow: 0 0 0 #000;
+        }
+      }
+    }
+  }
+  
+  @supports( -moz-appearance: none ) {
+    & {
+      width: 100%;          
+    }
+  }
+
+}

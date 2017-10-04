@@ -1,7 +1,36 @@
 <div class="ue-c-comments-wrap">
 
-	<div class="ue-c-comments-wrap__panel">
-				HELLLOOOOOO
+	<div class="ue-c-comments__filters">
+
+		<div class="ue-c-comments__filters-select">
+			<select class="ue-c-select" required>
+				<!-- Placeholder option -->
+				<option value="" hidden>Ordenar por...</option>
+				<!-- Normal options -->
+				<option value="1">Nuevos</option>
+				<option value="2">Antiguos</option>
+				<option value="3">Más valorados</option>
+				<option value="4">Más comentados</option>
+			</select>
+		</div>
+
+
+		<div class="switch_box box_1">
+			<input type="checkbox" class="switch_1">
+		</div>
+
+		{{!-- <label for="" class="control control--checkbox"> 
+			Te mencionan
+		    <input type="checkbox" checked="checked" />
+		    <div class="control__indicator"></div>
+		</label> --}}
+		
+	</div>
+
+	<div class="ue-c-comments__panel">
+
+
+				{{> includes/ue-comments/ue-comments }}
 
 	</div>
 

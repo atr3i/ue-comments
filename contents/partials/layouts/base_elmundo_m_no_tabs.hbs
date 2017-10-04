@@ -1,0 +1,60 @@
+{{!-- layouts/base_elmundo_m.hbs --}}
+
+<!doctype html>
+<html>
+  <head>
+    {{#> head-block }}
+      {{!-- Custom  content per page could be added. --}}
+    {{/head-block}} 
+    <link rel="stylesheet" href="styles/core-ue-comments.css">
+  </head>
+  <body class="cataluna-home cataluna">
+    {{#> body-scripts-block }}
+      {{!-- Custom scripts per page can be added. --}}
+      {{> includes/elmundo_m/body-scripts }}
+    {{/body-scripts-block}}
+    
+    <header class="super-menu-header js-cnav-header inside" data-menu-nivel="home">
+      {{#> header-block }}
+        {{!-- header content goes here. --}}
+      {{/header-block}}
+    </header>
+
+    <script>
+      var portal = "cataluna";
+    </script>
+
+    <main class="main news js_navContinua" data-ue-contenido id="js_59a31302e5fdea71458b459e">
+      {{#> main-block }}
+        {{!-- main content goes here. --}}
+        {{> includes/elmundo_m/main-no-tabs }}
+      {{/main-block}}
+    </main>
+
+    {{#> featured-links-block }}
+      {{!-- featured links goes here. --}}
+      {{> includes/elmundo_m/featured-links }}
+    {{/featured-links-block}}
+
+    <footer class="site-footer horizontal" itemscope itemtype="http://schema.org/Organization">
+      {{#> footer-block }}
+          {{!-- footer content goes here. --}}
+          {{> includes/elmundo_m/footer }}
+      {{/footer-block}}
+    </footer>
+
+    {{#> menu-sample-block }}
+      {{!-- menu sample goes here. --}}
+      {{> includes/menu-sample }}
+    {{/menu-sample-block}}
+    
+    
+    <script src="javascripts/main.js"></script>
+
+    {{#> scripts-block }}
+      {{!-- Custom scripts per page can be added. --}}
+      {{> includes/elmundo_m/scripts }}
+    {{/scripts-block}}
+  </body>
+
+</html>

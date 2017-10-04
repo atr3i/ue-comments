@@ -6,12 +6,15 @@
     bottom: 0;
     display: block;
     width: 100%;
+    max-width: 680px;
     max-width: var(--ue-c-panel-max-width, 680px);
     height: 100%;
     transition: all 300ms;
     overflow: scroll;
+    background-color: #f8f8f8;
     background-color: var(--ue-c-panel-background, #f8f8f8);
     &__navigation {
+    border-bottom: 1px solid black;
 		border-bottom: 1px solid var(--ue-c-panel-border-color, black);
 		width: 100%;
         position: relative;
@@ -23,18 +26,26 @@
             left: 0;
             width: 48px;
             height: 48px;
+            border-right: 1px solid black;
             border-right: 1px solid var(--ue-c-panel-border-color, black);
+            fill: black;
             fill: var(--ue-c-panel-icon-color, black);
         }
 	}
     &__title {
+        font-family: "Roboto";
         font-family: var(--ue-c-panel-subtitle-font-family, "Roboto");
+        font-size: 16px;
         font-size: var(--ue-c-panel-subtitle-font-size, 16px);
+        color: black;
         color: var(--ue-c-panel-subtitle-color, black);
     }
     &__subtitle {
+        font-family: "Roboto";
         font-family: var(--ue-c-panel-title-font-family, "Roboto");
+        font-size: 12px;
         font-size: var(--ue-c-panel-title-font-size, 12px);
+        color: black;
         color: var(--ue-c-panel-title-color, black);
     }
 }
@@ -60,6 +71,7 @@
     width: 100%;
     height: 48px;
     &:hover {
+        opacity: 0.7;
         opacity: var(--ue-c-panel-navigation-hover, 0.7);
     }
 }
