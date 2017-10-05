@@ -1,37 +1,33 @@
 <div class="ue-c-comments-wrap">
 
-	<div class="ue-c-comments__filters">
+	<div class="ue-c-comments__filter">
 
-		<div class="ue-c-comments__filters-select">
+		<div class="ue-c-comments__order">
 			<select class="ue-c-select" required>
 				<!-- Placeholder option -->
 				<option value="" hidden>Ordenar por...</option>
 				<!-- Normal options -->
-				<option value="1">Nuevos</option>
-				<option value="2">Antiguos</option>
-				<option value="3">Más valorados</option>
-				<option value="4">Más comentados</option>
+				<option value="1">Los más recientes</option>
+				<option value="2">Los más antiguos</option>
+				<option value="3">Los más valorados</option>
+				<option value="4">Los más comentados</option>
 			</select>
 		</div>
 
-
-		<div class="switch_box box_1">
-			<input type="checkbox" class="switch_1">
+		<div class="ue-c-comments__type">
+			<input class="ue-c-checkbox" type="checkbox" id="switch" />
+			<span class="ue-c-checkbox__switch">switch</span>
+			<label for="switch" class="ue-c-checkbox__label">Mis conversaciones</label>
+			{{!-- <input class="ue-c-checkbox" type="checkbox" id="switch" />
+			<label class="ue-c-checkbox__switch" for="switch">
+				<span class="ue-c-checkbox__text">Mis conversaciones</span>
+			</label> --}}
 		</div>
 
-		{{!-- <label for="" class="control control--checkbox"> 
-			Te mencionan
-		    <input type="checkbox" checked="checked" />
-		    <div class="control__indicator"></div>
-		</label> --}}
 		
 	</div>
 
-	<div class="ue-c-comments__panel">
+	{{> includes/ue-comments/ue-comments }}
 
-
-				{{> includes/ue-comments/ue-comments }}
-
-	</div>
 
 </div>

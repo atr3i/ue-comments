@@ -1,4 +1,3 @@
-
 //Mixin for buttons
 @mixin buttons($background, $color, $hover-background, $hover-color, $focus-border){
 	background-color: $background;
@@ -13,25 +12,6 @@
     }
 }
 
-// // Close symbol (x)
-// @mixin close-icon($color) {
-//     &::before,
-//     &::after {
-//         content: '';
-//         pointer-events: none;
-//         position: absolute;
-//         left: 0.2em;
-//         top: 1.1em;
-//         background-color: $color;
-//         width: 2em;
-//         height: 0.2em;
-//         transform: rotate(45deg);
-//     }
-//     &::after {
-//         transform: rotate(-45deg);
-//     }
-// }
-
 // Select function
 @mixin form-input-select(){
 
@@ -43,7 +23,8 @@
   font-size: 16px;
   margin-top: 9px;
   margin-bottom: 15px;
-  width: 100%;
+  width: auto;
+  // width: 100%;
 
   &::before,
   &::after {
@@ -207,7 +188,6 @@
           width: 100%;          
         }
         
-
         // Firefox focus has odd artifacts around the text, this kills that. See https://developer.mozilla.org/en-US/docs/Web/CSS/:-moz-focusring 
         &:-moz-focusring {
           color: transparent;
@@ -224,3 +204,23 @@
   }
 
 }
+
+
+// // Close symbol (x)
+// @mixin close-icon($color) {
+//     &::before,
+//     &::after {
+//         content: '';
+//         pointer-events: none;
+//         position: absolute;
+//         left: 0.2em;
+//         top: 1.1em;
+//         background-color: $color;
+//         width: 2em;
+//         height: 0.2em;
+//         transform: rotate(45deg);
+//     }
+//     &::after {
+//         transform: rotate(-45deg);
+//     }
+// }

@@ -7,8 +7,13 @@
 // .is-hidden
 // .is-visible
 
-$Color: #333;
-$block: 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="#{$Color}" width="24" height="24" viewBox="0 0 24 24"><g><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM4 12c0-4.42 3.58-8 8-8 1.85 0 3.55.63 4.9 1.69L5.69 16.9C4.63 15.55 4 13.85 4 12zm8 8c-1.85 0-3.55-.63-4.9-1.69L18.31 7.1C19.37 8.45 20 10.15 20 12c0 4.42-3.58 8-8 8z"></path></g></svg>';
+// Select Colors
+$select-color: var(--select-color, black);
+$select-arrow-color: var(--select-border-color, black);
+$select-placeholder: var(--select-placeholder, #C7C7C7);
+$select-border-color: var(--select-border-color, #999);
+$select-border-width: var(--select-border-width, 2px);
+
 
 .is-bubble-icon {
 	fill: var(--bubble-icon-color, black);
@@ -90,6 +95,25 @@ $block: 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="#
     		height: 30px;
     		transform: rotate(180deg);
 		}
+	}
+
+	&__filter {
+
+		display: flex;
+		justify-content: space-between;
+		padding: 0 1rem;
+	}
+
+	&__order {
+  		@include form-input-select();
+  		width: 60%;
+	}
+
+	&__type {
+		width: 36%;
+    	top: 10px;
+    	position: relative;
+    	text-align: center;
 	}
 }
 

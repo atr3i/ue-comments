@@ -31,10 +31,17 @@ body {
 	}
 }
 
+input,
+textarea {
+	appearance: checkbox;
+	vertical-align: initial; 
+}
+
 .ue-c-panel {
 	z-index: 12000; // set a higher z-index
 }
 
+// DEMO: Navigation menu 
 .menu-sample {
 	position: fixed;
 	bottom: 0;
