@@ -44,6 +44,7 @@ $select-border-width: var(--select-border-width, 2px);
 
 	&__thread {
 		padding: 1rem;
+		position: relative;
 	}
 
 	&__thread-pagination {
@@ -56,6 +57,14 @@ $select-border-width: var(--select-border-width, 2px);
 		padding: 1rem;
 		font-size: 16px;
 		background: lightgrey;
+		width: 100%;
+		
+		z-index: 5;
+		position: fixed;
+		margin-bottom: 0;
+		margin-left: -16px;
+		bottom: 0;
+
 	}
 	&__form-publish {
 
@@ -93,7 +102,6 @@ $select-border-width: var(--select-border-width, 2px);
 			transform: rotate(180deg);
 			width: 30px;
     		height: 30px;
-    		transform: rotate(180deg);
 		}
 	}
 
@@ -114,6 +122,12 @@ $select-border-width: var(--select-border-width, 2px);
     	top: 10px;
     	position: relative;
     	text-align: center;
+	}
+
+	.ue-c-button[data-badge] {
+		.is-arrow-icon {
+			fill: #fff;
+		}
 	}
 }
 

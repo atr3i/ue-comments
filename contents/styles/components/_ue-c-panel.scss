@@ -14,7 +14,7 @@
     background-color: #f8f8f8;
     background-color: var(--ue-c-panel-background, #f8f8f8);
     &__navigation {
-    border-bottom: 1px solid black;
+        border-bottom: 1px solid black;
 		border-bottom: 1px solid var(--ue-c-panel-border-color, black);
 		width: 100%;
         position: relative;
@@ -30,6 +30,11 @@
             border-right: 1px solid var(--ue-c-panel-border-color, black);
             fill: black;
             fill: var(--ue-c-panel-icon-color, black);
+        }
+        .ue-c-button--link {
+            position: absolute;
+            top: 0;
+            left: 0;
         }
 	}
     &__title {
