@@ -3,14 +3,14 @@
 	<div class="ue-c-comments__filter">
 
 		<div class="ue-c-comments__order">
-			<select class="ue-c-select" required>
+			<select class="ue-c-select" data-select="filters" required>
 				<!-- Placeholder option -->
-				<option value="" hidden>Ordenar por...</option>
+				<option value="placeHolder" hidden>Ordenar por...</option>
 				<!-- Normal options -->
-				<option value="1">Los más recientes</option>
-				<option value="2">Los más antiguos</option>
-				<option value="3">Los más valorados</option>
-				<option value="4">Los más comentados</option>
+				<option value="mostRecents">Los más recientes</option>
+				<option value="oldestComments">Los más antiguos</option>
+				<option value="mostValued">Los más valorados</option>
+				<option value="mostCommented">Los más comentados</option>
 			</select>
 		</div>
 
@@ -23,7 +23,16 @@
 		
 	</div>
 
-	{{> includes/ue-comments/ue-comments }}
+
+	{{!-- {{> includes/ue-comments/ue-comments }} --}}
+
+	<div class="ue-c-comments" data-select-content="newestComments">Los más recientes</div>
+
+	<div class="ue-c-comments" data-select-content="oldestComments">Los más antiguos</div>
+
+	<div class="ue-c-comments" data-select-content="mostValued">Los más valorados</div>
+
+	<div class="ue-c-comments" data-select-content="mostCommented">Los más comentados</div>
 
 
 </div>

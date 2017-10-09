@@ -37,6 +37,7 @@
 (function(){
 
   var buttons = document.body.querySelectorAll("[data-role-toggle]");
+  console.log(buttons);
  
   for (var i = buttons.length - 1; i >= 0; i--) {
 
@@ -49,6 +50,7 @@
 
       for (var i = capa.length - 1; i >= 0; i--) {
         capa[i].classList.toggle('is-visible');
+        console.log(capa[i]);
       }
     })
   }
@@ -186,7 +188,56 @@
     elem.reset();
   }
 
+  function optionCheck() {
+      var i, len, vl, helpDiv,
+          selectOptions = document.querySelector('[data-select=filters]');
+
+      // loop through the options in case there
+      // are multiple selected values
+      for (i = 0, len = selectOptions.options.length; i < len; i++) {
+          
+          // get the selected option value
+          vl = selectOptions.options[i].value;
+          
+          // find the corresponding help div
+          helpDiv = document.querySelectorAll('[data-select-content='+ vl +']');
+          
+          // move on if we didn't find one
+          if (!helpDiv) { continue; }
+          
+          // set CSS classes to show/hide help div
+          if (selectOptions.options[i].selected) {
+              helpDiv.classList.add('is-visible');
+          } else {
+              // helpDiv.classList.remove('is-visible');
+              console.log('hey');
+          }
+      }    
+  }
+
+  // alternative method of binding the onchange handler
+  document.querySelector('[data-select=filters]').onchange = optionCheck;
+
+
+  // var sel = document.querySelector('select[data-select="filters"]');
+  // document.addEventListener('DOMContentLoaded',function() {
+  //   sel.onchange = changeEventHandler;
+  // },false);
+
+  // function changeEventHandler(event) {
+  //     // You can use “this” to refer to the selected element.
+  //     if(!event.target.value) console.log('Please Select One');
+  //     else console.log(event.target.value);
+
+  //     var vl = event.target.value;
+  //     var el = document.querySelectorAll('[data-select-content='+ vl +']');
+
+      
+  //     console.log(vl, el, sel);
+
+
+  // }
+
+
 })();
-
-
 

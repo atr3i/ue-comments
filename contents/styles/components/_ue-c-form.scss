@@ -7,13 +7,20 @@
 	display: block;
 }
 
-
 [data-role-toggle-content='joinThread'] {
 	display: block;
 }
 
 [data-form-message].is-hidden {
 	display: none;
+}
+
+[data-select-content] {
+	display: none;
+}
+
+[data-select-content].is-visible {
+	display: block;
 }
 
 .has-fade-out {

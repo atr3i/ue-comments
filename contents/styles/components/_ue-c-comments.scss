@@ -58,12 +58,12 @@ $select-border-width: var(--select-border-width, 2px);
 		font-size: 16px;
 		background: lightgrey;
 		width: 100%;
-		
-		z-index: 5;
-		position: fixed;
-		margin-bottom: 0;
-		margin-left: -16px;
-		bottom: 0;
+		position: relative;
+		// z-index: 5;
+		// position: fixed;
+		// margin-bottom: 0;
+		// margin-left: -16px;
+		// bottom: 0;
 
 	}
 	&__form-publish {
