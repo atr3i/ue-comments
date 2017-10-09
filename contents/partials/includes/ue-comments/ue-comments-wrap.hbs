@@ -7,7 +7,7 @@
 				<!-- Placeholder option -->
 				<option value="placeHolder" hidden>Ordenar por...</option>
 				<!-- Normal options -->
-				<option value="mostRecents">Los más recientes</option>
+				<option value="newestComments">Los más recientes</option>
 				<option value="oldestComments">Los más antiguos</option>
 				<option value="mostValued">Los más valorados</option>
 				<option value="mostCommented">Los más comentados</option>
@@ -26,13 +26,25 @@
 
 	{{!-- {{> includes/ue-comments/ue-comments }} --}}
 
-	<div class="ue-c-comments" data-select-content="newestComments">Los más recientes</div>
+	<div class="is-visible" data-select-content="newestComments">
+		{{> includes/ue-comments/ue-comments }}
+	</div>
 
-	<div class="ue-c-comments" data-select-content="oldestComments">Los más antiguos</div>
+	<div class="" data-select-content="oldestComments">
+		{{> includes/ue-comments/ue-comments-oldest }}
+	</div>
 
-	<div class="ue-c-comments" data-select-content="mostValued">Los más valorados</div>
+	<div class="" data-select-content="mostValued">
+		{{> includes/ue-comments/ue-comments-most-valued }}
+	</div>
 
-	<div class="ue-c-comments" data-select-content="mostCommented">Los más comentados</div>
+	<div class="" data-select-content="mostCommented">
+		{{> includes/ue-comments/ue-comments-most-commented }}
+	</div>
+
+	<div class="" data-select-content="myMentions">
+		{{> includes/ue-comments/ue-comments-mentions }}
+	</div>
 
 
 </div>

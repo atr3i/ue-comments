@@ -184,60 +184,60 @@
 
   }
 
+ 
+  var selectOptions = document.querySelector('[data-select=filters]');
+
+  function optionCheck(event) {
+  
+      // loop through the options
+      for (i = 0, x = selectOptions.options.length; i < x; i++) {
+
+          // get the selected option value
+          vl = selectOptions.options[i].value;
+
+          // find the corresponding help div
+          helpDiv = document.querySelector('[data-select-content='+ vl +']');
+
+          // move on if we didn't find one
+          if (!helpDiv) { continue; }
+
+          // set CSS classes to show/hide help div
+          if(selectOptions.options[i].selected) helpDiv.classList.add('is-visible');
+          else helpDiv.classList.remove('is-visible');
+      } 
+      return vl;
+  }
+  var chk = document.getElementById('switch');
+  //var otherLayers = document.querySelectorAll('[data-select-content]');
+  var chkLayer = document.querySelector('[data-select-content=myMentions]');
+  function myMentions(e) {
+
+    if(chk.checked) {
+      chkLayer.classList.add('is-visible');
+      vl.classList.remove('is-visible');
+    }
+    else { 
+      chkLayer.classList.remove('is-visible'); 
+    }
+
+  }   
+ 
+  document.addEventListener('DOMContentLoaded',function() {
+    selectOptions.onchange = optionCheck;
+
+    chk.onchange = myMentions;
+
+  }, false);
+  // alternative method of binding the onchange handler
+  // var selectFilter = document.querySelector('[data-select=filters]');
+  // selectFilter.onchange = optionCheck;
+
+  
+
+
   function resetFields(elem) {
     elem.reset();
   }
-
-  function optionCheck() {
-      var i, len, vl, helpDiv,
-          selectOptions = document.querySelector('[data-select=filters]');
-
-      // loop through the options in case there
-      // are multiple selected values
-      for (i = 0, len = selectOptions.options.length; i < len; i++) {
-          
-          // get the selected option value
-          vl = selectOptions.options[i].value;
-          
-          // find the corresponding help div
-          helpDiv = document.querySelectorAll('[data-select-content='+ vl +']');
-          
-          // move on if we didn't find one
-          if (!helpDiv) { continue; }
-          
-          // set CSS classes to show/hide help div
-          if (selectOptions.options[i].selected) {
-              helpDiv.classList.add('is-visible');
-          } else {
-              // helpDiv.classList.remove('is-visible');
-              console.log('hey');
-          }
-      }    
-  }
-
-  // alternative method of binding the onchange handler
-  document.querySelector('[data-select=filters]').onchange = optionCheck;
-
-
-  // var sel = document.querySelector('select[data-select="filters"]');
-  // document.addEventListener('DOMContentLoaded',function() {
-  //   sel.onchange = changeEventHandler;
-  // },false);
-
-  // function changeEventHandler(event) {
-  //     // You can use “this” to refer to the selected element.
-  //     if(!event.target.value) console.log('Please Select One');
-  //     else console.log(event.target.value);
-
-  //     var vl = event.target.value;
-  //     var el = document.querySelectorAll('[data-select-content='+ vl +']');
-
-      
-  //     console.log(vl, el, sel);
-
-
-  // }
-
 
 })();
 
