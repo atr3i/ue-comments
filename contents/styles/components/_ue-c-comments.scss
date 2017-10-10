@@ -110,6 +110,7 @@ $select-border-width: var(--select-border-width, 2px);
 		display: flex;
 		justify-content: space-between;
 		padding: 0 1rem;
+		width: 100%;
 	}
 
 	&__order {
@@ -122,6 +123,15 @@ $select-border-width: var(--select-border-width, 2px);
     	top: 10px;
     	position: relative;
     	text-align: center;
+	}
+	&-wrap {
+		// position: relative;
+		// > div:not(.ue-c-comments__filter) {
+		// 	position: absolute;
+		// 	top: 4em;
+		// 	left: 0;
+		// 	background: whitesmoke;
+		// }
 	}
 
 	.ue-c-button[data-badge] {

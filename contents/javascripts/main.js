@@ -37,7 +37,6 @@
 (function(){
 
   var buttons = document.body.querySelectorAll("[data-role-toggle]");
-  console.log(buttons);
  
   for (var i = buttons.length - 1; i >= 0; i--) {
 
@@ -147,25 +146,25 @@
       })
     }
 
-    // var viewport = document.querySelectorAll('[data-form]');
-    // var allInputs = document.getElementsByTagName('input');
+    var viewport = document.querySelectorAll('[data-form]');
+    var allInputs = document.getElementsByTagName('input');
 
-    // var panel = document.querySelector('[data-slide-toggle-content]');
+    var panel = document.querySelector('[data-slide-toggle-content]');
 
     
 
-    // for( var i=0; i<allInputs.length && i<viewport.length; i++) {
+    for( var i=0; i<allInputs.length && i<viewport.length; i++) {
 
-    //     var zone = viewport[i];
-    //     var item = allInputs[i];
+        var zone = viewport[i];
+        var item = allInputs[i];
        
-    //     item.onfocus = function() {
-    //         this.style.background = "pink"; 
-    //         console.log('set focus event handler on', item);
-    //         panel.scrollTo(0, window.innerHeight);
-    //         console.log(window.innerHeight);
-    //     }
-    // };
+        item.onfocus = function() {
+            this.style.background = "pink"; 
+            console.log('set focus event handler on', item);
+            panel.scrollTo(0, window.innerHeight);
+            console.log(window.innerHeight);
+        }
+    };
 
   }
 
@@ -186,9 +185,11 @@
 
  
   var selectOptions = document.querySelector('[data-select=filters]');
-
-  function optionCheck(event) {
+  var chk = document.getElementById('switch');
+  var chkLayer = document.querySelector('[data-select-content=myMentions]');
   
+
+  function optionCheck(e) {
       // loop through the options
       for (i = 0, x = selectOptions.options.length; i < x; i++) {
 
@@ -197,42 +198,44 @@
 
           // find the corresponding help div
           helpDiv = document.querySelector('[data-select-content='+ vl +']');
-
+          
           // move on if we didn't find one
           if (!helpDiv) { continue; }
 
-          // set CSS classes to show/hide help div
-          if(selectOptions.options[i].selected) helpDiv.classList.add('is-visible');
-          else helpDiv.classList.remove('is-visible');
-      } 
-      return vl;
+          if(selectOptions.options[i].selected) {
+            helpDiv.classList.add('is-visible');
+            chk.checked = false;
+            chkLayer.classList.remove('is-visible');
+          
+          } else {
+            helpDiv.classList.remove('is-visible');
+          }
+      }
   }
-  var chk = document.getElementById('switch');
-  //var otherLayers = document.querySelectorAll('[data-select-content]');
-  var chkLayer = document.querySelector('[data-select-content=myMentions]');
-  function myMentions(e) {
+   
+  var layers = document.querySelectorAll('[data-select-content]');
+  function switchCheck(e) {
 
-    if(chk.checked) {
-      chkLayer.classList.add('is-visible');
-      vl.classList.remove('is-visible');
-    }
-    else { 
-      chkLayer.classList.remove('is-visible'); 
-    }
+    for (var i = layers.length - 1; i >= 0; i--) {
 
+      if(chk.checked == true) {
+          chkLayer.classList.add('is-visible');
+          layers[i].classList.remove('is-visible');
+          selectOptions.disabled = true;
+        } else { 
+          chkLayer.classList.remove('is-visible'); 
+          layers[0].classList.add('is-visible');
+          selectOptions.disabled = false;
+        } 
+    }
   }   
  
   document.addEventListener('DOMContentLoaded',function() {
-    selectOptions.onchange = optionCheck;
 
-    chk.onchange = myMentions;
+    selectOptions.onchange = optionCheck;
+    chk.onchange = switchCheck;
 
   }, false);
-  // alternative method of binding the onchange handler
-  // var selectFilter = document.querySelector('[data-select=filters]');
-  // selectFilter.onchange = optionCheck;
-
-  
 
 
   function resetFields(elem) {
