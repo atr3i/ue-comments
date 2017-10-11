@@ -1,2 +1,232 @@
+<div class="ue-c-comments">
+        <div class="ue-c-comments__title">
+            <svg class="ue-c-comments-bubble is-bubble-icon" width="24" height="24" viewBox="0 0 24 24">
+                <g><path d="M21.99 4c0-1.1-.89-2-1.99-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18z"></path></g>
+            </svg>
+            <span class="ue-c-comments__count">125</span> Comentarios
+        </div> 
+        <div class="ue-c-comments__thread">
 
-Los más antiguos
+            <div class="ue-c-comments__form" data-form="joinThread">
+                {{#> comments-form-block }}
+                    {{!-- comments form content goes here. --}}
+                    {{> includes/ue-comments-form/ue-comments-form }}
+                {{/comments-form-block}}
+            </div>
+
+            <div class="ue-c-comment">
+                <header class="ue-c-comment__header"> 
+                    <img class="ue-c-comment__avatar" width="50" alt="Avatar de usuario" src="https://e00-marca.uecdn.es/registro/v2/images/avatar/avatar.svg" />
+                    <span class="ue-c-comment__meta">    
+                        <span class="ue-c-comment__name">Amiano</span>
+                        <time datetime="2017-08-28T13:24Z">
+                            <span class="ue-c-comment__date">28-08-2017</span>
+                            <span class="ue-c-comment__time">13:24</span>
+                        </time> 
+                    </span>
+                    <span class="ue-c-comment__number" title="Número de comentario">
+                        #3
+                    </span>
+                </header>
+                <div class="ue-c-comment__discussion has-mention">
+                   {{!-- {{ mensaje }} --}}
+                    'Lo que queda del dia' un relato gótico? Es evidente que el que escribe esta crónica no ha leído ni estén ni ningún libro de Ishiguro. Y ni siquiera se acuerda bien de la película... Por cierto, a que viene dedicar un párrafo de dos a la película cuando se esta hablando del Nobel de literatura? Pero no había nadie mas a quien encomendarle este articulo??
+                </div>
+              
+                <ul class="ue-c-comment__tools">
+                    <li class="ue-c-comment__report">
+                        <button type="button" class="ue-c-button" data-role-toggle="blockComment_01">                          
+                            <span class="is-hidden-text">Denunciar comentario</span>
+                            <svg class="ue-c-comment__report-block" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM4 12c0-4.42 3.58-8 8-8 1.85 0 3.55.63 4.9 1.69L5.69 16.9C4.63 15.55 4 13.85 4 12zm8 8c-1.85 0-3.55-.63-4.9-1.69L18.31 7.1C19.37 8.45 20 10.15 20 12c0 4.42-3.58 8-8 8z"></path></svg>
+                        </button>
+                    </li>
+                    <li class="ue-c-comment__votes">
+                        <button type="button" class="ue-c-button" data-tooltip="Votar a favor">
+                            <span class="is-hidden-text">Votar a favor</span>
+                            <svg class="ue-c-comment__vote is-positive" width="24" height="24" viewBox="0 0 24 24"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path></svg>
+                            <span class="ue-c-comment__votes" aria-label="Votos a favor">2</span>
+                        </button>
+                        <button type="button" class="ue-c-button" data-tooltip="Votar en contra">
+                            <span class="is-hidden-text">Votar en contra</span>
+                            <svg class="ue-c-comment__vote is-negative" width="24" height="24" viewBox="0 0 24 24"><path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"></path></svg>
+                            <span class="ue-c-comment__votes" aria-label="Votos en contra">5</span>
+                        </button>
+                    </li>
+                    <li class="ue-c-comment__reply">
+                        <button type="button" class="ue-c-button" data-role-toggle="replyComment_01">                      
+                            Responder
+                        </button>
+                    </li>
+                </ul>
+
+                <div class="ue-c-comment__report-message" data-role-toggle-content="blockComment_01">
+                    Gracias. Revisaremos tu aviso de mal comportamiento.
+                </div>
+
+                <div class="ue-c-comments__form" data-role-toggle-content="replyComment_01" data-form="joinThread">
+                    {{#> comments-form-block }}
+                        {{!-- comments form content goes here. --}}
+                        {{> includes/ue-comments-form/ue-comments-form }}
+                    {{/comments-form-block}}
+                </div>
+
+            </div>
+
+            <div class="ue-c-comment">
+                <header class="ue-c-comment__header"> 
+                    <img class="ue-c-comment__avatar" width="50" alt="Avatar de usuario" src="https://e00-marca.uecdn.es/registro/v2/images/avatar/avatar.svg" />
+                    <span class="ue-c-comment__meta">    
+                        <span class="ue-c-comment__name">carlosyz2012</span>
+                        <time datetime="2017-08-28T13:24Z">
+                            <span class="ue-c-comment__date">28-08-2017</span>
+                            <span class="ue-c-comment__time">13:24</span>
+                        </time> 
+                    </span>
+                    <span class="ue-c-comment__number" title="Número de comentario">
+                        #2
+                    </span>
+                </header>
+                <div class="ue-c-comment__discussion">
+                   {{!-- {{ mensaje }} --}}
+                    'Lo que queda del dia' un relato gótico? Es evidente que el que escribe esta crónica no ha leído ni estén ni ningún libro de Ishiguro. Y ni siquiera se acuerda bien de la película... Por cierto, a que viene dedicar un párrafo de dos a la película cuando se esta hablando del Nobel de literatura? Pero no había nadie mas a quien encomendarle este articulo??
+                </div>
+              
+                <ul class="ue-c-comment__tools">
+                    <li class="ue-c-comment__report">
+                        <button type="button" class="ue-c-button" data-role-toggle="blockComment_02">                          
+                            <span class="is-hidden-text">Denunciar comentario</span>
+                            <svg class="ue-c-comment__report-block" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM4 12c0-4.42 3.58-8 8-8 1.85 0 3.55.63 4.9 1.69L5.69 16.9C4.63 15.55 4 13.85 4 12zm8 8c-1.85 0-3.55-.63-4.9-1.69L18.31 7.1C19.37 8.45 20 10.15 20 12c0 4.42-3.58 8-8 8z"></path></svg>
+                        </button>
+                    </li>
+                    <li class="ue-c-comment__votes">
+                        <button type="button" class="ue-c-button" data-tooltip="Votar a favor">
+                            <span class="is-hidden-text">Votar a favor</span>
+                            <svg class="ue-c-comment__vote is-positive" width="24" height="24" viewBox="0 0 24 24"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path></svg>
+                            <span class="ue-c-comment__votes" aria-label="Votos a favor">2</span>
+                        </button>
+                        <button type="button" class="ue-c-button" data-tooltip="Votar en contra">
+                            <span class="is-hidden-text">Votar en contra</span>
+                            <svg class="ue-c-comment__vote is-negative" width="24" height="24" viewBox="0 0 24 24"><path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"></path></svg>
+                            <span class="ue-c-comment__votes" aria-label="Votos en contra">5</span>
+                        </button>
+                    </li>
+                    <li class="ue-c-comment__reply">
+                        <button type="button" class="ue-c-button" data-role-toggle="replyComment_02">                      
+                            Responder
+                        </button>
+                    </li>
+                </ul>
+
+                <div class="ue-c-comment__report-message" data-role-toggle-content="blockComment_02">
+                    Gracias. Revisaremos tu aviso de mal comportamiento.
+                </div>
+
+                <div class="ue-c-comments__form" data-role-toggle-content="replyComment_02" data-form="joinThread">
+                    {{#> comments-form-block }}
+                        {{!-- comments form content goes here. --}}
+                        {{> includes/ue-comments-form/ue-comments-form }}
+                    {{/comments-form-block}}
+                </div>
+
+            </div>
+
+            <div class="ue-c-comment">
+                <header class="ue-c-comment__header"> 
+                    <img class="ue-c-comment__avatar" width="50" alt="Avatar de usuario" src="https://e00-marca.uecdn.es/registro/v2/images/avatar/avatar.svg" />
+                    <span class="ue-c-comment__meta">    
+                        <span class="ue-c-comment__name">krlospeka</span>
+                        <time datetime="2017-08-28T13:24Z">
+                            <span class="ue-c-comment__date">28-08-2017</span>
+                            <span class="ue-c-comment__time">13:24</span>
+                        </time> 
+                    </span>
+                    <span class="ue-c-comment__number" title="Número de comentario">
+                        #1
+                    </span>
+                </header>
+                <div class="ue-c-comment__discussion">
+                   {{!-- {{ mensaje }} --}}
+                    'Lo que queda del dia' un relato gótico? Es evidente que el que escribe esta crónica no ha leído ni estén ni ningún libro de Ishiguro. Y ni siquiera se acuerda bien de la película... Por cierto, a que viene dedicar un párrafo de dos a la película cuando se esta hablando del Nobel de literatura? Pero no había nadie mas a quien encomendarle este articulo??
+                    <span class="ue-c-comment__mention" data-role-toggle-content="showThread_01">
+                        <span class="ue-c-comment__mention-name">@caracartucho</span>
+                        <span class="ue-c-comment__mention-number">
+                            #1
+                        </span> 
+                        <span data-mention class="ue-c-comment__mention-text">
+                            Creo que se ha colado un borrador en vez del artículo final
+                        </span>
+                    </span>
+                    <span class="ue-c-comment__mention" data-role-toggle-content="showThread_01">
+                        <span class="ue-c-comment__mention-name">@caracartucho</span>
+                        <span class="ue-c-comment__mention-number">
+                            #126 
+                        </span> 
+                        <span data-mention class="ue-c-comment__mention-text">
+                           El reparto de los Nobel de literatura va por continentes. Esta año toca Asia. Enhorabuena a Ishiguro.
+                        </span>
+                    </span>
+                    <button class="ue-c-button--link" data-role-toggle="showThread_01">                     
+                        Ver conversación completa
+                        <svg class="ue-c-comment__show-thread" width="24" height="24" viewBox="0 0 24 24"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path></svg>
+                    </button>
+                    <span class="ue-c-comment__mention">
+                        <span class="ue-c-comment__mention-name">@caracartucho</span>
+                        <span class="ue-c-comment__mention-number">
+                            #126 
+                        </span> 
+                        <span data-mention class="ue-c-comment__mention-text">
+                            Grandísima noticia. Merecido.
+                        </span>
+                    </span>
+                </div>
+              
+                <ul class="ue-c-comment__tools">
+                    <li class="ue-c-comment__report">
+                        <button type="button" class="ue-c-button" data-role-toggle="blockComment_02">                          
+                            <span class="is-hidden-text">Denunciar comentario</span>
+                            <svg class="ue-c-comment__report-block" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM4 12c0-4.42 3.58-8 8-8 1.85 0 3.55.63 4.9 1.69L5.69 16.9C4.63 15.55 4 13.85 4 12zm8 8c-1.85 0-3.55-.63-4.9-1.69L18.31 7.1C19.37 8.45 20 10.15 20 12c0 4.42-3.58 8-8 8z"></path></svg>
+                        </button>
+                    </li>
+                    <li class="ue-c-comment__votes">
+                        <button type="button" class="ue-c-button" data-tooltip="Votar a favor">
+                            <span class="is-hidden-text">Votar a favor</span>
+                            <svg class="ue-c-comment__vote is-positive" width="24" height="24" viewBox="0 0 24 24"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path></svg>
+                            <span class="ue-c-comment__votes" aria-label="Votos a favor">2</span>
+                        </button>
+                        <button type="button" class="ue-c-button" data-tooltip="Votar en contra">
+                            <span class="is-hidden-text">Votar en contra</span>
+                            <svg class="ue-c-comment__vote is-negative" width="24" height="24" viewBox="0 0 24 24"><path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"></path></svg>
+                            <span class="ue-c-comment__votes" aria-label="Votos en contra">5</span>
+                        </button>
+                    </li>
+                    <li class="ue-c-comment__reply">
+                        <button type="button" class="ue-c-button" data-role-toggle="replyComment_02">                      
+                            Responder
+                        </button>
+                    </li>
+                </ul>
+
+                <div class="ue-c-comment__report-message" data-role-toggle-content="blockComment_02">
+                    Gracias. Revisaremos tu aviso de mal comportamiento.
+                </div>
+
+                <div class="ue-c-comments__form" data-role-toggle-content="replyComment_02" data-form="joinThread">
+                    {{#> comments-form-block }}
+                        {{!-- comments form content goes here. --}}
+                        {{> includes/ue-comments-form/ue-comments-form }}
+                    {{/comments-form-block}}
+                </div>
+
+            </div>
+
+            <div class="ue-c-comments__thread-pagination">
+                <button type="button" class="ue-c-button">VER ANTERIORES</button>
+            </div>
+
+            <button class="ue-c-button" data-badge="3">
+                <span class="is-hidden-text">Desplazarse hacia arriba</span>
+                <svg class="is-arrow-icon" width="24" height="24" viewBox="0 0 24 24"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path></svg>
+            </button>
+        </div>
+    </div>  
+

@@ -146,25 +146,25 @@
       })
     }
 
-    var viewport = document.querySelectorAll('[data-form]');
-    var allInputs = document.getElementsByTagName('input');
+    // var viewport = document.querySelectorAll('[data-form]');
+    // var allInputs = document.getElementsByTagName('input');
 
-    var panel = document.querySelector('[data-slide-toggle-content]');
+    // var panel = document.querySelector('[data-slide-toggle-content]');
 
     
 
-    for( var i=0; i<allInputs.length && i<viewport.length; i++) {
+    // for( var i=0; i<allInputs.length && i<viewport.length; i++) {
 
-        var zone = viewport[i];
-        var item = allInputs[i];
+    //     var zone = viewport[i];
+    //     var item = allInputs[i];
        
-        item.onfocus = function() {
-            this.style.background = "pink"; 
-            console.log('set focus event handler on', item);
-            panel.scrollTo(0, window.innerHeight);
-            console.log(window.innerHeight);
-        }
-    };
+    //     item.onfocus = function() {
+    //         this.style.background = "pink"; 
+    //         console.log('set focus event handler on', item);
+    //         panel.scrollTo(0, window.innerHeight);
+    //         console.log(window.innerHeight);
+    //     }
+    // };
 
   }
 
@@ -226,6 +226,7 @@
           chkLayer.classList.remove('is-visible'); 
           layers[0].classList.add('is-visible');
           selectOptions.disabled = false;
+          selectOptions.selectedIndex = 0;
         } 
     }
   }   
