@@ -106,13 +106,34 @@
 	}
 }
 
-.ue-c-button[data-badge] {
-
+.ue-c-button--badge {
+	@include buttons(
+		var(--btn-background, black), 
+		var(--btn-color, whitesmoke), 
+		var(--btn-hover-background, darkgrey), 
+		var(--btn-hover-color, whitesmoke),
+		var(--btn-focus-border, black)
+		);
+	border-radius: 20px;
+	position: relative;
+	display: inline-block;
+	padding: 1em;
+	width: 20%;
+	float: right;
+    margin: 1em 0;
+	.is-arrow-icon {
+		fill: var(--ue-c-panel-icon-color, whitesmoke);
+	}
 	&::after {
-
-		content: '';
-		
-			
+		content: '2';
+		background: var(--btn-badge-color, red);
+		width: 2em;
+		height: 2em;
+		line-height: 186%;
+		border-radius: 2em;
+		position: absolute;
+		top: 0;
+		right: -4px;
 	}
 }
 

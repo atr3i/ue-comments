@@ -46,10 +46,9 @@
 
       let enlace = this.getAttribute("data-role-toggle");
       let capa = document.querySelectorAll("[data-role-toggle-content=" + enlace + "]");
-
+      console.log(capa);
       for (var i = capa.length - 1; i >= 0; i--) {
         capa[i].classList.toggle('is-visible');
-        console.log(capa[i]);
       }
     })
   }
