@@ -15,7 +15,7 @@
 		</div>
 
 		<div class="ue-c-comments__type">
-			<input class="ue-c-checkbox" type="checkbox" id="switch" />
+			<input type="checkbox" id="switch" class="ue-c-checkbox" role="checkbox" aria-checked="false" />
 			<span class="ue-c-checkbox__switch">switch</span>
 			<label for="switch" class="ue-c-checkbox__label">Mis conversaciones</label>
 		</div>
@@ -26,23 +26,23 @@
 
 	{{!-- {{> includes/ue-comments/ue-comments }} --}}
 
-	<div class="is-visible" data-select-content="newestComments">
+	<div class="is-visible" data-select-content="newestComments" aria-labelledby="Recientes">
 		{{> includes/ue-comments/ue-comments }}
 	</div>
 
-	<div class="" data-select-content="oldestComments">
+	<div class="" data-select-content="oldestComments" aria-labelledby="Antiguos">
 		{{> includes/ue-comments/ue-comments-oldest }}
 	</div>
 
-	<div class="" data-select-content="mostValued">
+	<div class="" data-select-content="mostValued" aria-labelledby="Más Valorados">
 		{{> includes/ue-comments/ue-comments-most-valued }}
 	</div>
 
-	<div class="" data-select-content="mostCommented">
+	<div class="" data-select-content="mostCommented" aria-labelledby="Más Comentados">
 		{{> includes/ue-comments/ue-comments-most-commented }}
 	</div>
 
-	<div class="" data-select-content="myMentions">
+	<div class="" data-select-content="myMentions" aria-labelledby="Menciones">
 		{{> includes/ue-comments/ue-comments-mentions }}
 	</div>
 
