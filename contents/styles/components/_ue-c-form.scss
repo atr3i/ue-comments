@@ -185,10 +185,16 @@
 
 
 .ue-c-checkbox {
-	height: 0;
-	width: 0;
-	visibility: hidden;
+	height: 40px;
+	width: 48px;
+	// visibility: hidden;
 	position: absolute;
+
+	-webkit-appearance: none;
+
+	&:focus {
+	    	outline: #666 dotted 1px;
+	    }
 
 	&:checked + .ue-c-checkbox__switch {
 		background: dodgerblue;
@@ -230,6 +236,8 @@
 	    z-index: 1;
 	    padding: 1.75rem 0 0 0;
 	    cursor: pointer;
+
+
 	}
 }
 
