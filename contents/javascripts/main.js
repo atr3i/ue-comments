@@ -69,17 +69,23 @@
   		switch (d) {
   			case 'slideRight':
   			   c.classList.toggle('is-slide-right');
+           c.focus();
   			   b.classList.toggle('disable-vscroll');
-  			   s.classList.toggle('is-active');
+  			   s.classList.toggle('is-active'); 
   			   break;
   			case 'slideLeft':
   			   c.classList.toggle('is-slide-left');
+           c.focus();
   			   b.classList.toggle('disable-vscroll');
   			   s.classList.toggle('is-active');
   			   break;
   			default:
   			   c.classList.toggle('');
   		}
+
+
+
+
   	})
   }
 

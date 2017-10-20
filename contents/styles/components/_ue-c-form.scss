@@ -37,23 +37,27 @@
     padding: 0.5em 0.75rem;
     font-size: 1rem;
     line-height: 1.10;
-    outline: initial;
-    color: black;
+    color: black; 
     border-radius: 0.25rem;
     background-color: whitesmoke;
-    border: 1px solid lightgrey;
+    border: 1px solid lightgrey; 
+    &:focus {
+    	outline: #666 dotted 1px;
+    }
 }
 
 .ue-c-input {
 	padding: 0.5em 0.75rem;
     font-size: 1rem;
     line-height: 1.25;
-    outline: initial;
     color: black;
     background-color: whitesmoke;
     border: 1px solid lightgrey;
     border-radius: 0.25rem;
     transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    &:focus {
+    	outline: #666 dotted 1px;
+    }
 }
 
 .ue-c-input-group {
@@ -73,7 +77,10 @@
 [type='button'],
 .ue-c-button,
 .ue-c-button--link {
-	outline: initial;
+	//outline: initial;
+	&:focus {
+    	outline: #666 dotted 1px;
+    }
 }
 
 [type='button'],
@@ -107,13 +114,7 @@
 }
 
 .ue-c-button--badge {
-	@include buttons(
-		var(--btn-background, black), 
-		var(--btn-color, whitesmoke), 
-		var(--btn-hover-background, darkgrey), 
-		var(--btn-hover-color, whitesmoke),
-		var(--btn-focus-border, black)
-		);
+	
 	border-radius: 20px;
 	position: relative;
 	display: inline-block;
@@ -121,6 +122,16 @@
 	width: 20%;
 	float: right;
     margin: 1em 0;
+    @include buttons(
+		var(--btn-background, black), 
+		var(--btn-color, whitesmoke), 
+		var(--btn-hover-background, darkgrey), 
+		var(--btn-hover-color, whitesmoke),
+		var(--btn-focus-border, black)
+		);
+    &:focus {
+    	outline: #666 dotted 1px;
+    }
 	.is-arrow-icon {
 		fill: var(--ue-c-panel-icon-color, whitesmoke);
 	}
@@ -216,6 +227,7 @@
 	    background: transparent;
 	    position: absolute;
 	    left: 0;
+	    z-index: 1;
 	    padding: 1.75rem 0 0 0;
 	    cursor: pointer;
 	}
