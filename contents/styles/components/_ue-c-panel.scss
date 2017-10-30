@@ -1,4 +1,19 @@
-// Utils
+// Component ue-c-panel 
+//
+//
+// - Custom css variables
+// 
+// --ue-c-panel-max-width
+// --ue-c-panel-background
+// --ue-c-panel-border-color
+// --ue-c-panel-border-color
+// --ue-c-panel-icon-color
+// --ue-c-panel-subtitle-font
+// --ue-c-panel-subtitle-font-size
+// --ue-c-panel-subtitle-color
+// --ue-c-panel-title-font
+// --ue-c-panel-title-font-size
+// --ue-c-panel-title-color
 
 .ue-c-panel {
     position: fixed;
@@ -6,15 +21,15 @@
     bottom: 0;
     display: block;
     width: 100%;
-    max-width: 680px;
+    max-width: 680px; // IE
     max-width: var(--ue-c-panel-max-width, 680px);
     height: 100%;
     transition: all 300ms;
     overflow: scroll;
-    background-color: #f8f8f8;
+    background-color: #f8f8f8; // IE
     background-color: var(--ue-c-panel-background, #f8f8f8);
     &__navigation {
-        border-bottom: 1px solid black;
+        border-bottom: 1px solid black; // IE
 		border-bottom: 1px solid var(--ue-c-panel-border-color, black);
 		width: 100%;
         position: relative;
@@ -27,9 +42,9 @@
             left: 0;
             width: 48px;
             height: 48px;
-            border-right: 1px solid black;
+            border-right: 1px solid black; // IE
             border-right: 1px solid var(--ue-c-panel-border-color, black);
-            fill: black;
+            fill: black; // IE
             fill: var(--ue-c-panel-icon-color, black);
         }
         .ue-c-button--link {
@@ -41,54 +56,39 @@
             text-align: left;
             padding-left: 4em;
             &:focus {
-                //background-color: #ffeb4e2e;
                 outline: auto 5px -webkit-focus-ring-color;
             }
         }
 	}
     &__title {
-        font-family: "Roboto";
-        font-family: var(--ue-c-panel-subtitle-font-family, "Roboto");
-        font-size: 16px;
+        font-family: "Roboto"; // IE
+        font-family: var(--ue-c-panel-subtitle-font, "Roboto");
+        font-size: 16px; // IE
         font-size: var(--ue-c-panel-subtitle-font-size, 16px);
-        color: black;
+        color: black; // IE
         color: var(--ue-c-panel-subtitle-color, black);
     }
     &__subtitle {
-        font-family: "Roboto";
-        font-family: var(--ue-c-panel-title-font-family, "Roboto");
-        font-size: 12px;
+        font-family: "Roboto"; // IE
+        font-family: var(--ue-c-panel-title-font, "Roboto");
+        font-size: 12px; // IE
         font-size: var(--ue-c-panel-title-font-size, 12px);
-        color: black;
+        color: black; // IE
         color: var(--ue-c-panel-title-color, black);
     }
+    &--right {
+        right: -680px;
+    }
+    &--left {
+        left: -680px;
+    }
+    &.is-slide-right {
+        right: 0;
+    }
+    &.is-slide-left {
+        left: 0;
+    }
 }
-
-.ue-c-panel--right {
-    right: -680px;
-}
-
-.ue-c-panel--left {
-    left: -680px;
-}
-
-.is-slide-right {
-    right: 0;
-}
-
-.is-slide-left {
-    left: 0;
-}
-
-// .ue-c-panel__navigation-wrapper {
-//     display: inline-block;
-//     width: 100%;
-//     height: 48px;
-//     &:hover {
-//         opacity: 0.7;
-//         opacity: var(--ue-c-panel-navigation-hover, 0.7);
-//     }
-// }
 
 .ue-c-panel-shadow {
   position: fixed;
@@ -101,13 +101,12 @@
   background-color: #000;
   opacity: 0;
   transition: opacity 0.3s, width 0s 0.3s, height 0s 0.3s;
-}
-
-.ue-c-panel-shadow.is-active {
-  width: 100%;
-  height: 100%;
-  opacity: 0.7;
-  transition: opacity 0.3s;
+    &.is-active {
+      width: 100%;
+      height: 100%;
+      opacity: 0.7;
+      transition: opacity 0.3s;
+    }
 }
 
 @media (min-width: 1200px) { 

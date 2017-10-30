@@ -1,3 +1,15 @@
+// Components: 
+// ue-c-textarea
+// ue-c-input
+// ue-c-button
+// ue-c-form
+// ue-c-checkbox
+
+// --ue-c-textarea-border-color
+// --ue-c-textarea-border-radius
+// --ue-c-input-border-color
+// --ue-c-input-border-radius
+
 
 [data-role-toggle-content] {
 	display: none;
@@ -23,14 +35,6 @@
 	display: block;
 }
 
-.has-fade-out {
-	opacity: 0;
-	transition: all 1s ease-out 0s;
-}
-.has-fade-in {
-	opacity: 100;
-	transition: all 1s ease-out 0s;
-}
 
 .ue-c-textarea {
 	display: inline-block;
@@ -38,9 +42,11 @@
     font-size: 1rem;
     line-height: 1.10;
     color: black; 
-    border-radius: 0.25rem;
+    border-radius: 0.25rem; // IE
+    border-radius: var(--ue-c-textarea-border-radius, 0.25rem);
     background-color: whitesmoke;
-    border: 1px solid lightgrey; 
+    border: 1px solid lightgrey; // IE
+    border: 1px solid var(--ue-c-textarea-border-color, lightgrey);
     &:focus {
     	outline: #666 dotted 1px;
     }
@@ -52,8 +58,10 @@
     line-height: 1.25;
     color: black;
     background-color: whitesmoke;
-    border: 1px solid lightgrey;
-    border-radius: 0.25rem;
+    border: 1px solid lightgrey; // IE
+    border: 1px solid var(--ue-c-input-border-color, lightgrey);
+    border-radius: 0.25rem; // IE
+    border-radius: var(--ue-c-input-border-radius, 0.25rem);
     transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
     &:focus {
     	outline: #666 dotted 1px;
@@ -74,6 +82,7 @@
 	}
 }
 
+// ***** [type='button'] - Esta regla es necesaria para sobreescribir estilos de marca_style y elmundo_style ****
 [type='button'],
 .ue-c-button,
 .ue-c-button--link {
@@ -82,7 +91,7 @@
     	outline: #666 dotted 1px;
     }
 }
-
+// ***** [type='button'] - Esta regla es necesaria para sobreescribir estilos de marca_style y elmundo_style ****
 [type='button'],
 .ue-c-button {
 	cursor: pointer;
@@ -114,7 +123,6 @@
 }
 
 .ue-c-button--badge {
-	
 	border-radius: 20px;
 	position: relative;
 	display: inline-block;
@@ -136,7 +144,7 @@
 		fill: var(--ue-c-panel-icon-color, whitesmoke);
 	}
 	&::after {
-		content: '2';
+		content: attr(data-badge);
 		background: var(--btn-badge-color, red);
 		width: 2em;
 		height: 2em;
@@ -148,7 +156,7 @@
 	}
 }
 
-.ue-c-form {
+.ue-c-comments-form {
 	&__message,
 	&__message--error {
 		font-size: 1.1rem;
@@ -169,15 +177,22 @@
 				color: var(--link-color-hover, deepskyblue);
 			}
 		}
-
 		&--error {
 			background: var(--message-background, lightsalmon);
+		}
+		&.has-fade-out {
+			opacity: 0;
+			transition: all 1s ease-out 0s;
+		}
+		&.has-fade-in {
+			opacity: 100;
+			transition: all 1s ease-out 0s;
 		}
 	}
 	&__captcha {
 		text-align: center;
 		margin: 0 auto;
-		.ue-c-form__message {
+		.ue-c-comments-form__message {
 			text-align: left;
 		}
 	}
@@ -187,14 +202,14 @@
 .ue-c-checkbox {
 	height: 40px;
 	width: 48px;
-	// visibility: hidden;
 	position: absolute;
-
 	-webkit-appearance: none;
 
 	&:focus {
-	    	outline: #666 dotted 1px;
-	    }
+	    outline: #b3b3b3 dotted 1px;
+    	padding: 0em 6em 0em 6em;
+    	margin-left: -43px;
+	}
 
 	&:checked + .ue-c-checkbox__switch {
 		background: dodgerblue;

@@ -1,6 +1,9 @@
 // - Modificadores
 // 
+// - Custom css variables
 //
+// --ue-c-tablist-border
+// --ue-c-tab-border-color
 
 .ue-c-tabs {
 	width: 100%;
@@ -11,6 +14,7 @@
 	flex-direction: row;
 	justify-content: center;
 	width: 100%;
+  border-bottom: 1px solid black; // IE
 	border-bottom: 1px solid var(--ue-c-tablist-border, black);
 	padding: 10px;
 }
@@ -26,6 +30,7 @@
 }
 
 [role="tab"][aria-selected="true"] {
+  border-bottom: 4px solid black; // IE
   border-bottom: 4px solid var(--ue-c-tab-border-color, black);
   outline: 0;
 }
@@ -37,8 +42,6 @@
   border-radius: 0;
   color: inherit;
 }
-
-.ue-c-tab__panel {}
 
 [role="tabpanel"] {
   position: relative;

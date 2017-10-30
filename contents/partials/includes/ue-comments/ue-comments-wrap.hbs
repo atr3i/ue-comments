@@ -2,11 +2,10 @@
 
 	<div class="ue-c-comments__filter">
 
-		<div class="ue-c-comments__order">
-			<select class="ue-c-select" data-select="filters" required>
-				<!-- Placeholder option -->
+		<div class="ue-c-comments__sort">
+			<label for="sortBy" class="is-hidden-text">Seleccionar filtro</label>
+			<select id="sortBy" class="ue-c-select" data-select="filters" required>
 				<option value="placeHolder" hidden>Ordenar por...</option>
-				<!-- Normal options -->
 				<option value="newestComments">Los más recientes</option>
 				<option value="oldestComments">Los más antiguos</option>
 				<option value="mostValued">Los más valorados</option>

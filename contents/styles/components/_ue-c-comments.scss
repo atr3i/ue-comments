@@ -14,15 +14,14 @@ $select-placeholder: var(--select-placeholder, #C7C7C7);
 $select-border-color: var(--select-border-color, #999);
 $select-border-width: var(--select-border-width, 2px);
 
-
-.is-bubble-icon {
-	fill: var(--bubble-icon-color, black);
-}
-.is-arrow-icon{
-	fill: var(--ue-c-panel-icon-color, black);
-}
-
 .ue-c-comments{
+
+	.is-bubble-icon {
+		fill: var(--bubble-icon-color, black);
+	}
+	.is-arrow-icon{
+		fill: var(--ue-c-panel-icon-color, black);
+	}
 
 	&__title {
 		font-weight: bold;
@@ -51,27 +50,6 @@ $select-border-width: var(--select-border-width, 2px);
 		.ue-c-button {
 			width: 100%;
 		}	
-	}
-
-	&__form {
-		padding: 1rem;
-		font-size: 16px;
-		background: lightgrey;
-		width: 100%;
-		position: relative;
-		// z-index: 5;
-		// position: fixed;
-		// margin-bottom: 0;
-		// margin-left: -16px;
-		// bottom: 0;
-
-	}
-	&__form-publish {
-
-
-	}
-	&__form-verification {
-
 	}
 
 	&-toggle {
@@ -113,7 +91,7 @@ $select-border-width: var(--select-border-width, 2px);
 		width: 100%;
 	}
 
-	&__order {
+	&__sort {
   		@include form-input-select();
   		width: 60%;
 	}
@@ -123,15 +101,6 @@ $select-border-width: var(--select-border-width, 2px);
     	top: 10px;
     	position: relative;
     	text-align: center;
-	}
-	&-wrap {
-		// position: relative;
-		// > div:not(.ue-c-comments__filter) {
-		// 	position: absolute;
-		// 	top: 4em;
-		// 	left: 0;
-		// 	background: whitesmoke;
-		// }
 	}
 
 	.ue-c-button[data-badge] {
@@ -147,6 +116,21 @@ $select-border-width: var(--select-border-width, 2px);
 	width: 100%;
 	border-bottom: 1px solid grey;
 	margin-bottom: 1em;
+
+	&__publish {
+		padding: 1rem;
+		font-size: 16px;
+		background: lightgrey;
+		width: 100%;
+		position: relative;
+		// z-index: 5;
+		// position: fixed;
+		// margin-bottom: 0;
+		// margin-left: -16px;
+		// bottom: 0;
+
+	}
+
 	&__header {
 		display: flex;
 		flex-direction: row;
@@ -337,9 +321,6 @@ $select-border-width: var(--select-border-width, 2px);
 	    }
 	}
 
-	&__form {
-
-	}
 }
 
 

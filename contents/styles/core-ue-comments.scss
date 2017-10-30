@@ -53,17 +53,19 @@ input {
 	
 	li {
 		margin: 0;
-		padding: 0;
+		padding: 1em;
+		font-size: 14px;
+		color: grey;
+		border-box: box-sizing;
 		a {
 			display: inline-block;
-			width: 100%;
-			padding: 1em;
+			width: 100%;	
 			color: whitesmoke;
-			font-size: 14px;
-
-			&:hover {
+			padding: 0;
+			
+		}
+		&:hover {
 				background: #333;
 			}
-		}
 	}
 }

@@ -121,7 +121,7 @@
     var publishComment = elem.querySelectorAll('[data-form=publishComment]'); 
     var messageOk = elem.querySelectorAll('[data-form-message=confirm]');
     var buttonSubmit = elem.querySelectorAll('[data-form=submitComment]'); 
-    var formFields = elem.getElementsByClassName("ue-c-form")[0];
+    var formFields = elem.getElementsByClassName("ue-c-comments-form")[0];
     //var messageError = elem.querySelector('[data-form-message=error]');
 
     for (var i = buttonVerify.length - 1; i >= 0; i--) {
@@ -247,6 +247,51 @@
   function resetFields(elem) {
     elem.reset();
   }
+
+
+  var scrollButton = document.querySelector('[data-badge]');
+  var elemPanel = document.querySelector('[data-slide-toggle-content]');
+  var topPos = elemPanel.offsetTop;
+
+  scrollButton.addEventListener('click', function(e){
+
+    event.preventDefault();
+
+    scrollTo(elemPanel, topPos-10, 600);
+
+   // console.log(scrollButton, elemPanel, topPos);
+
+  })
+
+  function scrollTo(elem, to, duration) {
+
+    var start = elem.scrollTop,
+        change = to - start,
+        currentTime = 0,
+        increment = 20;
+    var animateScroll = function() {
+        currentTime += increment;
+        var val = Math.easeInOutQuad(currentTime, start, change, duration);
+        elem.scrollTop = val;
+        if(currentTime < duration) {
+          setTimeout(animateScroll, increment);
+        }
+    };
+    animateScroll();
+  }
+
+  //t = current time
+  //b = start value
+  //c = change in value
+  //d = duration
+  Math.easeInOutQuad = function (t, b, c, d) {
+    t /= d/2;
+    if (t < 1) return c/2*t*t + b;
+    t--;
+    return -c/2 * (t*(t-2) - 1) + b;
+  };
+
+
 
 })();
 

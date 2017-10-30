@@ -1,11 +1,17 @@
 
 .is-hidden-text {
-	position:absolute;
-	left:-10000px;
-	top:auto;
-	width:1px;
-	height:1px;
-	overflow:hidden;
+	position: absolute;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: polygon(0 0, 0 0, 0 0, 0 0);
+	// position:absolute;
+	// left:-10000px;
+	// top:auto;
+	// width:1px;
+	// height:1px;
+	// overflow:hidden;
 }
 
 .lightbox_shadow {
